@@ -98,6 +98,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="content\test.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -106,6 +111,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\test.css">
+      <DependentUpon>test.scss</DependentUpon>
+    </Content>
+    <Content Include="content\test.min.css">
+      <DependentUpon>test.css</DependentUpon>
+    </Content>
+    <Content Include="site\test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
