@@ -103,6 +103,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="scripts\lists.js" />
     <Content Include="scripts\test.js" />
     <Content Include="content\lists.scss" />
     <None Include="Web.Debug.config">
