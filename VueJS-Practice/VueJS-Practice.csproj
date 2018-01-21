@@ -94,6 +94,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\input.css">
+      <DependentUpon>input.scss</DependentUpon>
+    </Content>
+    <Content Include="content\input.min.css">
+      <DependentUpon>input.css</DependentUpon>
+    </Content>
+    <Content Include="content\lists.css">
+      <DependentUpon>lists.scss</DependentUpon>
+    </Content>
+    <Content Include="content\lists.min.css">
+      <DependentUpon>lists.css</DependentUpon>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -103,9 +115,11 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="scripts\input.js" />
     <Content Include="scripts\lists.js" />
     <Content Include="scripts\test.js" />
     <Content Include="content\lists.scss" />
+    <Content Include="content\input.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -121,6 +135,7 @@
       <DependentUpon>test.css</DependentUpon>
     </Content>
     <Content Include="site\lists.html" />
+    <Content Include="site\input.html" />
     <Content Include="site\styling.html" />
     <Content Include="site\test.html" />
     <Content Include="scripts\vue.js" />

@@ -27,11 +27,17 @@
 </head>
 <body>
     <div id="intro">
-        <input type="text" />
+        <input type="text" v-model="content" />
     </div>
 
     <script type="text/javascript">
-        
+
+        new Vue({
+            el: 'input',
+            data: {
+                content: 'Vlad Mocanu'
+            }
+        });
     </script>
 </body>
 </html>
