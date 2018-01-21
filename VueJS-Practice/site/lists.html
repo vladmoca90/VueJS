@@ -26,8 +26,24 @@
 
 </head>
 <body>
-    <div id="intro" class="text-center">
-        <h1>{{ message }}</h1>
+    <div id="intro">
+        <ul v-bind:style="styleList">
+            <li v-for="name in names" v-text="name"></li>
+        </ul>
     </div>
+
+    <script type="text/javascript" scope>
+
+        new Vue({
+            el: "#intro",
+            data: {
+                names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
+                styleList: {
+                    fontSize: '15px'
+                }
+            }
+        });
+
+    </script>
 </body>
 </html>
