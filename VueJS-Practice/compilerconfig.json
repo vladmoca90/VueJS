@@ -2,5 +2,13 @@
   {
     "outputFile": "content/test.css",
     "inputFile": "content/test.scss"
+  },
+  {
+    "outputFile": "content/input.css",
+    "inputFile": "content/input.scss"
+  },
+  {
+    "outputFile": "content/lists.css",
+    "inputFile": "content/lists.scss"
   }
 ]
