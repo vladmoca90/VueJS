@@ -121,6 +121,7 @@
       <DependentUpon>test.css</DependentUpon>
     </Content>
     <Content Include="site\lists.html" />
+    <Content Include="site\styling.html" />
     <Content Include="site\test.html" />
     <Content Include="scripts\vue.js" />
     <Content Include="Web.config" />

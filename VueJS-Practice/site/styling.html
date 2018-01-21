@@ -27,18 +27,17 @@
 </head>
 <body>
     <div id="intro">
-        <ul v-bind:style="styleList">
-            <li v-for="name in names" v-text="name"></li>
-        </ul>
+        <h3 v-bind:style="headingStyle">My name is Vlad Mocanu</h3>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#intro",
+            el: "h3",
             data: {
-                names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
-                styleList: {
-                    fontSize: '15px'
+                headingStyle: {
+                    fontSize: '40px',
+                    textAlign: 'center',
+                    textTransform: 'uppercase'
                 }
             }
         });
