@@ -28,19 +28,19 @@
 <body>
 
     <div id="intro">
-        <ul v-show="slideVisible">
+        <ul v-if="slideVisible: true">
             <li v-for="name in names" v-text="name"></li>
         </ul>
-        <button type="button" class="btn btn-success" @click="slideVisible = ! slideVisible">Click</button>
+        <br />
+        <button type="button" class="btn btn-success" @click="slideVisible = !slideVisible">Click</button>
     </div>
 
     <script type="text/javascript">
 
-        var app = vue({
-
+          new Vue({
             el: 'ul',
             data: {
-                names: ['Vlad', 'Alexandru', 'Andreea', 'Ana Maria'],
+                names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
                 return: {
                     slideVisible: false
                 }
