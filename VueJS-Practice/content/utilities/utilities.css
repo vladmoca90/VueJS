@@ -1,0 +1,46 @@
+﻿.u-relative {
+  position: relative; }
+
+.u--absolute {
+  position: absolute; }
+
+.u-fixed {
+  position: fixed; }
+
+.u-text--bold {
+  font-weight: bold; }
+
+.u-text--white {
+  color: #fff; }
+
+.u-text--no-decoration {
+  text-decoration: none; }
+
+.u-full-width {
+  width: 100%; }
+
+.u-full-height {
+  height: 100%; }
+
+.u-no-border {
+  border: 0; }
+
+.u-inline {
+  display: inline; }
+
+.u-block {
+  display: block; }
+
+.u-flex {
+  display: flex; }
+
+.u-center {
+  align-items: center;
+  justify-content: center; }
+
+.u-space-between {
+  justify-content: space-between; }
+
+.u-space-around {
+  justify-content: space-around; }
+
