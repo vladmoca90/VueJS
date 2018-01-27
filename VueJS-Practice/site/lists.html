@@ -20,15 +20,17 @@
 
     <script type="text/javascript" src="../scripts/vue.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+
     <link rel="stylesheet" type="text/css" href="../content/test.css" />
 
     <script type="text/javascript" src="../scripts/lists.js"></script>
 
 </head>
 <body>
-    <div id="intro">
-        <ul :style="styleList">
-            <li v-for="name in names" v-text="name"></li>
+    <div id="intro" class="u-full-width">
+        <ul :style="styleList" :class="listGroup">
+            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
     </div>
 
@@ -38,8 +40,11 @@
             data: {
                 names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
                 styleList: {
-                    fontSize: '15px'
-                }
+                    fontSize: '15px',
+                    marginTop: '25px'
+                },
+                listGroup: 'list-group',
+                listGroupItem: 'list-group-item'
             }
         });
     </script>
