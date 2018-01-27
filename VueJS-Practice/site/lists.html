@@ -27,7 +27,7 @@
 </head>
 <body>
     <div id="intro">
-        <ul v-bind:style="styleList">
+        <ul :style="styleList">
             <li v-for="name in names" v-text="name"></li>
         </ul>
     </div>
