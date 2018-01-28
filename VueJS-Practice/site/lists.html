@@ -30,12 +30,14 @@
 <body>
     <div id="list-container" class="u-full-width">
         <ul :style="styleList" :class="listGroup">
-            <li v-for="name in names" v-text="name" v-type:transition="enter" :class="listGroupItem"></li>
+            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
     </div>
 
     <script type="text/javascript">
+
         new Vue({
+
             el: "#list-container",
             data: {
                 names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
@@ -45,11 +47,11 @@
                     maxWidth: '125px',
                     textAlign: 'center'
                 },
-                enter: '#ff00',
                 listGroup: 'list-group center-block',
                 listGroupItem: 'list-group-item'
             }
         });
+
     </script>
 </body>
 </html>

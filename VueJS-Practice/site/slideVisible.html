@@ -28,7 +28,7 @@
 <body>
 
     <div id="intro">
-        <ul v-show="slideVisible">
+        <ul class="sliderList" v-show="slideVisible">
             <li v-for="name in names" v-text="name"></li>
         </ul>
         <button type="button" class="btn btn-success" @click="slideVisible = ! slideVisible">Click</button>
@@ -38,7 +38,7 @@
 
         var app = vue({
 
-            el: 'ul',
+            el: '.sliderList',
             data: {
                 names: ['Vlad', 'Alexandru', 'Andreea', 'Ana Maria'],
                 return: {
