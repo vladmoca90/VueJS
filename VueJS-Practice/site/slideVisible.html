@@ -28,22 +28,25 @@
 <body>
 
     <div id="intro">
-        <ul class="sliderList" v-show="slideVisible">
-            <li v-for="name in names" v-text="name"></li>
+        <ul id="slider-list" v-show="slideVisible" v-bind:class="listGroup">
+            <li v-bind:class="listGroupItem" v-for="name in names" v-text="name"></li>
         </ul>
-        <button type="button" class="btn btn-success" @click="slideVisible = ! slideVisible">Click</button>
+        <button type="button" v-bind:class="btnGreen" @click="slideVisible = ! slideVisible">Click</button>
     </div>
 
     <script type="text/javascript">
 
         var app = vue({
 
-            el: '.sliderList',
+            el: '#slider-list',
             data: {
                 names: ['Vlad', 'Alexandru', 'Andreea', 'Ana Maria'],
-                return: {
+                listGroup: 'list-group',
+                listGroupItem: 'list-group-item',
+                btnGreen: 'btn btn-success'
+                /* return: {
                     slideVisible: false
-                }
+                } */
             }
         });
 
