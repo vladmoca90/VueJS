@@ -33,6 +33,7 @@
         <ul :style="styleList" :class="listGroup">
             <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
+        <button class="btn btn-success center-block">Click</button>
     </div>
 
     <script type="text/javascript">
@@ -44,7 +45,7 @@
                 names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
                 styleList: {
                     fontSize: '15px',
-                    marginTop: '25px',
+                    margin: '30px auto',
                     maxWidth: '125px',
                     textAlign: 'center'
                 },
