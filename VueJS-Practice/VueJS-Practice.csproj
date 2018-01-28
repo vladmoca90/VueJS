@@ -106,6 +106,8 @@
     <Content Include="content\lists.min.css">
       <DependentUpon>lists.css</DependentUpon>
     </Content>
+    <Content Include="content\utilities\utilities.css" />
+    <Content Include="content\utilities\utilities.min.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -121,6 +123,7 @@
     <Content Include="scripts\test.js" />
     <Content Include="content\lists.scss" />
     <Content Include="content\input.scss" />
+    <Content Include="content\utilities\utilities.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
