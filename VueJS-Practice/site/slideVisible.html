@@ -20,33 +20,36 @@
 
     <script type="text/javascript" src="../scripts/vue.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../content/slideVisible.css" />
+    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+
+    <link rel="stylesheet" type="text/css" href="../content/test.css" />
 
     <script type="text/javascript" src="../scripts/slideVisible.js"></script>
 
 </head>
 <body>
 
-    <div id="intro">
-        <ul id="slider-list" v-show="slideVisible" v-bind:class="listGroup">
-            <li v-bind:class="listGroupItem" v-for="name in names" v-text="name"></li>
+    <div id="list-container" class="u-full-width">
+        <ul :style="styleList" :class="listGroup">
+            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
-        <button type="button" v-bind:class="btnGreen" @click="slideVisible = ! slideVisible">Click</button>
     </div>
 
     <script type="text/javascript">
 
-        var app = vue({
+        new Vue({
 
-            el: '#slider-list',
+            el: "#list-container",
             data: {
-                names: ['Vlad', 'Alexandru', 'Andreea', 'Ana Maria'],
-                listGroup: 'list-group',
-                listGroupItem: 'list-group-item',
-                btnGreen: 'btn btn-success'
-                /* return: {
-                    slideVisible: false
-                } */
+                names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
+                styleList: {
+                    fontSize: '15px',
+                    marginTop: '25px',
+                    maxWidth: '125px',
+                    textAlign: 'center'
+                },
+                listGroup: 'list-group center-block',
+                listGroupItem: 'list-group-item'
             }
         });
 
