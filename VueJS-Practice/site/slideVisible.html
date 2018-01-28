@@ -30,10 +30,10 @@
 <body>
 
     <div id="list-container" class="u-full-width">
-        <ul :style="styleList" :class="listGroup">
+        <ul :style="styleList" :class="listGroup" v-show="slideVisible">
             <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
-        <button class="btn btn-success center-block">Click</button>
+        <button class="btn btn-success center-block" @click="slideVisible = !slideVisible">Click</button>
     </div>
 
     <script type="text/javascript">
@@ -50,7 +50,10 @@
                     textAlign: 'center'
                 },
                 listGroup: 'list-group center-block',
-                listGroupItem: 'list-group-item'
+                listGroupItem: 'list-group-item',
+                slideVisible: {
+                    return: true
+                }
             }
         });
 
