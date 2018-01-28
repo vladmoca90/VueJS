@@ -28,7 +28,7 @@
 
 </head>
 <body>
-    <div id="intro" class="u-full-width">
+    <div id="list-container" class="u-full-width center-block">
         <ul :style="styleList" :class="listGroup">
             <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
@@ -36,12 +36,13 @@
 
     <script type="text/javascript">
         new Vue({
-            el: "#intro",
+            el: "#list-container",
             data: {
                 names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
                 styleList: {
                     fontSize: '15px',
-                    marginTop: '25px'
+                    marginTop: '25px',
+                    maxWidth: '300px'
                 },
                 listGroup: 'list-group',
                 listGroupItem: 'list-group-item'
