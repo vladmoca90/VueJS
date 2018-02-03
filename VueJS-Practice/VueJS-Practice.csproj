@@ -118,7 +118,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="scripts\input.js" />
-    <Content Include="scripts\lists.js" />
+    <None Include="scripts\lists.vue" />
     <Content Include="scripts\slideVisible.js" />
     <Content Include="scripts\test.js" />
     <Content Include="content\lists.scss" />

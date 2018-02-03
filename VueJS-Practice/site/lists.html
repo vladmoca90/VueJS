@@ -20,17 +20,17 @@
 
     <script type="text/javascript" src="../scripts/vue.js"></script>
 
+    <script type="text/javascript" src="../scripts/lists.vue"></script>
+
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
-    <link rel="stylesheet" type="text/css" href="../content/test.css" />
-
-    <script type="text/javascript" src="../scripts/lists.js"></script>
+    <link rel="stylesheet" type="text/css" href="../content/lists.css" />
 
 </head>
 <body>
     <div id="list-container" class="u-full-width">
-        <ul :style="styleList" :class="listGroup">
-            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
+        <ul style="styleList" class="listGroup">
+            <li v-for="name in names" v-text="name" class="listGroupItem"></li>
         </ul>
     </div>
 
