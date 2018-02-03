@@ -30,16 +30,24 @@
 
 </head>
 <body>
-    <div id="intro">
+    <div id="intro" :style="fontStyle">
         <first-component></first-component>
     </div>
 
     <script type="text/javascript">
-        Vue.component("first-component",
-            { template: "<div>My name is Vlad Mocanu</div>" });
+        Vue.component("first-component", {
+            template: "<div>My name is Vlad Mocanu</div>"
+        });
 
         new Vue({
-            el: "#intro"
+            el: "#intro",
+            data: {
+                fontStyle: {
+                    fontColor: "#ff00",
+                    fontWeight: "bold",
+                    textAlign: "center"
+                }
+        }
         });
     </script>
 </body>
