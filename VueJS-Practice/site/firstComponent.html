@@ -30,11 +30,17 @@
 
 </head>
 <body>
-    <div id="intro" style="fontStyle">
-        <first-component></first-component>
+    <div id="intro" :style="fontStyle">
+        <parent-component>
+            <first-component></first-component>
+        </parent-component>
     </div>
 
     <script type="text/javascript">
+
+        Vue.component("parent-component", {
+            template: ""
+        });
 
         Vue.component("first-component", {
             template: "<div>My name is Vlad Mocanu</div>"
@@ -44,7 +50,7 @@
             el: "#intro",
             data: {
                 fontStyle: {
-                    fontColor: "#ff00",
+                    color: "#ff00",
                     fontWeight: "bold",
                     textAlign: "center"
                 }
