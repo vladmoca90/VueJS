@@ -119,7 +119,7 @@
     </None>
     <None Include="scripts\input.vue" />
     <None Include="scripts\lists.vue" />
-    <Content Include="scripts\objectVue.vue" />
+    <Content Include="scripts\firstComponent.vue" />
     <None Include="scripts\slideVisible.vue" />
     <None Include="scripts\test.vue" />
     <Content Include="content\lists.scss" />
@@ -140,7 +140,7 @@
     <Content Include="content\test.min.css">
       <DependentUpon>test.css</DependentUpon>
     </Content>
-    <Content Include="site\ObjectVue.html" />
+    <Content Include="site\firstComponent.html" />
     <Content Include="site\slideVisible.html" />
     <Content Include="site\lists.html" />
     <Content Include="site\input.html" />
