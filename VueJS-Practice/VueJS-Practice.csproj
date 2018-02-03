@@ -117,13 +117,14 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="scripts\input.js" />
+    <None Include="scripts\input.vue" />
     <None Include="scripts\lists.vue" />
-    <Content Include="scripts\slideVisible.js" />
-    <Content Include="scripts\test.js" />
+    <None Include="scripts\slideVisible.vue" />
+    <None Include="scripts\test.vue" />
     <Content Include="content\lists.scss" />
     <Content Include="content\input.scss" />
     <Content Include="content\utilities\utilities.scss" />
+    <Content Include="scripts\styling.vue" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
