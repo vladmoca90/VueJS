@@ -2,7 +2,7 @@
 <html lang="en-gb">
 <head>
 
-    <title>Object Vue</title>
+    <title>First Vue Component</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -22,7 +22,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/objectVue.vue"></script>
+    <script type="text/javascript" src="../scripts/firstComponent.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
@@ -30,22 +30,11 @@
 
 </head>
 <body>
-    <div id="intro" class="u-full-width">
-        <ul :class="u-text--bold">
-            <li v-for="employee in employees" v-text="name"></li>
-        </ul>
-    </div>
+    <div></div>
 
     <script type="text/javascript">
 
-        new Vue({
-            el: "#intro",
-            data: {
-                employees: {
-                    names: ["Vlad", "Alexandru", "Andreea"]
-                }
-            }
-        });
+       
     </script>
 </body>
 </html>
