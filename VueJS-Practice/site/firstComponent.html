@@ -30,13 +30,17 @@
 
 </head>
 <body>
-    <div>
+    <div id="intro">
         <first-component></first-component>
     </div>
 
     <script type="text/javascript">
+        Vue.component("first-component",
+            { template: "<div>My name is Vlad Mocanu</div>" });
 
-       
+        new Vue({
+            el: "#intro"
+        });
     </script>
 </body>
 </html>
