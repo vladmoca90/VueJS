@@ -30,11 +30,12 @@
 
 </head>
 <body>
-    <div id="intro" :style="fontStyle">
+    <div id="intro" style="fontStyle">
         <first-component></first-component>
     </div>
 
     <script type="text/javascript">
+
         Vue.component("first-component", {
             template: "<div>My name is Vlad Mocanu</div>"
         });
@@ -47,8 +48,9 @@
                     fontWeight: "bold",
                     textAlign: "center"
                 }
-        }
+            }
         });
+
     </script>
 </body>
 </html>
