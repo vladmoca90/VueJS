@@ -30,33 +30,35 @@
 
 </head>
 <body>
-    <div id="intro" :style="fontStyle">
-        <parent-component>
-            <first-component></first-component>
+    <div id="intro">
+        <parent-component :style="parent">
+            <child-component :style="child"></child-component>
         </parent-component>
     </div>
 
     <script type="text/javascript">
 
         Vue.component('parent-component', {
-            template: '<div :style="parentStyle" class="u-full-height u-full-width"></div>'
+            template: '<div class="u-full-height u-full-width"></div>'
         });
 
-        Vue.component('first-component', {
-            template: '<div>My name is Vlad Mocanu</div>''
+        Vue.component('child-component', {
+            template: '<div>My name is Vlad Mocanu</div>'
         });
 
         new Vue({
             el: "#intro",
             data: {
-                fontStyle: {
+                parent: {
+                    border: "1px solid #000",
+                    margin: "25px auto",
+                    maxWidth: "300px",
+                    padding: "50px"
+                },
+                child: {
                     color: "#ff00",
                     fontWeight: "bold",
                     textAlign: "center"
-                },
-                parentStyle: {
-                    border: "1px solid #000",
-                    padding: "50px"
                 }
             }
         });
