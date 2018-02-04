@@ -38,12 +38,12 @@
 
     <script type="text/javascript">
 
-        Vue.component("parent-component", {
-            template: ""
+        Vue.component('parent-component', {
+            template: '<div :style="parentStyle" class="u-full-height u-full-width"></div>'
         });
 
-        Vue.component("first-component", {
-            template: "<div>My name is Vlad Mocanu</div>"
+        Vue.component('first-component', {
+            template: '<div>My name is Vlad Mocanu</div>''
         });
 
         new Vue({
@@ -53,6 +53,10 @@
                     color: "#ff00",
                     fontWeight: "bold",
                     textAlign: "center"
+                },
+                parentStyle: {
+                    border: "1px solid #000",
+                    padding: "50px"
                 }
             }
         });
