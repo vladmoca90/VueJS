@@ -29,7 +29,9 @@
 </head>
 <body>
     <div id="alert-message">
-
+        <div class="container">
+            <button :class="alertButton" @click="say(This as an alert message)"></button>
+        </div>
     </div>
 
     <script type="text/javascript">
@@ -38,7 +40,16 @@
 
             el: "#alert-message",
             data: {
-               
+                alertButton: {
+
+                },
+                methods: {
+                    alert: {
+                        function(message) {
+                            alert(message);
+                        }
+                    }
+                }
             }
         });
 
