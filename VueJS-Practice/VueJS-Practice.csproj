@@ -125,6 +125,7 @@
     <Content Include="content\lists.scss" />
     <Content Include="content\input.scss" />
     <Content Include="content\utilities\utilities.scss" />
+    <None Include="scripts\alert.vue" />
     <Content Include="scripts\styling.vue" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -140,6 +141,7 @@
     <Content Include="content\test.min.css">
       <DependentUpon>test.css</DependentUpon>
     </Content>
+    <Content Include="site\alert.html" />
     <Content Include="site\firstComponent.html" />
     <Content Include="site\slideVisible.html" />
     <Content Include="site\lists.html" />
