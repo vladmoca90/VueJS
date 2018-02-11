@@ -2,25 +2,26 @@
     <div class="employers u-full-width">{{ employer.name }}</div>
 </template>
 
-<script>
+<script type="text/javascript">
 export default {
 
-    props: [type: Object],
+    props: [
+        type: Object
+    ],
     data() {
         employer: [
-            name: {
-                "Alexandru",
-                "Vladmir",
-                "Andreea-Corina",
-            },
-            id: {},
-            age: {}
+            {
+                name: [
+                    "Alexandru", 
+                    "Vladimir", 
+                    "Grace", 
+                    "Andreea", 
+                    "Ionel"
+                ]
+            }
         ]
     }
 }
 </script>
 
-<style scoped>
-
-
-</style>
+<style scoped></style>
