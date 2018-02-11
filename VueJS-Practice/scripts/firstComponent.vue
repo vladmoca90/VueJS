@@ -1,4 +1,4 @@
-﻿<template>
+﻿<template lang="html">
     <div class="u-full-height u-full-width">
         <div>My name is Vlad Mocanu</div>
     </div>

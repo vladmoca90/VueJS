@@ -1,13 +1,7 @@
-﻿<template>
+﻿<template lang="html">
  <div id="list-container" class="u-full-width">
-        <ul 
-        :style="styleList" 
-        :class="listGroup">
-            <li 
-            v-for="name in names" 
-            v-text="name" 
-            :class="listGroupItem">
-            </li>
+        <ul :style="styleList" :class="listGroup">
+            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
     </div>
 
@@ -28,6 +22,4 @@
             }
         }
     </script>
-
-    <style scoped></style>
 </template>
