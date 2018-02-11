@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en-gb">
+
 <head>
 
     <title>First Vue Component</title>
@@ -29,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../content/lists.css" />
 
 </head>
+
 <body>
     <div id="intro">
         <parent-component :style="parent">
@@ -37,32 +39,14 @@
     </div>
 
     <script type="text/javascript">
-
         Vue.component('parent-component', {
-            template: '<div class="u-full-height u-full-width"></div>'
+            template: '../scripts/firstComponent.vue'
         });
 
         Vue.component('child-component', {
-            template: '<div>My name is Vlad Mocanu</div>'
+            template: '../scripts/firstComponent.vue'
         });
-
-        new Vue({
-            el: "#intro",
-            data: {
-                parent: {
-                    border: "1px solid #000",
-                    margin: "25px auto",
-                    maxWidth: "300px",
-                    padding: "50px"
-                },
-                child: {
-                    color: "#ff00",
-                    fontWeight: "bold",
-                    textAlign: "center"
-                }
-            }
-        });
-
     </script>
 </body>
+
 </html>
