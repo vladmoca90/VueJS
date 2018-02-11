@@ -32,7 +32,9 @@
 <body>
 
     <div id="list-container" class="u-full-width">
-        <ul :style="styleList" :class="listGroup" v-show="slideVisible">
+        <ul v-show="slideVisible"
+		:style="styleList" 
+		:class="listGroup">
             <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
         <button class="btn btn-success center-block" @click="slideVisible = !slideVisible">Click</button>
