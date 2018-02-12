@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="u-full-width">
-      <div class="btn btn-success" @click.once="oneClick">Press this button</div>
+      <div class="main-button btn btn-success" @click.once="oneClick">Press this button</div>
   </div>
 </template>
 
@@ -9,12 +9,14 @@
 
         props: ["count"],
         data() {
-
-            oneClick {
-                
-            }
+            oneClick = "counter += 1"
         }
     }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+.main-button {
+    margin: 25px auto;
+}
+</style>
