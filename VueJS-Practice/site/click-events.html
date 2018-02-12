@@ -32,14 +32,24 @@
 </head>
 
 <body>
-    <div id="app" class="u-full-width" :style="{ margin: '25px auto' }">
+    <div class="app u-full-width" :style="{ margin: '25px auto' }">
         <button class="btn btn-success" @click="counter += 1">Add 1</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
+    </div>
+
+    <div class="app u-full-width" :style="{ margin: '25px auto' }">
+        <button class="btn btn-info" @click.space="counter += 4">Add 1</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
+    </div>
+
+    <div class="app u-full-width" :style="{ margin: '25px auto' }">
+        <button class="btn btn-info" @click.exact.ctrl="counter -= 2">Add 1</button>
         <p>The button above has been clicked {{ counter }} times.</p>
     </div>
 
     <script type="text/javascript">
         var application = new Vue({
-            el: '#app',
+            el: '.app',
             data: {
                 counter: 0
             }
