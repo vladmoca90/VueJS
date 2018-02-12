@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en-gb">
+
 <head>
 
     <title>Alert message</title>
@@ -27,18 +28,16 @@
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
 </head>
+
 <body>
     <div id="alert-message">
         <div class="container">
-            <button 
-			:style="alertButton" 
-			@click="say('This as an alert message')">Press button
+            <button :style="alertButton" @click="say('This as an alert message')">Press button
 			</button>
         </div>
     </div>
 
     <script type="text/javascript">
-
         new Vue({
 
             el: "#alert-message",
@@ -55,7 +54,7 @@
                 }
             }
         });
-
     </script>
 </body>
+
 </html>
