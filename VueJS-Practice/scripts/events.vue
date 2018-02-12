@@ -1,15 +1,16 @@
 <template lang="html">
   <div class="u-full-width">
-      <div class="main-button btn btn-success" @click.once="oneClick">Press this button</div>
+      <div class="main-button btn btn-success" @click="counter += 1">Press this button</div>
+      <span>{{ counter }}</span>
   </div>
 </template>
 
 <script type="text/javascript">
     export default {
 
-        props: ["count"],
+        el: "main-button",
         data() {
-            oneClick = "counter += 1"
+            counter: 0
         }
     }
 </script>
