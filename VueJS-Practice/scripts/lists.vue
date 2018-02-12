@@ -4,6 +4,7 @@
             <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
     </div>
+</template>
 
     <script>
         export default {
@@ -24,4 +25,4 @@
             }
         }
     </script>
-</template>
+<style lang="scss" scoped></style>
