@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Alert message</title>
+    <title>Click exact</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,37 +23,27 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/alert.vue"></script>
+    <script type="text/javascript" src="../scripts/click-events.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+
+    <link rel="stylesheet" type="text/css" href="../content/click-events.css" />
 
 </head>
 
 <body>
-    <div id="alert-message">
-        <div class="container">
-            <button :style="alertButton" @click="say('This as an alert message')">Press button
-			</button>
-        </div>
+    <div class="app-2 u-full-width" :style="{ margin: '50px auto' }">
+        <button class="btn btn-danger" @click.exact.ctrl="counter -= 2">Substract 2</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
     </div>
 
     <script type="text/javascript">
-        new Vue({
-
-            el: "#alert-message",
+        var appTwo = new Vue({
+            el: '.app-2',
             data: {
-                alertButton: {
-                    margin: "50px auto"
-                },
-                methods: {
-                    alert: {
-                        say: function(message) {
-                            alert(message);
-                        }
-                    }
-                }
+                counter: 0
             }
-        });
+        })
     </script>
 </body>
 

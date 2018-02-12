@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Alert message</title>
+    <title>Counter</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,36 +23,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/alert.vue"></script>
+    <script type="text/javascript" src="../scripts/counter.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+
+    <link rel="stylesheet" type="text/css" href="../content/counter.css" />
 
 </head>
 
 <body>
-    <div id="alert-message">
-        <div class="container">
-            <button :style="alertButton" @click="say('This as an alert message')">Press button
-			</button>
-        </div>
-    </div>
-
     <script type="text/javascript">
-        new Vue({
-
-            el: "#alert-message",
-            data: {
-                alertButton: {
-                    margin: "50px auto"
-                },
-                methods: {
-                    alert: {
-                        say: function(message) {
-                            alert(message);
-                        }
-                    }
-                }
-            }
+        Vue.component('counter', {
+            template: '../scripts/counter.vue'
         });
     </script>
 </body>

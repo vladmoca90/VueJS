@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Events</title>
+    <title>Click</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,18 +23,25 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/events.vue"></script>
+    <script type="text/javascript" src="../scripts/click-events.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
-    <link rel="stylesheet" type="text/css" href="../content/events.css" />
+    <link rel="stylesheet" type="text/css" href="../content/click-events.css" />
 
 </head>
 
 <body>
+    <div class="app u-full-width" :style="{ margin: '25px auto' }">
+        <button class="btn btn-success" @click="counter += 1">Add 1</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
+    </div>
     <script type="text/javascript">
-        Vue.component('events', {
-            template: '../scripts/events.vue'
+        var app = new Vue({
+            el: '.app',
+            data: {
+                counter: 0
+            }
         });
     </script>
 </body>
