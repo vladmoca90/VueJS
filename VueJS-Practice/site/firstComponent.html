@@ -39,13 +39,8 @@
     </div>
 
     <script type="text/javascript">
-        Vue.component('parent-component', {
-            template: '../scripts/firstComponent.vue'
-        });
-
-        Vue.component('child-component', {
-            template: '../scripts/firstComponent.vue'
-        });
+        Vue.component('parent-component', require('../scripts/firstComponent.vue'));
+        Vue.component('child-component', required('../scripts/firstComponent.vue'));
     </script>
 </body>
 
