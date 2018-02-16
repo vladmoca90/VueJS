@@ -33,7 +33,7 @@
 
 <body>
     <div class="u-full-height u-full-width">
-        <div class="employers u-full-width"></div>
+        <div v-for="employer in employers" :key="employer.id"></div>
     </div>
     <script type="text/javascript">
         new Vue({
