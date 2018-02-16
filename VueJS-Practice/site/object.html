@@ -32,9 +32,38 @@
 </head>
 
 <body>
+    <div id="app">
 
+    </div>
 
     <script type="text/javascript">
+        var app = Vue({
+
+            el: "#app",
+            data: {
+                candidates: {
+                    name: ["Alexandru", "Vladimir", "Ana-Maria"],
+                    age: [25, 34, 29],
+                    id: [1122, 1180, 1149],
+                    position: [
+                        "Front End Developer",
+                        "Security Analysist",
+                        "Head of Design"
+                    ],
+                    country: [
+                        "UK",
+                        "Romania",
+                        "France"
+                    ]
+                },
+                computed: {
+
+                },
+                methods: {
+
+                }
+            }
+        });
     </script>
 </body>
 
