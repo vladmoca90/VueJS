@@ -33,13 +33,18 @@
 
 <body>
     <div id="app">
-
+        <ul>
+            <li v-for="candidate in candidates" :key="candidate.name"></li>
+        </ul>
     </div>
 
     <script type="text/javascript">
         var app = Vue({
 
             el: "#app",
+            props: {
+                candidatesName: Object,
+            },
             data: {
                 candidates: {
                     name: ["Alexandru", "Vladimir", "Ana-Maria"],
@@ -54,7 +59,7 @@
                         "UK",
                         "Romania",
                         "France"
-                    ]
+                    ],
                 },
                 computed: {
 
