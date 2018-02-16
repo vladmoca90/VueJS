@@ -33,8 +33,8 @@
 
 <body>
     <div id="app">
-        <ul>
-            <li v-for="candidate in candidates" :key="candidate.name"></li>
+        <ul :class="candidatesList">
+            <li v-for="candidate in candidates" :key="candidate.name" :class="candidatesListItem"></li>
         </ul>
     </div>
 
@@ -46,6 +46,8 @@
                 candidatesName: Object,
             },
             data: {
+                candidatesLit: "list-group",
+                candidatesListItem: "list-group-item",
                 candidates: {
                     name: ["Alexandru", "Vladimir", "Ana-Maria"],
                     age: [25, 34, 29],
