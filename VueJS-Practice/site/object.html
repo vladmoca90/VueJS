@@ -32,9 +32,45 @@
 </head>
 
 <body>
-
+    <div id="app">
+        <ul :class="candidatesList">
+            <li v-for="candidate in candidates" :key="candidate.name" :class="candidatesListItem"></li>
+        </ul>
+    </div>
 
     <script type="text/javascript">
+        var app = Vue({
+
+            el: "#app",
+            props: {
+                candidatesName: Object,
+            },
+            data: {
+                candidatesLit: "list-group",
+                candidatesListItem: "list-group-item",
+                candidates: {
+                    name: ["Alexandru", "Vladimir", "Ana-Maria"],
+                    age: [25, 34, 29],
+                    id: [1122, 1180, 1149],
+                    position: [
+                        "Front End Developer",
+                        "Security Analysist",
+                        "Head of Design"
+                    ],
+                    country: [
+                        "UK",
+                        "Romania",
+                        "France"
+                    ],
+                },
+                computed: {
+
+                },
+                methods: {
+
+                }
+            }
+        });
     </script>
 </body>
 
