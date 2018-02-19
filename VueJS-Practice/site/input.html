@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en-gb">
+
 <head>
 
     <title>Input</title>
@@ -27,19 +28,21 @@
     <script type="text/javascript" src="../scripts/input.vue"></script>
 
 </head>
+
 <body>
     <div id="intro">
-        <input type="text" v-model="content" />
+        <input type="text" v-model="textContent" />
+        <p v-html="textContent"></p>
     </div>
 
     <script type="text/javascript">
-
         new Vue({
-            el: 'input',
+            el: "#intro",
             data: {
-                content: 'Vlad Mocanu'
-            }
+                textContent: "",
+            },
         });
     </script>
 </body>
+
 </html>
