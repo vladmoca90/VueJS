@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Colors</title>
+    <title>Splice Array</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -29,17 +29,23 @@
 
 <body>
     <div id="app">
-
+        <p v-html="myArray"></p>
+        <button @click="spliceArray">Splice</button>
+        <p v-html="resultArray"></p>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: "#app",
             data: {
-
+                myArray: ["Ana", "Vlad", 29, "Alex", 11]
             },
-            methods: {
-
+            computed: {
+                spliceArray: function() {
+                    return {
+                        resultArray = this.myArray.splice(1, 2, "Ioana")
+                    }
+                }
             }
         });
     </script>
