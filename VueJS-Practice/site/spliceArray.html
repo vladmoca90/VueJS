@@ -23,64 +23,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../content/colors.css" />
-
-    <script type="text/javascript" src="../scripts/colors.vue"></script>
+    <script type="text/javascript" src="../scripts/spliceArray.vue"></script>
 
 </head>
 
 <body>
-    <div id="blocks">
-        <div class="demo"></div>
-        <div class="demo"></div>
-        <div class="demo" @click="attachBlue = !attachBlue" :class="divClasses"></div>
-        <div class="demo"></div>
-        <div class="demo"></div>
+    <div id="app">
+
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#blocks",
+            el: "#app",
             data: {
-                attachBlue: false
+
             },
-            computed: {
-                divClasses: function() {
-                    return {
-                        blue: this.attachBlue,
-                        black: !this.attachBlue
-                    }
-                }
+            methods: {
+
             }
         });
     </script>
-
-    <style type="text/css">
-        #blocks {
-            display: flex;
-            justify-content: space-between;
-            margin: 25px 50px;
-        }
-        
-        .demo {
-            background-color: #ababab;
-            flex-direction: row;
-            height: 150px;
-            width: 150px;
-        }
-        
-        .red {
-            background-color: #ff0000;
-        }
-        
-        .blue {
-            background-color: #00ff;
-        }
-        
-        .black {
-            background-color: #000;
-        }
-    </style>
 </body>
 
 </html>
