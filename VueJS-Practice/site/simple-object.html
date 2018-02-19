@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Object</title>
+    <title>Simple Object</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -27,14 +27,14 @@
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
-    <link rel="stylesheet" type="text/css" href="../content/object.css" />
+    <link rel="stylesheet" type="text/css" href="../content/simple-object.css" />
 
 </head>
 
 <body>
     <div id="app">
-        <ul :class="candidatesList">
-            <li v-for="candidate in candidates" :key="candidate.name" :class="candidatesListItem"></li>
+        <ul>
+            <li v-for="person in persons" v-html="{person}"></li>
         </ul>
     </div>
 
@@ -46,30 +46,20 @@
                 candidatesName: Object,
             },
             data: {
-                candidatesLit: "list-group",
-                candidatesListItem: "list-group-item",
-                candidates: {
-                    name: ["Alexandru", "Vladimir", "Ana-Maria"],
-                    age: [25, 34, 29],
-                    id: [1122, 1180, 1149],
-                    position: [
-                        "Front End Developer",
-                        "Security Analysist",
-                        "Head of Design"
-                    ],
-                    country: [
-                        "UK",
-                        "Romania",
-                        "France"
-                    ],
-                },
-                computed: {
-
-                },
-                methods: {
-
-                }
-            }
+                persons: [{
+                    name: "Alexandru",
+                    age: 27,
+                    country: "United Kingdom"
+                }, {
+                    name: "Vlad",
+                    age: 24,
+                    country: "Romania"
+                }, {
+                    name: "Maria",
+                    age: 29,
+                    country: "Romania"
+                }]
+            },
         });
     </script>
 </body>
