@@ -37,7 +37,15 @@
         <button @click="counter--">Decrease</button>
     </div>
     <script type="text/javascript">
-        Vue.component('counter', require('../scripts/counter.vue'));
+        new Vue({
+            el: "#app",
+            data: {
+                counter: 0,
+            },
+            methods: {
+
+            }
+        });
     </script>
 </body>
 
