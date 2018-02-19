@@ -34,17 +34,16 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="person in persons" :persons="persons" :key="person.name">{{ person.name }}</li>
+            <li v-for="person in persons">
+                {{ person.name }}
+            </li>
         </ul>
     </div>
 
     <script type="text/javascript">
-        var app = Vue({
+        new Vue({
 
             el: "#app",
-            props: {
-                persons: Object,
-            },
             data: {
                 persons: [{
                     name: "Alexandru",
