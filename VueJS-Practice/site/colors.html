@@ -31,18 +31,20 @@
 
 <body>
     <div id="blocks">
+        <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed}"></div>
         <div class="demo"></div>
+        <div class="demo" @click="attachBlue = !attachBlue" :class="{blue: attachBlue, black = !attachBlue}"></div>
         <div class="demo"></div>
-        <div class="demo"></div>
-        <div class="demo"></div>
-        <div class="demo"></div>
+        <div class="demo" @click="attachBlack = !attachBlack" :class="{black: attachBlack}"></div>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: "#blocks",
             data: {
-
+                attachRed: false,
+                attachBlue: false,
+                attachBlack: false,
             },
         });
     </script>
@@ -62,7 +64,7 @@
         }
         
         .red {
-            background-color: #ff00;
+            background-color: #ff0000;
         }
         
         .blue {
