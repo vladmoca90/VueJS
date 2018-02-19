@@ -34,7 +34,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="person in persons" v-html="{person}"></li>
+            <li v-for="person in persons" :persons="persons" :key="person.name">{{ person.name }}</li>
         </ul>
     </div>
 
@@ -43,7 +43,7 @@
 
             el: "#app",
             props: {
-                candidatesName: Object,
+                persons: Object,
             },
             data: {
                 persons: [{
