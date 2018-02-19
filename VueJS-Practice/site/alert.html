@@ -30,24 +30,27 @@
 </head>
 
 <body>
-    <div id="alert-message">
-        <div class="container">
-            <button :class="alertButton" @click="message">Press button</button>
-        </div>
+    <div class="container">
+        <p></p>
+        <button :class="alertButton" @click="alertMessage">Alert button</button>
+        <p></p>
+        <button :class="promptButton" @click="promptMessage">Prompt button</button>
     </div>
 
     <script type="text/javascript">
         new Vue({
 
-            el: "#alert-message",
+            el: ".container",
             data: {
                 alertButton: "btn btn-danger",
+                promptButton: "btn btn-success",
             },
             methods: {
-                alert: {
-                    message: function() {
-                        alert("This is an alert message");
-                    }
+                alertMessage: function() {
+                    alert("This is an alert message");
+                },
+                promptMessage: function() {
+                    prompt("Write your name here");
                 }
             }
         });
