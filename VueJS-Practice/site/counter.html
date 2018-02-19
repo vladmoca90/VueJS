@@ -32,6 +32,10 @@
 </head>
 
 <body>
+    <div id="app">
+        <button @click="counter++">Increase</button>
+        <button @click="counter--">Decrease</button>
+    </div>
     <script type="text/javascript">
         Vue.component('counter', require('../scripts/counter.vue'));
     </script>
