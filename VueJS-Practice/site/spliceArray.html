@@ -28,9 +28,9 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" :class="appStyle">
         <p v-html="myArray"></p>
-        <button @click="spliceArray">Splice</button>
+        <button @click.once="spliceArray">Splice</button>
         <p v-html="resultArray"></p>
     </div>
 
@@ -38,13 +38,15 @@
         new Vue({
             el: "#app",
             data: {
+                appStyle: {
+                    display: "block",
+                    margin: "auto"
+                }
                 myArray: ["Ana", "Vlad", 29, "Alex", 11]
             },
-            computed: {
+            methods: {
                 spliceArray: function() {
-                    return {
-                        resultArray = this.myArray.splice(1, 2, "Ioana")
-                    }
+                    resultArray = this.myArray.splice(1, 2, "Ioana")
                 }
             }
         });
