@@ -34,9 +34,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="person in persons">
-                {{ person.name }}
-            </li>
+            <li v-for="person in persons" v-html="person.name"></li>
         </ul>
     </div>
 
