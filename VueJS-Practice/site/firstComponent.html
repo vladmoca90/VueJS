@@ -32,15 +32,16 @@
 </head>
 
 <body>
-    <div id="intro">
-        <parent-component :style="parent">
-            <child-component :style="child"></child-component>
-        </parent-component>
-    </div>
+    <parent-component message="This is a component"></parent-component>
 
     <script type="text/javascript">
-        Vue.component('parent-component', require('../scripts/firstComponent.vue'));
-        Vue.component('child-component', required('../scripts/firstComponent.vue'));
+        Vue.component('parent-component', {
+            // declare the props
+            props: ['message'],
+            // like data, the prop can be used inside templates and
+            // is also made available in the vm as this.message
+            template: '<span>{{ message }}</span>'
+        })
     </script>
 </body>
 
