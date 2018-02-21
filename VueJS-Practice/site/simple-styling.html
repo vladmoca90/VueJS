@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Alert message</title>
+    <title>Simple Styling</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -21,36 +21,25 @@
 
     <script type="text/javascript" src="../scripts/vue.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="../content/test.css" />
 
-    <script type="text/javascript" src="../scripts/alert.vue"></script>
-
-    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+    <script type="text/javascript" src="../scripts/simple-styling.vue"></script>
 
 </head>
 
 <body>
-    <div class="container">
-        <p></p>
-        <button :class="alertButton" @click="alertMessage">Alert button</button>
-        <p></p>
-        <button :class="promptButton" @click="promptMessage">Prompt button</button>
+    <div id="intro">
+        <h3 :style="headingStyle">My name is Vlad Mocanu</h3>
     </div>
 
     <script type="text/javascript">
         new Vue({
-
-            el: ".container",
+            el: "h3",
             data: {
-                alertButton: "btn btn-danger",
-                promptButton: "btn btn-success",
-            },
-            methods: {
-                alertMessage: function() {
-                    alert("This is an alert message");
-                },
-                promptMessage: function() {
-                    prompt("Write your name here");
+                headingStyle: {
+                    fontSize: '40px',
+                    textAlign: 'center',
+                    textTransform: 'uppercase'
                 }
             }
         });

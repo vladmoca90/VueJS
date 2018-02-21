@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-gb">
+
 <head>
 
-    <title>Styling</title>
+    <title>Splice Array</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -20,27 +21,36 @@
 
     <script type="text/javascript" src="../scripts/vue.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../content/test.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/styling.vue"></script>
+    <script type="text/javascript" src="../scripts/spliceArray.vue"></script>
 
 </head>
+
 <body>
-    <div id="intro">
-        <h3 :style="headingStyle">My name is Vlad Mocanu</h3>
+    <div id="app" :class="appStyle">
+        <p v-html="myArray"></p>
+        <button @click.once="spliceArray">Splice</button>
+        <p v-html="resultArray"></p>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "h3",
+            el: "#app",
             data: {
-                headingStyle: {
-                    fontSize: '40px',
-                    textAlign: 'center',
-                    textTransform: 'uppercase'
+                appStyle: {
+                    display: "block",
+                    margin: "auto"
+                }
+                myArray: ["Ana", "Vlad", 29, "Alex", 11]
+            },
+            methods: {
+                spliceArray: function() {
+                    resultArray = this.myArray.splice(1, 2, "Ioana")
                 }
             }
         });
     </script>
 </body>
+
 </html>
