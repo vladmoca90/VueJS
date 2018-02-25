@@ -1,11 +1,9 @@
 ﻿//Utilities for positions
-
 .u-relative {
     position: relative;
 }
 
 //Only when the parent has position: relative
-
 .u--absolute {
     position: absolute;
 }
@@ -15,9 +13,12 @@
 }
 
 //Utilities for texts and links
-
 .u-text--bold {
     font-weight: bold;
+}
+
+.u-text--black {
+    color: #000;
 }
 
 .u-text--white {
@@ -29,7 +30,6 @@
 }
 
 //Utilities for sizes
-
 .u-full-width {
     width: 100%;
 }
@@ -39,13 +39,11 @@
 }
 
 //Utilities for border
-
 .u-no-border {
     border: 0;
 }
 
 //Utilities for displays
-
 .u-inline {
     display: inline;
 }
@@ -54,15 +52,26 @@
     display: block;
 }
 
-//Utilities for flexbox
+.u-table {
+    display: table;
+}
 
+//Utilities for flexbox
 .u-flex {
     display: flex;
+}
+
+.u-flex--inline {
+    display: inline-flex;
 }
 
 .u-center {
     align-items: center;
     justify-content: center;
+}
+
+.u-flexend {
+    justify-content: flex-end;
 }
 
 .u-space-between {
