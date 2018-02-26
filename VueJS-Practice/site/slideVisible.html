@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en-gb">
+
 <head>
 
     <title>Slide Visible</title>
@@ -24,24 +25,20 @@
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
-    <link rel="stylesheet" type="text/css" href="../content/test.css" />
-
     <script type="text/javascript" src="../scripts/slideVisible.vue"></script>
 
 </head>
+
 <body>
 
     <div id="list-container" class="u-full-width">
-        <ul v-show="slideVisible"
-		:style="styleList" 
-		:class="listGroup">
+        <ul v-show="slideVisible" :style="styleList" :class="listGroup">
             <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
         <button class="btn btn-success center-block" @click="slideVisible = !slideVisible">Click</button>
     </div>
 
     <script type="text/javascript">
-
         new Vue({
 
             el: "#list-container",
@@ -60,7 +57,7 @@
                 }
             }
         });
-
     </script>
 </body>
+
 </html>
