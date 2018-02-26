@@ -19,6 +19,8 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
     <script type="text/javascript" src="../scripts/vue.js"></script>
 
     <script type="text/javascript" src="../scripts/test.vue"></script>
@@ -27,14 +29,19 @@
 
 <body>
     <div id="intro" class="text-center">
-        <h1>{{ message }}</h1>
+        <h1>{{ message() }}</h1>
     </div>
 
     <script type="text/javascript">
-        var vue_det = new Vue({
-            el: '#intro',
+        new Vue({
+            el: "#intro",
             data: {
-                message: 'My first VueJS Task'
+                test: "My first VueJS Task in VS Code",
+            },
+            methods: {
+                message: function() {
+                    return this.test;
+                },
             }
         });
     </script>
