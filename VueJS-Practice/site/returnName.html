@@ -31,14 +31,11 @@
 
 <body>
     <div class="app u-full-height u-full-width">
-        <h1>{{ name }}</h1>
+        <h1 class="text-center">{{ name }}</h1>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            props: {
-                type: String,
-            },
             el: ".app",
             data: {
                 name: "Alexandru",
