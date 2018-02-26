@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>First prop</title>
+    <title>Return name</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,36 +23,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/first-prop.vue"></script>
+    <script type="text/javascript" src="../scripts/returnName.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
-    <link rel="stylesheet" type="text/css" href="../content/first-prop.css" />
+    <link rel="stylesheet" type="text/css" href="../content/returnName.css" />
 
 </head>
 
 <body>
     <div class="u-full-height u-full-width">
-        <div v-for="employer in employers" :key="employer.id"></div>
+        <h1 v-html="name"></h1>
     </div>
     <script type="text/javascript">
         new Vue({
             props: {
-                type: Object
+                type: String,
             },
             data: {
-                employer: [{
-                    name: [
-                        "Alexandru",
-                        "Vladimir",
-                        "Grace",
-                        "Andreea",
-                        "Ionel"
-                    ],
-                    id: [10346, 10084, 10980, 10355, 10700],
-                    age: [25, 44, 33, 29, 37],
-                }]
-            }
+                return: {
+                    name: "Alexandru"
+                }
+            },
         });
     </script>
 </body>
