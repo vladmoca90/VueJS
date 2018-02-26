@@ -31,17 +31,20 @@
 
 <body>
     <div class="app u-full-height u-full-width">
-        <h1 class="text-center">{{ name }}</h1>
+        <h1 class="text-center">{{ fullName() }}</h1>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: ".app",
             data: {
-                name: "Alexandru",
+                firstName: "Alexandru",
+                lastName: "Mocanu",
             },
-            computed: function() {
-                return this.name.substr(2, 2);
+            methods: {
+                fullName: function() {
+                    return this.firstName + ' ' + this.lastName;
+                }
             }
         });
     </script>
