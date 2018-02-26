@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Number or words</title>
+    <title>String Methods</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,7 +23,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue/lenghtOfWords.vue"></script>
+    <script type="text/javascript" src="../scripts/vue/stringMethods.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
@@ -38,13 +38,13 @@
         new Vue({
             el: ".app",
             data: {
-                sentence: "Ana are mere, portocale, pere si mure.",
+                text: "Ana are mere, portocale, pere si mure",
             },
             methods: {
                 totalNumber: function() {
-                    return sentence.lenght;
+                    return text.substr(2, 3);
                 },
-            }
+            },
         });
     </script>
 </body>
