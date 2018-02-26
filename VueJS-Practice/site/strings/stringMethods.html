@@ -33,17 +33,24 @@
     <div class="app u-full-height u-full-width">
         <span class="text-center">Ana are mere, portocale, pere si mure =></span>
         <span class="text-center">{{ totalNumber() }}</span>
+        <br><br>
+        <span class="text-center">Toata viata am calatorit si m-am plimbat =></span>
+        <span class="text-center">{{ totalSubstr() }}</span>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: ".app",
             data: {
-                text: "Ana are mere, portocale, pere si mure",
+                numberOfWords: "Ana are mere, portocale, pere si mure",
+                theSubstr: "Toata viata am calatorit si m-am plimbat",
             },
             methods: {
                 totalNumber: function() {
-                    return this.text.length + " " + "words";
+                    return this.numberOfWords.length + " " + "words";
+                },
+                totalSubstr: function() {
+                    return this.theSubstr.substr(4, 13);
                 },
             },
         });
