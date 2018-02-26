@@ -28,19 +28,31 @@
 </head>
 
 <body>
-    <div id="intro">
-        <input type="text" v-model="textContent" />
-        <p v-html="textContent"></p>
+    <div id="intro" class="u-full-width u-full-height">
+        <input type="text" maxlength="20" size="20" v-model="inputContent" />
+        <p v-html="inputContent"></p>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: "#intro",
             data: {
-                textContent: "",
+                inputContent: "",
             },
         });
     </script>
+
+    <style scope>
+        #intro {
+            margin: 0 auto;
+            max-width: 200px;
+            min-height: 200px;
+        }
+        
+        #intro>input {
+            margin: 70px auto;
+        }
+    </style>
 </body>
 
 </html>

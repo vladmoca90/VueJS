@@ -32,8 +32,8 @@
 <body>
 
     <div id="list" class="u-full-width">
-        <ul v-show="slideVisible" :class="listGroup">
-            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
+        <ul v-show="slideVisible" class="list-group center-block">
+            <li v-for="name in names" v-text="name" class="list-group-item"></li>
         </ul>
         <button class="btn btn-success center-block" @click="slideVisible = !slideVisible">Click</button>
     </div>
@@ -43,8 +43,6 @@
             el: "#list",
             data: {
                 names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
-                listGroup: 'list-group center-block',
-                listGroupItem: 'list-group-item',
                 slideVisible: {
                     return: true
                 }
@@ -54,9 +52,12 @@
 
     <style>
         #list>ul {
-            font-size: 5px;
             margin: 30px auto;
-            max-width: 125px;
+            max-width: 150px;
+        }
+        
+        #list>ul>li {
+            font-size: 15px;
             text-align: center;
         }
     </style>
