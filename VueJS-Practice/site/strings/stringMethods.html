@@ -31,7 +31,8 @@
 
 <body>
     <div class="app u-full-height u-full-width">
-        <h1 class="text-center">{{ totalNumber() }}</h1>
+        <span class="text-center">Ana are mere, portocale, pere si mure =></span>
+        <span class="text-center">{{ totalNumber() }}</span>
     </div>
 
     <script type="text/javascript">
@@ -42,7 +43,7 @@
             },
             methods: {
                 totalNumber: function() {
-                    return text.substr(2, 3);
+                    return this.text.length + " " + "words";
                 },
             },
         });
