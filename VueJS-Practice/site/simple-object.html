@@ -27,34 +27,31 @@
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
-    <link rel="stylesheet" type="text/css" href="../content/simple-object.css" />
-
 </head>
 
 <body>
-    <div id="app">
-        <ul>
-            <li v-for="person in persons" v-html="person.name"></li>
+    <div id="object">
+        <ul class="list-group">
+            <li class="list-group-item" v-for="(index,person) in persons" v-html="person.name"></li>
         </ul>
     </div>
 
     <script type="text/javascript">
         new Vue({
-
-            el: "#app",
+            el: "#object",
             data: {
                 persons: [{
                     name: "Alexandru",
                     age: 27,
                     country: "United Kingdom"
                 }, {
-                    name: "Vlad",
+                    name: "Vladimir",
                     age: 24,
                     country: "Romania"
                 }, {
-                    name: "Maria",
+                    name: "Mariana",
                     age: 29,
-                    country: "Romania"
+                    country: "United States of America"
                 }]
             },
         });

@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Splice Array</title>
+    <title>Return name</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,30 +23,27 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/spliceArray.vue"></script>
+    <script type="text/javascript" src="../scripts/vue/returnName.vue"></script>
+
+    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
 </head>
 
 <body>
-    <div id="app" :class="appStyle">
-        <p v-html="myArray"></p>
-        <button @click.once="spliceArray">Splice</button>
-        <p v-html="resultArray"></p>
+    <div class="app u-full-height u-full-width">
+        <h1 class="text-center">{{ fullName() }}</h1>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#app",
+            el: ".app",
             data: {
-                appStyle: {
-                    display: "block",
-                    margin: "auto"
-                }
-                myArray: ["Ana", "Vlad", 29, "Alex", 11]
+                firstName: "Alexandru",
+                lastName: "Mocanu",
             },
             methods: {
-                spliceArray: function() {
-                    resultArray = this.myArray.splice(1, 2, "Ioana")
+                fullName: function() {
+                    return this.firstName + ' ' + this.lastName;
                 }
             }
         });

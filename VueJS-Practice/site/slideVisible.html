@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en-gb">
+
 <head>
 
     <title>Slide Visible</title>
@@ -24,43 +25,42 @@
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
-    <link rel="stylesheet" type="text/css" href="../content/test.css" />
-
     <script type="text/javascript" src="../scripts/slideVisible.vue"></script>
 
 </head>
+
 <body>
 
-    <div id="list-container" class="u-full-width">
-        <ul v-show="slideVisible"
-		:style="styleList" 
-		:class="listGroup">
-            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
+    <div id="list" class="u-full-width">
+        <ul v-show="slideVisible" class="list-group center-block">
+            <li v-for="name in names" v-text="name" class="list-group-item"></li>
         </ul>
         <button class="btn btn-success center-block" @click="slideVisible = !slideVisible">Click</button>
     </div>
 
     <script type="text/javascript">
-
         new Vue({
-
-            el: "#list-container",
+            el: "#list",
             data: {
                 names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
-                styleList: {
-                    fontSize: '15px',
-                    margin: '30px auto',
-                    maxWidth: '125px',
-                    textAlign: 'center'
-                },
-                listGroup: 'list-group center-block',
-                listGroupItem: 'list-group-item',
                 slideVisible: {
                     return: true
                 }
             }
         });
-
     </script>
+
+    <style>
+        #list>ul {
+            margin: 30px auto;
+            max-width: 150px;
+        }
+        
+        #list>ul>li {
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
 </body>
+
 </html>

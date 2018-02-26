@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Input</title>
+    <title>Splice Array</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,36 +23,21 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/input.vue"></script>
+    <script type="text/javascript" src="../scripts/reverseArray.vue"></script>
 
 </head>
 
 <body>
-    <div id="intro" class="u-full-width u-full-height">
-        <input type="text" maxlength="20" size="20" v-model="inputContent" />
-        <p v-html="inputContent"></p>
+    <div id="app">
+
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#intro",
-            data: {
-                inputContent: "",
-            },
+
+
         });
     </script>
-
-    <style scope>
-        #intro {
-            margin: 0 auto;
-            max-width: 200px;
-            min-height: 200px;
-        }
-        
-        #intro>input {
-            margin: 70px auto;
-        }
-    </style>
 </body>
 
 </html>

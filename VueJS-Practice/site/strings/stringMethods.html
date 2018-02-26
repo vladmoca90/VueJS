@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Simple Styling</title>
+    <title>String Methods</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -21,27 +21,38 @@
 
     <script type="text/javascript" src="../scripts/vue.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../content/test.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/simple-styling.vue"></script>
+    <script type="text/javascript" src="../scripts/vue/stringMethods.vue"></script>
+
+    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
 </head>
 
 <body>
-    <div id="intro">
-        <h3 :style="headingStyle">My name is Vlad Mocanu</h3>
+    <div class="app u-full-height u-full-width">
+        <span class="text-center">Ana are mere, portocale, pere si mure =></span>
+        <span class="text-center">{{ totalNumber() }}</span>
+        <br><br>
+        <span class="text-center">Toata viata am calatorit si m-am plimbat =></span>
+        <span class="text-center">{{ totalSubstr() }}</span>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "h3",
+            el: ".app",
             data: {
-                headingStyle: {
-                    fontSize: '40px',
-                    textAlign: 'center',
-                    textTransform: 'uppercase'
-                }
-            }
+                numberOfWords: "Ana are mere, portocale, pere si mure",
+                theSubstr: "Toata viata am calatorit si m-am plimbat",
+            },
+            methods: {
+                totalNumber: function() {
+                    return this.numberOfWords.length + " " + "words";
+                },
+                totalSubstr: function() {
+                    return this.theSubstr.substr(4, 13);
+                },
+            },
         });
     </script>
 </body>
