@@ -31,8 +31,8 @@
 
 <body>
 
-    <div id="list-container" class="u-full-width">
-        <ul v-show="slideVisible" :style="styleList" :class="listGroup">
+    <div id="list" class="u-full-width">
+        <ul v-show="slideVisible" :class="listGroup">
             <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
         </ul>
         <button class="btn btn-success center-block" @click="slideVisible = !slideVisible">Click</button>
@@ -40,16 +40,9 @@
 
     <script type="text/javascript">
         new Vue({
-
-            el: "#list-container",
+            el: "#list",
             data: {
                 names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
-                styleList: {
-                    fontSize: '15px',
-                    margin: '30px auto',
-                    maxWidth: '125px',
-                    textAlign: 'center'
-                },
                 listGroup: 'list-group center-block',
                 listGroupItem: 'list-group-item',
                 slideVisible: {
@@ -58,6 +51,15 @@
             }
         });
     </script>
+
+    <style>
+        #list>ul {
+            font-size: 5px;
+            margin: 30px auto;
+            max-width: 125px;
+            text-align: center;
+        }
+    </style>
 </body>
 
 </html>
