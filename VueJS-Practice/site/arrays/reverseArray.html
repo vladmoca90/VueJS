@@ -30,20 +30,21 @@
 <body>
     <div id="app">
         <br><br>
-        <button class="btn btn-primary">Reverse</button>
-        <div>["Alex", "Vlad", "Andreea", "Horia"]</div>
-        <p>{{ reverseArray }}</p>
+        <button class="btn btn-primary" @click="reverseArray">Reverse</button>
+        <br><br>
+        <div>{{ totalArray}}</div>
+        <p>{{ myArray }}</p>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: "#app",
             data: {
-                array: ["Alex", "Vlad", "Andreea", "Horia"],
+                totalArray: ["Alex", "Vlad", "Andreea", "Horia"],
             },
             methods: {
                 reverseArray: function() {
-                    return this.array.reverse();
+                    myArray = this.totalArray.reverse();
                 },
             }
         });
