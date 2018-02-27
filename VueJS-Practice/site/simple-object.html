@@ -32,7 +32,7 @@
 <body>
     <div id="object" class="center-block">
         <ul class="list-group">
-            <li class="list-group-item" v-for="person in persons" v-html="person.name"></li>
+            <li class="list-group-item" v-for="person in persons">{{ person.name }}</li>
         </ul>
     </div>
 

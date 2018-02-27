@@ -31,7 +31,7 @@
     <div id="app" :class="appStyle">
         <p v-html="myArray"></p>
         <button @click.once="spliceArray">Splice</button>
-        <p v-html="resultArray"></p>
+        <p>{{ resultArray }}</p>
     </div>
 
     <script type="text/javascript">

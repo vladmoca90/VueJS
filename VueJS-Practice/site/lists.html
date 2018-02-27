@@ -32,7 +32,7 @@
 <body>
     <div id="list-container" class="u-full-width">
         <ul :style="styleList" :class="listGroup">
-            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
+            <li v-for="name in names" :class="listGroupItem">{{ name }}</li>
         </ul>
     </div>
 
