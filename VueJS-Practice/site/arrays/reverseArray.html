@@ -29,8 +29,10 @@
 
 <body>
     <div id="app">
+        <br><br>
         <button class="btn btn-primary">Reverse</button>
         <div>["Alex", "Vlad", "Andreea", "Horia"]</div>
+        <p v-html="reverseArray"></p>
     </div>
 
     <script type="text/javascript">
@@ -41,7 +43,7 @@
             },
             methods: {
                 reverseArray: function() {
-
+                    return this.array.reverse();
                 },
             }
         });
