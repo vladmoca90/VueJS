@@ -29,8 +29,8 @@
 
 <body>
     <div id="app" :class="appStyle">
-        <p v-html="myArray"></p>
-        <button @click.once="spliceArray">Splice</button>
+        <p>{{ myArray }}</p>
+        <button @click="spliceArray" :disabled="false">Splice</button>
         <p>{{ resultArray }}</p>
     </div>
 
@@ -42,11 +42,11 @@
                     display: "block",
                     margin: "auto"
                 },
-                myArray: ["Ana", "Vlad", 29, "Alex", 11]
+                myArray: ["Ana", "Vlad", 29, "Alex", 11, "Andreea", 0, true]
             },
             methods: {
                 spliceArray: function() {
-                    resultArray = this.myArray.splice(1, 2, "Ioana")
+                    resultArray = this.myArray.splice(1, 2, "Ioana");
                 }
             }
         });
