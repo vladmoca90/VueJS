@@ -28,27 +28,22 @@
 </head>
 
 <body>
-    <div id="app" :class="appStyle">
-        <p>{{ myArray }}</p>
-        <button @click.once="spliceArray" :disabled="false">Splice</button>
-        <p>{{ resultArray }}</p>
+    <div id="app">
+        <span>{{ myArray }}</span>
+        <span>{{ spliceArray }}</span>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: "#app",
             data: {
-                appStyle: {
-                    display: "block",
-                    margin: "auto"
-                },
-                myArray: ["Ana", "Vlad", 29, "Alex", 11, "Andreea", 0, true]
+                myArray: ["Ana", "Vlad", 29, "Alex", 11, "Andreea", 0, true],
             },
-            methods: {
+            computed: {
                 spliceArray: function() {
-                    resultArray = this.myArray.splice(1, 7);
-                }
-            }
+                    this.myArray.splice(1, 7);
+                },
+            },
         });
     </script>
 </body>
