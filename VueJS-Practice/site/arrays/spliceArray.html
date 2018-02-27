@@ -30,7 +30,7 @@
 <body>
     <div id="app" :class="appStyle">
         <p>{{ myArray }}</p>
-        <button @click="spliceArray" :disabled="false">Splice</button>
+        <button @click.once="spliceArray" :disabled="false">Splice</button>
         <p>{{ resultArray }}</p>
     </div>
 
@@ -46,7 +46,7 @@
             },
             methods: {
                 spliceArray: function() {
-                    resultArray = this.myArray.splice(1, 2, "Ioana");
+                    resultArray = this.myArray.splice(1, 7);
                 }
             }
         });
