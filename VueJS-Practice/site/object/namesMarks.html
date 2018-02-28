@@ -32,7 +32,7 @@
 <body>
     <div id="list-container" class="u-full-width">
         <ol>
-            <li v-for="name in names" :key="name.name">{{ name.name }}</li>
+            <li v-for="name in names" :key="name.name" v-if="showName">{{ name.name }}</li>
         </ol>
     </div>
 
@@ -61,6 +61,7 @@
                     mark: 9.76,
                     id: 3,
                 }],
+                showName: false,
             },
             methods: {
 
