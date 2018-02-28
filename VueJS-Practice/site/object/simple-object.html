@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <div id="object" class="center-block">
+    <div id="list" class="center-block">
         <ul class="list-group">
             <li class="list-group-item" v-for="person in persons" :key="person.name">{{ person.name }}</li>
         </ul>
@@ -61,7 +61,7 @@
         });
     </script>
     <style>
-        #object {
+        #list {
             margin-top: 50px;
             max-width: 200px;
             text-align: center;
