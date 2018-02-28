@@ -31,9 +31,9 @@
 
 <body>
     <div id="list-container" class="u-full-width">
-        <ul :style="styleList" :class="listGroup">
-            <li v-for="name in names" :class="listGroupItem">{{ name }}</li>
-        </ul>
+        <ol class="list-group">
+            <li v-for="name in names">{{ name }}</li>
+        </ol>
     </div>
 
     <script type="text/javascript">
@@ -48,6 +48,14 @@
         });
     </script>
 
+    <style type="text/css">
+        #list-container {
+            font-size: 15px;
+            margin: 50px auto;
+            max-width: 300px;
+            text-align: center;
+        }
+    </style>
 </body>
 
 </html>
