@@ -19,7 +19,7 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue.js"></script>
+    <script type="text/javascript" src="../../scripts/vue.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
@@ -31,8 +31,8 @@
 
 <body>
     <div id="list-container" class="u-full-width">
-        <ol class="list-group">
-            <li v-for="name in names">{{ name }}</li>
+        <ol>
+            <li v-for="name in names" :key="name.name">{{ name.name }}</li>
         </ol>
     </div>
 
@@ -68,7 +68,6 @@
             font-size: 15px;
             margin: 50px auto;
             max-width: 300px;
-            text-align: center;
         }
     </style>
 </body>
