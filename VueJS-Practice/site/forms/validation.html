@@ -28,29 +28,27 @@
 </head>
 
 <body>
-    <div id="intro" class="u-full-width u-full-height">
-        <input type="text" maxlength="20" size="20" v-model="inputContent" />
-        <p>{{ inputContent }}</p>
+    <div id="formular" class="u-full-width u-full-height">
+        <form class="form-horiontal">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" class="form-control" v-model="name" />
+            </div>
+        </form>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#intro",
-            data: {
-                inputContent: "",
-            },
+            el: "#formular",
+            data: {},
         });
     </script>
 
     <style scope>
-        #intro {
-            margin: 0 auto;
-            max-width: 200px;
-            min-height: 200px;
-        }
-        
-        #intro>input {
-            margin: 70px auto;
+        #formular {
+            margin: 50px auto;
+            max-width: 300px;
+            border: 1px solid #eee;
         }
     </style>
 </body>
