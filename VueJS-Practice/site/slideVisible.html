@@ -33,7 +33,7 @@
 
     <div id="list" class="u-full-width">
         <ul v-show="slideVisible" class="list-group center-block">
-            <li v-for="name in names" v-text="name" class="list-group-item"></li>
+            <li v-for="name in names" class="list-group-item">{{ name }}</li>
         </ul>
         <button class="btn btn-success center-block" @click="slideVisible = !slideVisible">Click</button>
     </div>
@@ -44,7 +44,7 @@
             data: {
                 names: ["Joe", "Mary", "Jane", "Jack", "Erika"],
                 slideVisible: {
-                    return: true
+                    return: true,
                 }
             }
         });

@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Splice Array</title>
+    <title>Reverse Array</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -29,13 +29,22 @@
 
 <body>
     <div id="app">
-
+        <button class="btn btn-primary" @click="reverseArray">Reverse</button>
+        <div>{{ totalArray}}</div>
+        <p>{{ myArray }}</p>
     </div>
 
     <script type="text/javascript">
         new Vue({
-
-
+            el: "#app",
+            data: {
+                totalArray: ["Alex", "Vlad", "Andreea", "Horia"],
+            },
+            methods: {
+                reverseArray: function() {
+                    myArray = this.totalArray.reverse();
+                },
+            }
         });
     </script>
 </body>

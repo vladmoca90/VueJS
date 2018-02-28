@@ -30,15 +30,16 @@
 </head>
 
 <body>
-    <div id="object">
+    <div id="list" class="center-block">
         <ul class="list-group">
-            <li class="list-group-item" v-for="(index,person) in persons" v-html="person.name"></li>
+            <li class="list-group-item" v-for="person in persons" :key="person.name">{{ person.name }}</li>
         </ul>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: "#object",
+            props: Object,
             data: {
                 persons: [{
                     name: "Alexandru",
@@ -54,8 +55,19 @@
                     country: "United States of America"
                 }]
             },
+            computed: {
+
+            },
         });
     </script>
+    <style>
+        #list {
+            margin-top: 50px;
+            max-width: 200px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
 </body>
 
 </html>

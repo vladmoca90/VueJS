@@ -23,21 +23,39 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/lists.vue"></script>
+    <script type="text/javascript" src="....//scripts/lists.vue"></script>
 
-    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+    <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
 
 </head>
 
 <body>
     <div id="list-container" class="u-full-width">
-        <ul :style="styleList" :class="listGroup">
-            <li v-for="name in names" v-text="name" :class="listGroupItem"></li>
-        </ul>
+        <ol class="list-group">
+            <li v-for="name in names">{{ name }}</li>
+        </ol>
     </div>
 
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: "#list-container",
+            data: {
+                names: [{}, {}, {}, {}, {}],
+            },
+            methods: {
 
+            },
+        });
+    </script>
+
+    <style type="text/css">
+        #list-container {
+            font-size: 15px;
+            margin: 50px auto;
+            max-width: 300px;
+            text-align: center;
+        }
+    </style>
 </body>
 
 </html>

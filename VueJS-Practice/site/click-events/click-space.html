@@ -30,14 +30,14 @@
 </head>
 
 <body>
-    <div class="app-1 u-full-width" :style="{ margin: '50px auto' }">
+    <div class="app u-full-width" :style="{ margin: '50px auto' }">
         <button class="btn btn-info" @click.space="counter += 4">Add 4</button>
         <p>The button above has been clicked {{ counter }} times.</p>
     </div>
 
     <script type="text/javascript">
-        var appOne = new Vue({
-            el: '.app-1',
+        new Vue({
+            el: '.app',
             data: {
                 counter: 0
             }
