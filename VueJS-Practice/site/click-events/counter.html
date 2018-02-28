@@ -23,20 +23,20 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/counter.vue"></script>
+    <script type="text/javascript" src="../../scripts/counter.vue"></script>
 
-    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+    <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
 
 </head>
 
 <body>
-    <div id="app">
+    <div id="count">
         <button @click="increase">Increase</button>
         <p>{{ counter }}</p>
     </div>
     <script type="text/javascript">
         new Vue({
-            el: "#app",
+            el: "#count",
             data: {
                 counter: 0,
             },
@@ -44,7 +44,7 @@
                 increase: function() {
                     this.counter += 1;
                 },
-            }
+            },
         });
     </script>
 </body>
