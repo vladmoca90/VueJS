@@ -61,12 +61,20 @@
                 <span>{{ emailPassword }}</span>
             </div>
             <div class="form-group">
-                <label for="address">Select your region:</label>
-                <input type="checkbox" v-model="selectCountry" />
-                <input type="checkbox" v-model="selectCountry" />
-                <input type="checkbox" v-model="selectCountry" />
-                <input type="checkbox" v-model="selectCountry" />
-                <input type="checkbox" v-model="selectCountry" />
+                <label for="languages">Languages:</label>
+                <input type="checkbox" v-model="languages" />
+                <input type="checkbox" v-model="languages" />
+                <input type="checkbox" v-model="languages" />
+                <input type="checkbox" v-model="languages" />
+                <input type="checkbox" v-model="languages" />
+            </div>
+            <div class="form-group">
+                <label for="selectRegion">Select your region:</label>
+                <input type="radio" v-model="selectRegion" />
+                <input type="radio" v-model="selectRegion" />
+                <input type="radio" v-model="selectRegion" />
+                <input type="radio" v-model="selectRegion" />
+                <input type="radio" v-model="selectRegion" />
             </div>
         </form>
     </div>
