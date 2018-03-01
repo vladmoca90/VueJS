@@ -19,6 +19,12 @@
             },
             // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Sass Compile",
+            "type": "shell",
+            "command": "node-sass styles.scss styles.css",
+            "group": "build"
         }
     ]
 }
