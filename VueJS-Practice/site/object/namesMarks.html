@@ -63,16 +63,13 @@
                 }],
             },
             methods: {
-                /* showName: function() {
-                     for (i = 0; i < persons.length; i++) {
-                         person.id = person.id[i];
-                     }
-                     if (person.id == id) {
-                         return this.person.name;
-                     } else {
-                         return " ";
-                     }
-                 }, */
+                showName: function() {
+                    if (person.id == id) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
             },
         });
     </script>
