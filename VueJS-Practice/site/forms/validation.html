@@ -33,32 +33,32 @@
             <div class="form-group">
                 <label for="firstName">First Name:</label>
                 <input class="u-full-with" type="text" v-model="firstName" />
-                <span></span>
+                <span>{{ firstName }}</span>
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name:</label>
-                <input class="u-full-with" type="text" v-model="LastName" />
-                <span></span>
+                <input class="u-full-with" type="text" v-model="lastName" />
+                <span>{{ lastName }}</span>
             </div>
             <div class="form-group">
                 <label for="age">Age:</label>
                 <input class="u-full-with" type="number" v-model="age" />
-                <span></span>
+                <span>{{ age }}</span>
             </div>
             <div class="form-group">
                 <label for="address">Address:</label>
                 <input class="u-full-with" type="text" v-model="homeAddress" />
-                <span></span>
+                <span>{{ homeAddress }}</span>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input class="u-full-with" type="email" v-model="emailAddress" />
-                <span></span>
+                <span>{{ emailAddress }}</span>
             </div>
             <div class="form-group">
                 <label for="address">Password:</label>
                 <input class="u-full-with" type="password" v-model="emailPassword" />
-                <span></span>
+                <span>{{ email Password }}</span>
             </div>
         </form>
     </div>
@@ -67,8 +67,8 @@
         new Vue({
             el: "#formular",
             data: {
-                lastName: "",
                 firstName: "",
+                lastName: "",
                 age: "",
                 homeAddress: "",
                 emailAddress: "",
