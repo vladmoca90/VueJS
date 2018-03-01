@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Lists</title>
+    <title>Names and marks</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -19,11 +19,11 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue.js"></script>
+    <script type="text/javascript" src="../../scripts/vue.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="....//scripts/lists.vue"></script>
+    <script type="text/javascript" src="../../scripts/names-marks.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
 
@@ -31,8 +31,8 @@
 
 <body>
     <div id="list-container" class="u-full-width">
-        <ol class="list-group">
-            <li v-for="name in names">{{ name }}</li>
+        <ol>
+            <li v-for="person in persons" :key="person.name" v-if="showName">{{ person.name }}</li>
         </ol>
     </div>
 
@@ -40,10 +40,36 @@
         new Vue({
             el: "#list-container",
             data: {
-                names: [{}, {}, {}, {}, {}],
+                persons: [{
+                    name: "Antochi Andreea-Daniela",
+                    mark: 8.50,
+                    id: 1,
+                }, {
+                    name: "Balineanu Contantin-Ionut",
+                    mark: 7.74,
+                    id: 2,
+                }, {
+                    name: "Barboi Andrei",
+                    mark: 8.14,
+                    id: 1,
+                }, {
+                    name: "Ciucur Alina",
+                    mark: 8.88,
+                    id: 2,
+                }, {
+                    name: "Despre Ioana-Francesca",
+                    mark: 9.76,
+                    id: 3,
+                }],
             },
             methods: {
-
+                showName: function() {
+                    if (person.id == id) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
             },
         });
     </script>
@@ -53,7 +79,6 @@
             font-size: 15px;
             margin: 50px auto;
             max-width: 300px;
-            text-align: center;
         }
     </style>
 </body>

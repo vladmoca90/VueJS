@@ -1,46 +1,76 @@
-﻿.u-relative {
-  position: relative; }
+.u-relative {
+    position: relative;
+}
 
 .u--absolute {
-  position: absolute; }
+    position: absolute;
+}
 
 .u-fixed {
-  position: fixed; }
+    position: fixed;
+}
 
 .u-text--bold {
-  font-weight: bold; }
+    font-weight: bold;
+}
+
+.u-text--black {
+    color: #000;
+}
 
 .u-text--white {
-  color: #fff; }
+    color: #fff;
+}
 
 .u-text--no-decoration {
-  text-decoration: none; }
+    text-decoration: none;
+}
 
 .u-full-width {
-  width: 100%; }
+    width: 100%;
+}
 
 .u-full-height {
-  height: 100%; }
+    height: 100%;
+}
 
 .u-no-border {
-  border: 0; }
+    border: 0;
+}
 
 .u-inline {
-  display: inline; }
+    display: inline;
+}
 
 .u-block {
-  display: block; }
+    display: block;
+}
+
+.u-table {
+    display: table;
+}
 
 .u-flex {
-  display: flex; }
+    display: flex;
+}
+
+.u-flex--inline {
+    display: inline-flex;
+}
 
 .u-center {
-  align-items: center;
-  justify-content: center; }
+    align-items: center;
+    justify-content: center;
+}
+
+.u-flexend {
+    justify-content: flex-end;
+}
 
 .u-space-between {
-  justify-content: space-between; }
+    justify-content: space-between;
+}
 
 .u-space-around {
-  justify-content: space-around; }
-
+    justify-content: space-around;
+}
