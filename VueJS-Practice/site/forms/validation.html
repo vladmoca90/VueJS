@@ -33,26 +33,32 @@
             <div class="form-group">
                 <label for="firstName">First Name:</label>
                 <input class="u-full-with" type="text" v-model="firstName" />
+                <span></span>
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name:</label>
                 <input class="u-full-with" type="text" v-model="LastName" />
+                <span></span>
             </div>
             <div class="form-group">
                 <label for="age">Age:</label>
                 <input class="u-full-with" type="number" v-model="age" />
+                <span></span>
             </div>
             <div class="form-group">
                 <label for="address">Address:</label>
-                <input class="u-full-with" type="text" v-model="home-address" />
+                <input class="u-full-with" type="text" v-model="homeAddress" />
+                <span></span>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input class="u-full-with" type="email" v-model="email-address" />
+                <input class="u-full-with" type="email" v-model="emailAddress" />
+                <span></span>
             </div>
             <div class="form-group">
                 <label for="address">Password:</label>
-                <input class="u-full-with" type="password" v-model="email-password" />
+                <input class="u-full-with" type="password" v-model="emailPassword" />
+                <span></span>
             </div>
         </form>
     </div>
@@ -60,7 +66,14 @@
     <script type="text/javascript">
         new Vue({
             el: "#formular",
-            data: {},
+            data: {
+                lastName: "",
+                firstName: "",
+                age: "",
+                homeAddress: "",
+                emailAddress: "",
+                emailPassword: "",
+            },
         });
     </script>
 
@@ -71,8 +84,6 @@
             max-width: 500px;
             padding: 20px;
         }
-        
-        #formular>form>div {}
         
         #formular>form>div input {
             max-width: 200px;
