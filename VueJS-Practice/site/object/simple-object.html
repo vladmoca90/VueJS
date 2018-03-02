@@ -31,8 +31,8 @@
 
 <body>
     <div id="list" class="center-block">
-        <ul class="list-group">
-            <li class="list-group-item" v-for="person in persons" :key="person.name">{{ person.name }}</li>
+        <ul role="list" class="list-group">
+            <li role="listitem" class="list-group-item" v-for="person in persons" :key="person.name">{{ person.name }}</li>
         </ul>
     </div>
 

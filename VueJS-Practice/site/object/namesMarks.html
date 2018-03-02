@@ -31,8 +31,8 @@
 
 <body>
     <div id="list-container" class="u-full-width">
-        <ol>
-            <li v-for="person in persons" :key="person.name" v-if="showName">{{ person.name }}</li>
+        <ol role="list">
+            <li role="listitem" v-for="person in persons" :key="person.name" v-if="showName">{{ person.name }}</li>
         </ol>
     </div>
 
