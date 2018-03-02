@@ -30,18 +30,19 @@
 <body>
     <!-- Components with a local registration -->
 
-    <my-component></my-component>
+    <div id="app">
+        <my-component></my-component>
+    </div>
 
     <script type="text/javascript">
         var Child = {
-            template: '<div>A custom component!</div>'
+            template: "<div>This is my first local component</div>"
         }
 
         new Vue({
-            // ...
+            el: "#app",
             components: {
-                // <my-component> will only be available in parent's template
-                'my-component': Child
+                "my-component": Child
             }
         })
     </script>
