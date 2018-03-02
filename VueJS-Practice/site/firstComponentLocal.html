@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>First Vue Component</title>
+    <title>First Vue Component Local</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,22 +23,25 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/firstComponent.vue"></script>
-
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
 </head>
 
 <body>
-    <parent-component message="This is a component"></parent-component>
+    <!-- Components with a local registration -->
+
+    <parentComponent></parentComponent>
 
     <script type="text/javascript">
-        Vue.component('parent-component', {
+        var myChild = {
+            template: "This is my first component"
+        };
 
-            props: ['message'],
-
-            template: '<span>{{ message }}</span>'
-        })
+        new Vue({
+            components: {
+                "parentComponent": myChild
+            }
+        });
     </script>
 </body>
 
