@@ -19,29 +19,31 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue.js"></script>
+    <script type="text/javascript" src="../scripts/js/vue.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+    <link rel="stylesheet" type="text/css" href="../content/utilities/utilities.css" />
 
 </head>
 
 <body>
     <!-- Components with a local registration -->
 
-    <parentComponent></parentComponent>
+    <my-component></my-component>
 
     <script type="text/javascript">
-        var myChild = {
-            template: "This is my first component"
-        };
+        var Child = {
+            template: '<div>A custom component!</div>'
+        }
 
         new Vue({
+            // ...
             components: {
-                "parentComponent": myChild
+                // <my-component> will only be available in parent's template
+                'my-component': Child
             }
-        });
+        })
     </script>
 </body>
 
