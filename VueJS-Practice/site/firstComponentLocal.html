@@ -32,6 +32,7 @@
 
     <div id="app">
         <my-component></my-component>
+        <scnd-comp></scnd-comp>
     </div>
 
     <script type="text/javascript">
@@ -39,10 +40,15 @@
             template: "<div>This is my first local component</div>"
         }
 
+        var scnd = {
+            template: "<div>This is the second local component</div>"
+        }
+
         new Vue({
             el: "#app",
             components: {
-                "my-component": Child
+                "my-component": Child,
+                "scnd-comp": scnd
             }
         })
     </script>
