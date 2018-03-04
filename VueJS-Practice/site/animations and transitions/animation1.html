@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Animatio 1</title>
+    <title>Animation 1</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,72 +23,65 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
+    <style>
+        @import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+        .trans-block {
+            width: 120px;
+            height: 120px;
+            background: #bbb;
+        }
+    </style>
+
 </head>
 
 <body>
-    <div id="app">
-
-        <button @click="increase(-3, 5)">Increase</button>
-
-        <button @click="counter++">+</button>
-
-        <p>{{ counter }}</p>
-
-        <div :style="coordinatesStyle">
-
-            <p @mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <h1>Animations</h1>
+                <button class="btn btn-primary" @click="load = !load">Load / Remove element</button>
+                <br><br>
+                <transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @enter-cancelled="enterCancelled" @before-leave="beforeLeave" @leave="leave" @after-leave="afterLeave" @leave-cancel="leaveCancel">
+                    <div class="trans-block" v-if="load"></div>
+                </transition>
+            </div>
         </div>
-
-        <p></p>
-
-        <input type="text" @keyup.exact.a="anAlert" @keydown="value = $event.target.value" />
-
-        <p :style="textValueColor">
-            <span>{{ value }}</span>
-        </p>
-
-        <button @click="showPrompt">Your details</button>
-
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: '#app',
+            el: ".container",
             data: {
-                counter: 0,
-                x: 0,
-                y: 0,
-                coordinatesStyle: {
-                    backgroundColor: '#00f',
-                    padding: '5px',
-                    width: '280px',
-                    color: '#fff',
-                },
-                inputIdentity: {
-                    placeholder: 'Write here whatever you want'
-                },
-                textValueColor: {
-                    color: '#f00',
-                    fontWeight: 'bold',
-                },
-                value: '',
+                show: false,
+                alertAnimation: "fade",
+                load: true,
             },
             methods: {
-                increase: function(step1, step2) {
-                    this.counter += (step1 + step2);
+                beforeEnter(el) {
+                    console.log("beforeEnter");
                 },
-                updateCoordinates: function(event) {
-                    this.x = event.clientX;
-                    this.y = (2 * event.clientX).toString(8);
+                enter(el, done) {
+                    console.log("enter");
                 },
-                anAlert: function() {
-                    this.event = alert("You just deleted the last character");
+                afterEnter(el) {
+                    console.log("afterEnter");
                 },
-                showPrompt: function() {
-                    this.event = prompt("Please type your name here");
+                enterCancelled(el) {
+                    console.log("enterCancelled");
                 },
-
+                beforeLeave(el) {
+                    console.log("beforeLeave");
+                },
+                leave(el, done) {
+                    console.log("leave");
+                    done();
+                },
+                afterLeave(el) {
+                    console.log("afterLeave");
+                },
+                leaveCancelled(el) {
+                    console.log("afterCancelled");
+                }
             }
         });
     </script>
