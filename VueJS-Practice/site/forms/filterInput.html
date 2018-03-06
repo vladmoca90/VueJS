@@ -24,99 +24,211 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
     <style>
-        @import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
-        .fade-enter {
-            opacity: 0;
+        html,
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
         
-        .fade-enter-active {
-            transition: opacity 1s;
-            opacity: 1;
+        div#app {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
         
-        .fade-leave {
-            /* opacity: 1; */
+        div#app .search-wrapper {
+            position: relative;
         }
         
-        .fade-leave-active {
-            transition: 1s;
-            opacity: 0;
+        div#app .search-wrapper label {
+            position: absolute;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+            top: 8px;
+            left: 12px;
+            z-index: -1;
+            transition: 0.15s all ease-in-out;
         }
         
-        .slide-enter {
-            /* transform: translateY(20px); */
+        div#app .search-wrapper input {
+            padding: 4px 12px;
+            color: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            transition: 0.15s all ease-in-out;
+            background: white;
         }
         
-        .slide-enter-active {}
-        
-        .slide-leave {}
-        
-        .slide-leave-active {
-            animation: slide-out 1s ease-out forwards;
-            transition: opacity 3s;
-            opacity: 0;
+        div#app .search-wrapper input:focus {
+            outline: none;
+            transform: scale(1.05);
         }
         
-        @keyframes slide-in {
-            from {
-                transform: translateY(20px);
-            }
-            to {
-                transform: translateY(0);
-            }
+        div#app .search-wrapper input:focus+label {
+            font-size: 10px;
+            transform: translateY(-24px) translateX(-12px);
         }
         
-        @keyframes slide-out {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(20px);
-            }
+        div#app .search-wrapper input::-webkit-input-placeholder {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 100;
+        }
+        
+        div#app .wrapper {
+            display: flex;
+            max-width: 444px;
+            flex-wrap: wrap;
+            padding-top: 12px;
+        }
+        
+        div#app .card {
+            box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+            max-width: 124px;
+            margin: 12px;
+            transition: 0.15s all ease-in-out;
+        }
+        
+        div#app .card:hover {
+            transform: scale(1.1);
+        }
+        
+        div#app .card a {
+            text-decoration: none;
+            padding: 12px;
+            color: #03a9f4;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        div#app .card a img {
+            height: 100px;
+        }
+        
+        div#app .card a small {
+            font-size: 10px;
+            padding: 4px;
+        }
+        
+        div#app .hotpink {
+            background: hotpink;
+        }
+        
+        div#app .green {
+            background: green;
+        }
+        
+        div#app .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
         }
     </style>
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                <h1>Animations</h1>
-                <hr>
-                <select v-model="alertAnimation">
-              <option>fade</option>
-              <option>slide</option>
-            </select>
-                <button class="btn btn-primary" @click="show = !show">Show Alert</button>
-                <br><br>
-                <transition name="fade">
-                    <div class="alert alert-info" v-if="show">This is some Info</div>
-                </transition>
-                <br><br>
-                <transition name="slide">
-                    <div class="alert alert-info" v-if="show">This is some Info</div>
-                </transition>
-                <br><br>
-                <transition enter-active-class="animated bounce" leave-active-class="animated shake">
-                    <div class="alert alert-info" v-if="show">This is some Info</div>
-                </transition>
-                <br><br>
-                <transition :name="alertAnimation" mode="out-in">
-                    <div class="alert alert-info" v-if="show" key="info">This is some Info</div>
-                    <div class="alert alert-warning" v-else key="warning">This is some Info</div>
-                </transition>
+
+    <div id="app">
+        <div class="search-wrapper">
+            <input type="text" v-model="search" placeholder="Search title.." />
+            <label>Search title:</label>
+        </div>
+        <div class="wrapper">
+            <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link" target="_blank">
+                    <img v-bind:src="post.img" />
+                    <small>posted by: {{ post.author }}</small> {{ post.title }}
+                </a>
             </div>
         </div>
     </div>
 
     <script type="text/javascript">
-        new Vue({
-            el: ".container",
-            data: {
-                show: true
+        class Post {
+            constructor(title, link, author, img) {
+                this.title = title;
+                this.link = link;
+                this.author = author;
+                this.img = img;
             }
-        });
+        }
+
+        const app = new Vue({
+            el: '#app',
+            data: {
+                search: '',
+                postList: [
+                    new Post(
+                        'Vue.js',
+                        'https://vuejs.org/',
+                        'Chris',
+                        'https://vuejs.org//images/logo.png'
+                    ),
+                    new Post(
+                        'React.js',
+                        'https://facebook.github.io/react/',
+                        'Tim',
+                        'https://daynin.github.io/clojurescript-presentation/img/react-logo.png'
+                    ),
+                    new Post(
+                        'Angular.js',
+                        'https://angularjs.org/',
+                        'Sam',
+                        'https://angularjs.org/img/ng-logo.png'
+                    ),
+                    new Post(
+                        'Ember.js',
+                        'http://emberjs.com/',
+                        'Rachel',
+                        'http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200'
+                    ),
+                    new Post(
+                        'Meteor.js',
+                        'https://www.meteor.com/',
+                        'Chris',
+                        'http://hacktivist.in/introduction-to-nodejs-mongodb-meteor/img/meteor.png'
+                    ),
+                    new Post(
+                        'Aurelia',
+                        'http://aurelia.io/',
+                        'Tim',
+                        'https://cdn.auth0.com/blog/aurelia-logo.png'
+                    ),
+                    new Post(
+                        'Node.js',
+                        'https://nodejs.org/en/',
+                        'A. A. Ron',
+                        'https://code-maven.com/img/node.png'
+                    ),
+                    new Post(
+                        'Pusher',
+                        'https://pusher.com/',
+                        'Alex',
+                        'https://avatars1.githubusercontent.com/u/739550?v=3&s=400'
+                    ),
+                    new Post(
+                        'Feathers.js',
+                        'http://feathersjs.com/',
+                        'Chuck',
+                        'https://cdn.worldvectorlogo.com/logos/feathersjs.svg'
+                    ),
+                ]
+            },
+            computed: {
+                filteredList() {
+                    return this.postList.filter(post => {
+                        return post.title.toLowerCase().includes(this.search.toLowerCase())
+                    })
+                }
+            }
+        })
     </script>
 </body>
 
