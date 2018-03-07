@@ -33,9 +33,11 @@
         #app>input {
             display: inline-block;
             margin: 20px auto;
+            padding-left: 5px;
         }
         
-        #app>div {
+        #app>div.content-text {
+            border-radius: 10px;
             padding: 20px !important;
         }
         
@@ -52,15 +54,15 @@
     <div id="app" class="u-full-width">
         <input type="text" placeholder="Search..." v-model="query" />
         <span>{{ query }}</span>
-        <div class="jumbotron">
+        <div class="jumbotron content-text">
             <p>When using the DOM as your template (e.g. using the el option to mount an element with existing content), you will be subject to some restrictions that are inherent to how HTML works, because Vue can only retrieve the template content after
                 the browser has parsed and normalized it. Most notably, some elements such as and have restrictions on what elements can appear inside them, and some elements such as can only appear inside certain other elements.</p>
         </div>
-        <div class="jumbotron">
+        <div class="jumbotron content-text">
             <p>Reading is a large town on the Thames and Kennet rivers in southern England. It’s known for the annual Reading Festival, an outdoor rock music event. Shops and riverside restaurants dot the town centre. The Reading Museum contains exhibits
                 on the town’s history and displays a Victorian replica of the Bayeux Tapestry. The ruins of the 12th-century Reading Abbey lie beside Forbury Gardens, a Victorian formal garden.</p>
         </div>
-        <div class="jumbotron">
+        <div class="jumbotron content-text">
             <p>Berkshire is a county in south east England, west of London and is one of the home counties. It was recognised by the Queen as the Royal County of Berkshire in 1957 because of the presence of Windsor Castle, and letters patent were issued
                 in 1974. Berkshire is a county of historic origin and is a home county, ...</p>
         </div>
@@ -71,6 +73,9 @@
             el: '#app',
             data: {
                 query: '',
+            },
+            computed: {
+
             }
         });
     </script>
