@@ -23,17 +23,42 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-
-
-    <style></style>
-
+    <style type="text/css">
+        @import url('../../content/utilities/utilities.css');
+        #app {
+            margin: 0 auto;
+            max-width: 500px;
+        }
+        
+        #app>input {
+            margin: 20px auto;
+        }
+        
+        #app>div {
+            padding: 20px !important;
+        }
+        
+        #app>div>p {
+            font-size: 14px !important;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <div id="app">
+    <div id="app" class="u-full-width">
+        <input type="text" placeholder="Search..." v-model="query" />
+        <div class="jumbotron">
+            <p>When using the DOM as your template (e.g. using the el option to mount an element with existing content), you will be subject to some restrictions that are inherent to how HTML works, because Vue can only retrieve the template content after
+                the browser has parsed and normalized it. Most notably, some elements such as and have restrictions on what elements can appear inside them, and some elements such as can only appear inside certain other elements.</p>
+        </div>
+        <div class="jumbotron">
+            <p></p>
+        </div>
+        <div class="jumbotron">
+            <p></p>
+        </div>
     </div>
 
     <script type="text/javascript">
