@@ -19,8 +19,6 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue/vue.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
     <style type="text/css">
@@ -50,7 +48,7 @@
     <div id="app" class="u-full-width">
         <h1>Blog in blogs</h1>
         <input class="u-full-width" type="text" placeholder="Search..." v-model="query" />
-        <div v-for="blog in blogs" class="jumbotron content-text">
+        <div v-for="blog in allBlogs" class="jumbotron content-text">
             <h3>{{ blog.title }}</h3>
             {{ blog.content }}
         </div>
@@ -64,17 +62,21 @@
                 query: '',
             },
             computed: {
-
+                allBlogs() {
+                    return this.blogs.filter((blog) => {
+                        return blog.title.match(this.query)
+                    });
+                }
             },
             created() {
                 blog: [{
-                    title: 'First text',
+                    title: 'Berskshire',
                     content: '',
                 }, {
-                    title: 'Second text',
+                    title: 'Surrey',
                     content: '',
                 }, {
-                    title: 'Third text',
+                    title: 'Lincolnshire',
                     content: '',
                 }, ]
             },
