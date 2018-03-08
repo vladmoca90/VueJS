@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/vladmoca90/VueJS-Practice/issues"
   },
-  "homepage": "https://github.com/vladmoca90/VueJS-Practice#readme"
+  "homepage": "https://github.com/vladmoca90/VueJS-Practice#readme",
+  "keywords": [
+    "vuejs-practice"
+  ]
 }
