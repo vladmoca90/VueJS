@@ -24,7 +24,11 @@
     <style>
         #app {
             margin: 20px auto;
-            max-width: 250px;
+            max-width: 300px;
+        }
+        
+        #app>p {
+            padding-top: 15px;
         }
     </style>
 
@@ -32,10 +36,14 @@
 
 <body>
     <div id="app" class="u-full-width">
-        <button role="button" class="btn btn-primary" @click="removeFromArray">Remove ( - )</button>
+        <button role="button" class="btn btn-danger" @click="removeFromArray">Remove ( - )</button>
+
         <p>{{ removeArray }}</p>
 
-        <button role="button" class="btn btn-primary" @click="addInArray">Add ( + )</button>
+        <p></p>
+
+        <button role="button" class="btn btn-success" @click="addInArray">Add ( + )</button>
+
         <p>{{ addArray }}</p>
     </div>
 
