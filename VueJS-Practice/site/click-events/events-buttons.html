@@ -21,17 +21,32 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
+    <style type="text/css">
+        .app {
+            margin: 0 auto;
+            max-width: 200px;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="app u-full-width">
-        <button type="button" @click="" class="btn btn-success">Created</button>
+        <button type="button" @click="showCreated()" class="btn btn-success">Created</button>
 
-        <button type="button" @click="" class="btn btn-info">Updated</button>
+        <span></span>
 
-        <button type="button" @click="" class="btn btn-warning">Mounted</button>
+        <button type="button" @click="showUpdated()" class="btn btn-info">Updated</button>
 
-        <button type="button" @click="" class="btn btn-danger">Destroyed</button>
+        <span></span>
+
+        <button type="button" @click="showMounted()" class="btn btn-warning">Mounted</button>
+
+        <span></span>
+
+        <button type="button" @click="showDestroyed()" class="btn btn-danger">Destroyed</button>
+
+        <span></span>
     </div>
 
     <script type="text/javascript">
