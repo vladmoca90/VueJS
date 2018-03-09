@@ -55,9 +55,11 @@
                 addArray: ["Valentina", "Andrei", "Ioana", "Constantin"],
             },
             methods: {
-                removeFromArray: function() {},
+                removeFromArray: function() {
+                    return this.removeArray.pop('Vlad');
+                },
                 addInArray: function() {
-
+                    return this.addArray.shift('Claudiu');
                 },
             }
         });
