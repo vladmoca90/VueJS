@@ -29,32 +29,32 @@
             <div class="form-group personal-details">
                 <label for="firstName">First Name:</label>
                 <input class="u-full-with" type="text" v-model="firstName" />
-                <span>{{ firstName }}</span>
+                <span>{{ fieldRequired }}</span>
             </div>
             <div class="form-group personal-details">
                 <label for="lastName">Last Name:</label>
                 <input class="u-full-with" type="text" v-model="lastName" />
-                <span>{{ lastName }}</span>
+                <span>{{ fieldRequired }}</span>
             </div>
             <div class="form-group personal-details">
                 <label for="age">Age:</label>
                 <input class="u-full-with" type="number" v-model="text" />
-                <span>{{ age }}</span>
+                <span>{{ fieldRequired }}</span>
             </div>
             <div class="form-group personal-details">
                 <label for="address">Address:</label>
                 <input class="u-full-with" type="text" v-model="homeAddress" />
-                <span>{{ homeAddress }}</span>
+                <span>{{ fieldRequired }}</span>
             </div>
             <div class="form-group personal-details">
                 <label for="email">Email:</label>
                 <input class="u-full-with" type="email" v-model="emailAddress" />
-                <span>{{ emailAddress }}</span>
+                <span>{{ fieldRequired }}</span>
             </div>
             <div class="form-group personal-details">
                 <label for="address">Password:</label>
                 <input class="u-full-with" type="password" v-model="emailPassword" />
-                <span>{{ emailPassword }}</span>
+                <span>{{ fieldRequired }}</span>
             </div>
             <div class="form-group form-lists">
                 <label for="languages">Languages:</label>
@@ -109,6 +109,7 @@
                 homeAddress: null,
                 emailAddress: null,
                 emailPassword: null,
+                fieldRequired: null,
             },
             methods: {
                 checkForm: function() {
