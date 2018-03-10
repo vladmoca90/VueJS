@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Simple Object</title>
+    <title>First Vue Component Local</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -19,55 +19,37 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/object.vue"></script>
-
-    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+    <link rel="stylesheet" type="text/css" href="../content/utilities/utilities.css" />
 
 </head>
 
 <body>
-    <div id="list" class="center-block">
-        <ul role="list" class="list-group">
-            <li role="listitem" class="list-group-item" v-for="person in persons" :key="person.name">{{ person.name }}</li>
-        </ul>
+    <!-- Components with a local registration -->
+
+    <div id="app">
+        <my-component></my-component>
+        <scnd-comp></scnd-comp>
     </div>
 
     <script type="text/javascript">
-        new Vue({
-            el: "#object",
-            props: Object,
-            data: {
-                persons: [{
-                    name: "Alexandru",
-                    age: 27,
-                    country: "United Kingdom"
-                }, {
-                    name: "Vladimir",
-                    age: 24,
-                    country: "Romania"
-                }, {
-                    name: "Mariana",
-                    age: 29,
-                    country: "United States of America"
-                }]
-            },
-            computed: {
-
-            },
-        });
-    </script>
-    <style>
-        #list {
-            margin-top: 50px;
-            max-width: 200px;
-            text-align: center;
-            width: 100%;
+        var Child = {
+            template: "<div>This is my first local component</div>"
         }
-    </style>
+
+        var scnd = {
+            template: "<div>This is the second local component</div>"
+        }
+
+        new Vue({
+            el: "#app",
+            components: {
+                "my-component": Child,
+                "scnd-comp": scnd
+            }
+        })
+    </script>
 </body>
 
 </html>

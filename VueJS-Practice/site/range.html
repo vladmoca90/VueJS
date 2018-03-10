@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Click</title>
+    <title>Range</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -19,26 +19,22 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-
-    <script type="text/javascript" src="../scripts/click-events.vue"></script>
-
-    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
 </head>
 
 <body>
-    <div class="app u-full-width" :style="{ margin: '25px auto' }">
-        <button class="btn btn-success" @click="counter += 1">Add 1</button>
-        <p>The button above has been clicked {{ counter }} times.</p>
+    <div class="text-center">
+        <p>
+            <span v-for="n in 10">{{ " " + n + " " }}</span>
+        </p>
     </div>
+
     <script type="text/javascript">
-        var app = new Vue({
-            el: '.app',
+        new Vue({
+            el: 'div',
             data: {
-                counter: 0
+                n: 0
             }
         });
     </script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+
+    <title>Project1</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+
+        <button @click="increase(-3, 5)">Increase</button>
+
+        <button @click="counter++">+</button>
+
+        <p>{{ counter }}</p>
+
+        <div :style="coordinatesStyle">
+
+            <p @mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
+
+        </div>
+
+        <p></p>
+
+        <input type="text" @keyup.exact.a="anAlert" @keydown="value = $event.target.value" />
+
+        <p :style="textValueColor">
+            <span>{{ value }}</span>
+        </p>
+
+        <button @click="showPrompt">Your details</button>
+
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                x: 0,
+                y: 0,
+                coordinatesStyle: {
+                    backgroundColor: '#00f',
+                    padding: '5px',
+                    width: '280px',
+                    color: '#fff',
+                },
+                inputIdentity: {
+                    placeholder: 'Write here whatever you want'
+                },
+                textValueColor: {
+                    color: '#f00',
+                    fontWeight: 'bold',
+                },
+                value: '',
+            },
+            methods: {
+                increase: function(step1, step2) {
+                    this.counter += (step1 + step2);
+                },
+                updateCoordinates: function(event) {
+                    this.x = event.clientX;
+                    this.y = (2 * event.clientX).toString(8);
+                },
+                anAlert: function() {
+                    this.event = alert("You just deleted the last character");
+                },
+                showPrompt: function() {
+                    this.event = prompt("Please type your name here");
+                },
+
+            }
+        });
+    </script>
+</body>
+
+</html>

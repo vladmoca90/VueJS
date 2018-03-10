@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+
+    <title>Buttons with multiple events</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+    <style type="text/css">
+        .app {
+            margin: 0 auto;
+            max-width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="app u-full-width">
+        <button type="button" @click="showCreated()" class="btn btn-success">Created</button>
+
+        <span></span>
+
+        <button type="button" @click="showUpdated()" class="btn btn-info">Updated</button>
+
+        <span></span>
+
+        <button type="button" @click="showMounted()" class="btn btn-warning">Mounted</button>
+
+        <span></span>
+
+        <button type="button" @click="showDestroyed()" class="btn btn-danger">Destroyed</button>
+
+        <span></span>
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+            el: '.app',
+            data: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Simple Object</title>
+    <title>Add and remove array</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -19,55 +19,51 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <script type="text/javascript" src="../scripts/object.vue"></script>
-
-    <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
+    <style>
+        #app {
+            margin: 20px auto;
+            max-width: 350px;
+        }
+        
+        #app>p {
+            padding-top: 15px;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div id="list" class="center-block">
-        <ul role="list" class="list-group">
-            <li role="listitem" class="list-group-item" v-for="person in persons" :key="person.name">{{ person.name }}</li>
-        </ul>
+    <div id="app" class="u-full-width">
+        <button role="button" class="btn btn-danger" @click.once="removeFromArray">Remove ( - )</button>
+
+        <p>{{ removeArray }}</p>
+
+        <p></p>
+
+        <button role="button" class="btn btn-success" @click.once="addInArray">Add ( + )</button>
+
+        <p>{{ addArray }}</p>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#object",
-            props: Object,
+            el: "#app",
             data: {
-                persons: [{
-                    name: "Alexandru",
-                    age: 27,
-                    country: "United Kingdom"
-                }, {
-                    name: "Vladimir",
-                    age: 24,
-                    country: "Romania"
-                }, {
-                    name: "Mariana",
-                    age: 29,
-                    country: "United States of America"
-                }]
+                removeArray: ["Alex", "Vlad", "Andreea", "Horia"],
+                addArray: ["Valentina", "Andrei", "Ioana", "Constantin"],
             },
-            computed: {
-
-            },
+            methods: {
+                removeFromArray: function() {
+                    return this.removeArray.pop('Vlad');
+                },
+                addInArray: function() {
+                    return this.addArray.unshift('Claudiu');
+                },
+            }
         });
     </script>
-    <style>
-        #list {
-            margin-top: 50px;
-            max-width: 200px;
-            text-align: center;
-            width: 100%;
-        }
-    </style>
 </body>
 
 </html>
