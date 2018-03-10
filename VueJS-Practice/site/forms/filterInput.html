@@ -30,6 +30,7 @@
         
         .app>input {
             margin: 20px auto;
+            padding: 5px;
         }
         
         .app ul>li {
@@ -42,9 +43,9 @@
 <body>
 
     <div class="app u-full-width center-block">
-        <input type="text" name="filterCountries" v-model="query" />
+        <input class="u-full-width" type="text" v-model="query" placeholder="Search" />
         <div>
-            <ul class="list-group" v-for="country in countries">
+            <ul class="list-group" v-for="country in allCountries">
                 <li class="list-group-item">{{ country.name }}</li>
                 <li class="list-group-item">{{ country.continent}}</li>
             </ul>
@@ -59,14 +60,17 @@
                     name: 'United Kingdom',
                     continent: 'Europe',
                 }, {
+                    name: 'Sudan',
+                    continent: 'Africa',
+                }, {
                     name: 'Romania',
                     continent: 'Europe',
                 }, {
+                    name: 'Canada',
+                    continent: 'North America',
+                }, {
                     name: 'Germany',
                     continent: 'Europe',
-                }, {
-                    name: 'Sudan',
-                    continent: 'Africa',
                 }, {
                     name: 'Taiwan',
                     continent: 'Asia',
@@ -76,14 +80,16 @@
                 }, {
                     name: 'Fiji',
                     continent: 'Oceania',
-                }, {
-                    name: 'Canada',
-                    continent: 'North America',
                 }, ]
             },
             computed: {
-                filterCountries: function() {
+                function() {
                     return this.input.match(query);
+                },
+                allCountries: function() {
+                    return this.countries.filter((country) => {
+                        return country.name.match(this.query)
+                    });
                 }
             },
         });
