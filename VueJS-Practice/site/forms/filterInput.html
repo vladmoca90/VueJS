@@ -25,7 +25,7 @@
 
     <style>
         .app {
-            max-width: 250px;
+            max-width: 200px;
         }
         
         .app>input {
@@ -86,7 +86,8 @@
             computed: {
                 allCountries: function() {
                     return this.countries.filter((country) => {
-                        return country.name.match(this.query)
+                        return country.name.match(this.query) ||
+                            country.continent.match(this.query)
                     });
                 }
             },
