@@ -22,7 +22,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
     <style type="text/css">
-
+        #app {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        
+        li {
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -30,7 +37,12 @@
 <body>
 
     <div id="app" class="u-full-width">
-
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Choose a country &nbsp;<span class="caret"></span></button>
+            <ul type="list" class="dropdown-menu">
+                <li>Romania</li>
+            </ul>
+        </div>
     </div>
 
     <script type="text/javascript">
