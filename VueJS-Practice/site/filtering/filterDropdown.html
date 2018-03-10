@@ -24,15 +24,11 @@
     <style type="text/css">
         #app {
             margin: 30px auto;
+            max-width: 200px;
         }
         
-        #app,
-        ul {
-            max-width: 160px;
-        }
-        
-        ul>li {
-            padding: 10px 0;
+        #app>select option {
+            padding: 10px;
             text-align: center;
         }
         
@@ -50,16 +46,18 @@
 <body>
 
     <div id="app" class="u-full-width">
-        <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Choose a country &nbsp;<span class="caret"></span></button>
-            <ul type="list" class="dropdown-menu u-full-width">
-                <li>Romania</li>
-                <li>Albania</li>
-                <li>Russia</li>
-                <li>Brazil</li>
-                <li>Thailand</li>
-            </ul>
-        </div>
+        <select name="countryDropdown" v-model="query">
+            <option>Romania</option>
+            <option>India</option>
+            <option>Australia</option>
+            <option>Mali</option>
+            <option>Canada</option>
+            <option>Ukraine</option>
+            <option>Israel</option>
+            <option>Colombia</option>
+            <option>Russia</option>
+            <option>Chile</option>
+        </select>
         <div class="content">
             <p>Romania</p>
             <p>Albania</p>
