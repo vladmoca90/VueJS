@@ -24,7 +24,7 @@
     <style>
         #app {
             margin: 20px auto;
-            max-width: 300px;
+            max-width: 350px;
         }
         
         #app>p {
@@ -36,13 +36,13 @@
 
 <body>
     <div id="app" class="u-full-width">
-        <button role="button" class="btn btn-danger" @click="removeFromArray">Remove ( - )</button>
+        <button role="button" class="btn btn-danger" @click.once="removeFromArray">Remove ( - )</button>
 
         <p>{{ removeArray }}</p>
 
         <p></p>
 
-        <button role="button" class="btn btn-success" @click="addInArray">Add ( + )</button>
+        <button role="button" class="btn btn-success" @click.once="addInArray">Add ( + )</button>
 
         <p>{{ addArray }}</p>
     </div>
@@ -59,7 +59,7 @@
                     return this.removeArray.pop('Vlad');
                 },
                 addInArray: function() {
-                    return this.addArray.shift('Claudiu');
+                    return this.addArray.unshift('Claudiu');
                 },
             }
         });
