@@ -26,54 +26,74 @@
 <body>
     <div id="formular" class="u-full-width u-full-height">
         <form role="form" class="form-horiontal">
-            <div class="form-group">
+            <div class="form-group personal-details">
                 <label for="firstName">First Name:</label>
                 <input class="u-full-with" type="text" v-model="firstName" />
                 <span>{{ firstName }}</span>
             </div>
-            <div class="form-group">
+            <div class="form-group personal-details">
                 <label for="lastName">Last Name:</label>
                 <input class="u-full-with" type="text" v-model="lastName" />
                 <span>{{ lastName }}</span>
             </div>
-            <div class="form-group">
+            <div class="form-group personal-details">
                 <label for="age">Age:</label>
-                <input class="u-full-with" type="number" v-model="age" />
+                <input class="u-full-with" type="number" v-model="text" />
                 <span>{{ age }}</span>
             </div>
-            <div class="form-group">
+            <div class="form-group personal-details">
                 <label for="address">Address:</label>
                 <input class="u-full-with" type="text" v-model="homeAddress" />
                 <span>{{ homeAddress }}</span>
             </div>
-            <div class="form-group">
+            <div class="form-group personal-details">
                 <label for="email">Email:</label>
                 <input class="u-full-with" type="email" v-model="emailAddress" />
                 <span>{{ emailAddress }}</span>
             </div>
-            <div class="form-group">
+            <div class="form-group personal-details">
                 <label for="address">Password:</label>
                 <input class="u-full-with" type="password" v-model="emailPassword" />
                 <span>{{ emailPassword }}</span>
             </div>
-            <div class="form-group">
+            <div class="form-group form-lists">
                 <label for="languages">Languages:</label>
-                <input type="checkbox" v-model="languages" />
-                <input type="checkbox" v-model="languages" />
-                <input type="checkbox" v-model="languages" />
-                <input type="checkbox" v-model="languages" />
-                <input type="checkbox" v-model="languages" />
+                <label>
+                    English: <input type="checkbox" v-model="languages" />
+                </label>
+                <label>
+                    Spanish: <input type="checkbox" v-model="languages" />
+                </label>
+                <label>
+                    French: <input type="checkbox" v-model="languages" />
+                </label>
+                <label>
+                    Arabic: <input type="checkbox" v-model="languages" />
+                </label>
+                <label>
+                    Chinese: <input type="checkbox" v-model="languages" />
+                </label>
             </div>
-            <div class="form-group">
+            <div class="form-group form-lists">
                 <label for="selectRegion">Select your region:</label>
-                <input type="radio" name="country" v-model="selectRegion" />
-                <input type="radio" name="country" v-model="selectRegion" />
-                <input type="radio" name="country" v-model="selectRegion" />
-                <input type="radio" name="country" v-model="selectRegion" />
-                <input type="radio" name="country" v-model="selectRegion" />
+                <label>
+                    European Union: <input type="radio" name="country" v-model="selectRegion" />
+                </label>
+                <label>
+                    United Kingdom: <input type="radio" name="country" v-model="selectRegion" />
+                </label>
+                <label>
+                    Russia/Belarus: <input type="radio" name="country" v-model="selectRegion" />
+                </label>
+                <label>
+                    Turkey: <input type="radio" name="country" v-model="selectRegion" />
+                </label>
+                <label>
+                    Israel: <input type="radio" name="country" v-model="selectRegion" />
+                </label>
             </div>
             <div class="form-group">
-                <input type="submit" @click.prevent="" />
+                <input type="submit" />
                 <input type="reset" />
             </div>
         </form>
@@ -83,22 +103,47 @@
         new Vue({
             el: "#formular",
             data: {
-                firstName: "",
-                lastName: "",
-                age: "",
-                homeAddress: "",
-                emailAddress: "",
-                emailPassword: "",
+                firstName: '',
+                lastName: '',
+                age: '',
+                homeAddress: '',
+                emailAddress: '',
+                emailPassword: '',
+            },
+            computed: {
+
             },
         });
     </script>
 
     <style type="text/css" scope>
         #formular {
-            border: 1px solid #eee;
+            background-color: #ebebeb;
+            border: 1px solid #bbb;
             margin: 50px auto;
             max-width: 500px;
             padding: 20px 30px;
+        }
+        
+        #formular>form>div {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #formular>form>div.personal-details {
+            flex-direction: row;
+        }
+        
+        #formular>form>div.form-lists {
+            flex-direction: column;
+        }
+        
+        #formular>form>div.form-lists label {
+            font-weight: 400;
+        }
+        
+        #formular>form>div.form-lists label[for] {
+            font-weight: 700;
         }
         
         #formular>form>div input {
