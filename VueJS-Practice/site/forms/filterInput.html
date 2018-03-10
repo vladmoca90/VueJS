@@ -21,18 +21,30 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <style>
+    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
+    <style>
+        .app {
+            max-width: 250px;
+        }
+        
+        .app>input {
+            margin: 20px auto;
+        }
+        
+        .app ul>li {
+            text-align: center;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <div id="app">
+    <div class="app u-full-width center-block">
         <input type="text" name="filterCountries" v-model="query" />
-        <div class="container" v-for="country in countries">
-            <ul class="list-group">
+        <div>
+            <ul class="list-group" v-for="country in countries">
                 <li class="list-group-item">{{ country.name }}</li>
                 <li class="list-group-item">{{ country.continent}}</li>
             </ul>
@@ -41,7 +53,7 @@
 
     <script type="text/javascript">
         new Vue({
-            el: '#app',
+            el: '.app',
             data: {
                 countries: [{
                     name: 'United Kingdom',
