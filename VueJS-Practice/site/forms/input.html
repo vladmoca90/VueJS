@@ -25,15 +25,15 @@
 
 <body>
     <div id="intro" class="u-full-width u-full-height">
-        <input type="text" maxlength="20" size="20" v-model="inputContent" />
-        <p>{{ inputContent }}</p>
+        <input type="text" maxlength="20" size="20" v-model="query" />
+        <p>{{ query }}</p>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#intro",
+            el: '#intro',
             data: {
-                inputContent: "",
+                query: '',
             },
         });
     </script>
