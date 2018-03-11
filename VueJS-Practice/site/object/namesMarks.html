@@ -7,13 +7,15 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -31,7 +33,7 @@
 
 <body>
     <div class="parent-container u-full-width">
-        <table role="presentation"  class="table table-bordered">
+        <table role="presentation" class="table table-bordered table-dark">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -39,7 +41,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="student in students">
+                <tr v-for="student in students"
+                    :key="student.name">
                     <td>{{ student.name }}</td>
                     <td>{{ student.mark }}</td>
                 </tr>
@@ -53,30 +56,39 @@
             data: {
                 students: [
                     {
-                        name: "Antochi Andreea-Daniela",
-                        mark: 8.59,
-                    }, 
-                    {
-                        name: "Balineanu Contantin-Ionut",
-                        mark: 7.74,
-                    }, 
+                        name: "Zanfir Corina",
+                        mark: 8.61,
+                    },
                     {
                         name: "Barboi Andrei",
                         mark: 8.04,
-                    }, 
-                    {
-                        name: "Ciucur Alina",
-                        mark: 8.88,
-                    }, 
+                    },
                     {
                         name: "Despre Ioana-Francesca",
                         mark: 9.76,
                     },
                     {
+                        name: "Antochi Andreea-Daniela",
+                        mark: 8.59,
+                    },
+                    {
+                        name: "Ciucur Alina",
+                        mark: 8.88,
+                    },
+                    {
                         name: "Toma Carmen-Nicoleta",
                         mark: 9.25,
                     },
+                     {
+                        name: "Balineanu Contantin-Ionut",
+                        mark: 7.74,
+                    }, 
                 ],
+            },
+            computed: {
+                sortTable: function() {
+                    this.students.sort(student.name);
+                },
             },
         });
     </script>
