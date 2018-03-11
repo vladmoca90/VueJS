@@ -89,15 +89,17 @@
             },
             computed: {
                 sortNames: function() {
-                    this.students.sort(function(name) {
-                        for(i=0; i< name; i++) {
-                            return student.name;
+                    this.students.sort(function(a, b) {
+                        var nameA = a.student.name;
+                        var nameB = b.student.name;
+                        if(nameA > nameB) {
+                            return 1;
                         }
-                        if(student.name[i] > student.name[i + 1]) {
-                            return true;
+                        else if(nameA < nameB) {
+                            return -1;
                         }
                         else {
-                            return false;
+                            return 0;
                         }
                     });
                 },
