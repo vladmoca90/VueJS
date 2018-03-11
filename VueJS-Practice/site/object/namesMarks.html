@@ -21,19 +21,13 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../../scripts/vue.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-
-    <script type="text/javascript" src="../../scripts/names-marks.vue"></script>
-
-    <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
 
 </head>
 
 <body>
     <div class="parent-container u-full-width">
-        <table role="presentation" class="table table-bordered table-dark">
+        <table role="presentation" class="table table-bordered table-dark table-hover">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -73,7 +67,7 @@
                     },
                     {
                         name: "Ilie Andrei-Cristian",
-                        mark: 7.45,
+                        mark: 7.44,
                     },
                     {
                         name: "Ciucur Alina",
@@ -87,24 +81,43 @@
                         name: "Balineanu Contantin-Ionut",
                         mark: 7.79,
                     }, 
+                     {
+                        name: "Serban Marilena-Alina",
+                        mark: 8.20,
+                    },
                 ],
             },
             computed: {
-                sortTable: function() {
-                    this.students.sort(student.name);
+                sortNames: function() {
+                    this.students.sort(function(name) {
+                        for(i=0; i< name; i++) {
+                            return student.name;
+                        }
+                        if(student.name[i] > student.name[i + 1]) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    });
                 },
             },
         });
     </script>
 
     <style type="text/css">
+        @import '../../content/utilities/utilities.css';
         .parent-container {
-            font-size: 15px;
+            font-family: Calibri;
+            font-size: 16px;
             margin: 50px auto;
             max-width: 400px;
         }
         th, td {
             text-align: center;
+        }
+        tbody>tr:hover {
+            cursor: pointer;
         }
     </style>
 </body>
