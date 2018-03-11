@@ -30,55 +30,59 @@
 </head>
 
 <body>
-    <div id="list-container" class="u-full-width">
-        <ol role="list">
-            <li role="listitem" v-for="person in persons" :key="person.name" v-if="showName">{{ person.name }}</li>
-        </ol>
+    <div class="parent-container u-full-width">
+        <table role="presentation"  class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mark</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="student in students">
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.mark }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#list-container",
+            el: "table",
             data: {
-                persons: [{
+                students: [{
                     name: "Antochi Andreea-Daniela",
-                    mark: 8.50,
-                    id: 1,
+                    mark: 8.59,
                 }, {
                     name: "Balineanu Contantin-Ionut",
                     mark: 7.74,
-                    id: 2,
                 }, {
                     name: "Barboi Andrei",
                     mark: 8.14,
-                    id: 1,
                 }, {
                     name: "Ciucur Alina",
                     mark: 8.88,
-                    id: 2,
                 }, {
                     name: "Despre Ioana-Francesca",
                     mark: 9.76,
-                    id: 3,
-                }],
-            },
-            methods: {
-                showName: function() {
-                    if (person.id == id) {
-                        return true;
-                    } else {
-                        return false;
-                    }
                 },
+                {
+                    name: "Toma Carmen-Nicoleta",
+                    mark: 9.25,
+                },],
             },
         });
     </script>
 
     <style type="text/css">
-        #list-container {
+        .parent-container {
             font-size: 15px;
             margin: 50px auto;
-            max-width: 300px;
+            max-width: 400px;
+        }
+        th, td {
+            text-align: center;
         }
     </style>
 </body>

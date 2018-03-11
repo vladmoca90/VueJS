@@ -32,12 +32,12 @@
 
     <script type="text/javascript">
         new Vue({
-            el: ".app",
+            el: '.app',
             data: {
-                firstName: "Alexandru",
-                lastName: "Mocanu",
+                firstName: 'Alexandru',
+                lastName: 'Mocanu',
             },
-            methods: {
+            computed: {
                 fullName: function() {
                     return this.firstName + ' ' + this.lastName;
                 }

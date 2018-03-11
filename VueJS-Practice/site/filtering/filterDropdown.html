@@ -30,17 +30,21 @@
 <body>
 
     <div id="app" class="u-full-width">
-
+        <select v-model="makeSelection">
+            <option v-for="country in countries">{{ country }}</option>
+        </select>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: '#app',
             data: {
-
+                countries: ["Romania", "Canada", "India", "Brazil", "Australia", "Israel", "France", "Armenia"],
             },
             computed: {
+                makeSelection: function() {
 
+                },
             },
         });
     </script>
