@@ -1,0 +1,27 @@
+{
+  "name": "vuejs-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "pkg": "^4.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladmoca90/VueJS-Practice.git"
+  },
+  "author": "ag_dubs <vladmoca90@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladmoca90/VueJS-Practice/issues"
+  },
+  "homepage": "https://github.com/vladmoca90/VueJS-Practice#readme"
+}

@@ -23,6 +23,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
+<<<<<<< HEAD
 </head>
 
 <body>
@@ -42,6 +43,17 @@
                 </tr>
             </tbody>
         </table>
+=======
+    <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
+
+</head>
+
+<body>
+    <div id="list-container" class="u-full-width">
+        <ol role="list">
+            <li role="listitem" v-for="person in persons" v-if="showName">{{ person.name }}</li>
+        </ol>
+>>>>>>> develop
     </div>
 
     <script type="text/javascript">
