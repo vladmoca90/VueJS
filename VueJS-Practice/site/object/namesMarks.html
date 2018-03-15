@@ -19,11 +19,7 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../../scripts/vue.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-
-    <script type="text/javascript" src="../../scripts/names-marks.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
 
@@ -32,7 +28,7 @@
 <body>
     <div id="list-container" class="u-full-width">
         <ol role="list">
-            <li role="listitem" v-for="person in persons" :key="person.name" v-if="showName">{{ person.name }}</li>
+            <li role="listitem" v-for="person in persons" v-if="showName">{{ person.name }}</li>
         </ol>
     </div>
 

@@ -19,11 +19,7 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../scripts/vue.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-
-    <script type="text/javascript" src="../scripts/object.vue"></script>
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
@@ -32,14 +28,13 @@
 <body>
     <div id="list" class="center-block">
         <ul role="list" class="list-group">
-            <li role="listitem" class="list-group-item" v-for="person in persons" :key="person.name">{{ person.name }}</li>
+            <li role="listitem" class="list-group-item" v-for="person in persons">{{ person.name }}</li>
         </ul>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: "#object",
-            props: Object,
+            el: "#list",
             data: {
                 persons: [{
                     name: "Alexandru",
