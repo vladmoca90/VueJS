@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+
+    <title>Dropdown</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+    <style scoped>
+        .dropdown-block {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 50px auto;
+            max-width: 120px;
+            padding: 10px 15px;
+            width: 100%;
+        }
+        .dropdown-block__list {
+            margin: 0;
+            padding: 0;
+        }
+        .dropdown-block__list > .dropdown-block__btn {
+            display: inline;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="dropdown-block">
+        <ul class="dropdown-block__list">
+            <span class="dropdown-block__btn" @click="showNames = !showNames">Show List
+                <span class="caret"></span>
+            </span>
+            <li v-for="person in persons" v-show="showNames" class="text-center">{{ person.name }}</li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+            el: '.dropdown-block',
+            data: {
+                showNames: false,
+                persons: {
+                    name: [
+                        "Danielle McDonald",
+                        "John Swift",
+                        "Angela Wycombe",
+                    ],
+                }
+            },
+            methods: {
+
+            }
+        });
+    </script>
+</body>
+
+</html>
