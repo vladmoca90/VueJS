@@ -28,18 +28,19 @@
         .dropdown-block {
             border: 1px solid #ccc;
             border-radius: 8px;
+            height: 100%;
             margin: 50px auto;
+            min-height: 35px;
             max-width: 120px;
             padding: 10px 15px;
             width: 100%;
         }
+
         .dropdown-block__list {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
             margin: 0;
             padding: 0;
-        }
-        .dropdown-block__list > .dropdown-block__btn {
-            display: inline;
-            text-align: center;
         }
     </style>
 
@@ -47,11 +48,11 @@
 
 <body>
     <div class="dropdown-block">
-        <ul class="dropdown-block__list">
+        <ul class="dropdown-block__list list-unstyled">
             <span class="dropdown-block__btn" @click="showNames = !showNames">Show List
                 <span class="caret"></span>
             </span>
-            <li v-for="person in persons" v-show="showNames" class="text-center">{{ person.name }}</li>
+            <li v-show="showNames" v-for="person in persons" class="text-center">{{ person.name }}</li>
         </ul>
     </div>
 
@@ -60,13 +61,22 @@
             el: '.dropdown-block',
             data: {
                 showNames: false,
-                persons: {
-                    name: [
-                        "Danielle McDonald",
-                        "John Swift",
-                        "Angela Wycombe",
-                    ],
-                }
+                persons: [{
+                        name: "Alexandru",
+                        age: 27,
+                        country: "United Kingdom"
+                    },
+                    {
+                        name: "Vladimir",
+                        age: 24,
+                        country: "Romania"
+                    },
+                    {
+                        name: "Mariana",
+                        age: 29,
+                        country: "United States of America"
+                    }
+                ],
             },
             methods: {
 
