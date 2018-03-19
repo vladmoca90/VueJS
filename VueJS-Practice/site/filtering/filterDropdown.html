@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Input</title>
+    <title>Filter Dropdown</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -21,34 +21,33 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
+    <style type="text/css">
+        @import url('../../content/utilities/utilities.css');
+    </style>
+
 </head>
 
 <body>
-    <div id="intro" class="u-full-width u-full-height">
-        <input type="text" maxlength="20" size="20" v-model="query" />
-        <p>{{ query }}</p>
+
+    <div id="app" class="u-full-width">
+        <select v-model="makeSelection">
+            <option v-for="country in countries">{{ country }}</option>
+        </select>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: '#intro',
+            el: '#app',
             data: {
-                query: '',
+                countries: ["Romania", "Canada", "India", "Brazil", "Australia", "Israel", "France", "Armenia"],
+            },
+            computed: {
+                makeSelection: function() {
+
+                },
             },
         });
     </script>
-
-    <style scope>
-        #intro {
-            margin: 0 auto;
-            max-width: 200px;
-            min-height: 200px;
-        }
-        
-        #intro>input {
-            margin: 70px auto;
-        }
-    </style>
 </body>
 
 </html>

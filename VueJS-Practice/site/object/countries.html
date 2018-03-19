@@ -7,13 +7,18 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -26,18 +31,78 @@
 </head>
 
 <body>
-    <table>
-     
-    </table>>
+    <table class="main-table table table-dark">
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 
     <script type="text/javascript">
         new Vue({
-
+            el: '.main-table',
+            data: {
+                countries: [{
+                        name: "Taiwan",
+                        population: 22, //in millions
+                        capital: "Taipei",
+                        language: "Cantonese",
+                        otherCities: ["Tainan", "Kaohsiung", "Taichung"],
+                        UNmember: false,
+                    },
+                    {
+                        name: "Israel",
+                        population: 8, //in millions
+                        capital: "Jerusalem",
+                        language: "Hebrew",
+                        otherCities: ["Tel Aviv", "Haifa", "Eilat"],
+                        UNmember: true,
+                    },
+                    {
+                        name: "Albania",
+                        population: 3.5, //in millions
+                        capital: "Tirana",
+                        language: "Albanian",
+                        otherCities: ["Vlore", "Elbasan", "Durres"],
+                        UNmember: true,
+                    },
+                    {
+                        name: "Brazil",
+                        population: 193, //in millions
+                        capital: "Brasilia",
+                        language: "Portuguese",
+                        otherCities: ["Rio de Janeiro", "Recife", "Sao Paulo"],
+                        UNmember: true,
+                    },
+                    {
+                        name: "Palestine",
+                        population: 3.5, //in millions
+                        capital: "East Jerusalem",
+                        language: "Arabic",
+                        otherCities: ["Bethleehem", "Gaza", "Hebron"],
+                        UNmember: false,
+                    },
+                    {
+                        name: "India",
+                        population: 1135, //in millions
+                        capital: "New Delhi",
+                        language: "Hindi",
+                        otherCities: ["Madras", "Mumbai", "Varanasi"],
+                        UNmember: true,
+                    },
+                ],
+            },
         });
     </script>
 
     <style type="text/css">
-        #list-container {
+        .main-table {
             font-size: 15px;
             margin: 50px auto;
             max-width: 300px;
