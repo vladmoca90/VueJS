@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Range</title>
+    <title>Dropdown</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -24,17 +24,23 @@
 </head>
 
 <body>
-    <div class="text-center">
-        <p>
-            <span v-for="n in 10">{{ " " + n + " " }}</span>
-        </p>
+    <div class="dropdown-menu">
+       <ul class="dropdown-menu__list list-group">
+           <span class="dropdown-menu__button" @click="showNames = !showNames">Show List &nbsp; <span class="caret"></span></span>
+           <li v-for="person in persons" v-show="showNames" class="text-center list-group-item">{{  }}</li>
+       </ul>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: 'div',
+            el: '.dropdown-menu',
             data: {
-                n: 0
+                showNames: false;
+            },
+            computed: {
+                persons: {
+
+                },
             }
         });
     </script>
