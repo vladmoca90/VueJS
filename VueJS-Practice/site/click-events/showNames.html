@@ -24,28 +24,51 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
+    <style scoped>
+        .dropdown-block {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 50px auto;
+            max-width: 120px;
+            padding: 10px 15px;
+            width: 100%;
+        }
+        .dropdown-block__list {
+            margin: 0;
+            padding: 0;
+        }
+        .dropdown-block__list > .dropdown-block__btn {
+            display: inline;
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body>
-    <div class="dropdown-menu">
-        <ul class="dropdown-menu__list list-group">
-            <span class="dropdown-menu__button" @click="showNames = !showNames">Show List &nbsp;
+    <div class="dropdown-block">
+        <ul class="dropdown-block__list">
+            <span class="dropdown-block__btn" @click="showNames = !showNames">Show List
                 <span class="caret"></span>
             </span>
-            <li v-for="person in persons" v-show="showNames" class="text-center list-group-item">{{ person.name }}</li>
+            <li v-for="person in persons" v-show="showNames" class="text-center">{{ person.name }}</li>
         </ul>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: '.dropdown-menu',
+            el: '.dropdown-block',
             data: {
                 showNames: false,
                 persons: {
-                    name: ["Danielle McDonald", "John Swift", "Angela Wycombe"],
+                    name: [
+                        "Danielle McDonald",
+                        "John Swift",
+                        "Angela Wycombe",
+                    ],
                 }
             },
-            computed: {
+            methods: {
 
             }
         });
