@@ -45,7 +45,7 @@
         <textarea class="comments-panel__textarea u-full-width u-full-height">
 
         </textarea>
-        <div class="comments-panel__bottom u-full-height">
+        <div class="comments-panel__bottom u-full-height u-flex">
             <!-- <input type="checkbox" /> -->
             <button type="button" class="btn btn-primary comments-panel__button">SEND</button>
         </div>
@@ -63,16 +63,24 @@
         });
     </script>
 
-    <style type="text/css" scope>
+    <style type="text/css" scoped>
+        @import '../../content/mixins/mixins.css';
+
+        body {
+            background-color: #BBDEFB;
+        }
+
         .comments-panel {
-            border: 1px solid #ccc;
+            background-color: #fff; 
+            border: 1px solid #a9a9a9;
+            border-radius: 7px;
             font-size: 15px;
             margin: 30px auto;
             max-width: 600px;
         }
 
         .comments-panel__top {
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #a9a9a9;
             min-height: 60px;
         }
 
@@ -88,12 +96,13 @@
 
         .comments-panel__bottom {
             max-height: 60px;
-            padding: 10px;
+            justify-content: flex-end;
+            padding: 10px 15px 15px;
         }
 
         .comments-panel__button {
             font-size: 15px;
-            margin-right: auto;
+            margin-left: auto;
             padding: 5px 15px;
         }
     </style>
