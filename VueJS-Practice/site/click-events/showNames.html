@@ -65,10 +65,10 @@
 </head>
 
 <body>
-    <div class="dropdown-block" @click="showList">
+    <div class="dropdown-block" @click="showNames = !showNames">
         <ul class="dropdown-block__list list-unstyled">
             <span class="dropdown-block__btn">Show List
-                <span class="caret" :class="{ rotateDown : caretDown}"></span>
+                <span class="caret" :class="{ rotateDown : caretDown = !caretDown}"></span>
             </span>
             <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
         </ul>
@@ -89,9 +89,6 @@
                 },
             },
             methods: {
-                showList: function () {
-                    return this.showNames = !this.showNames;
-                },
             },
         });
     </script>
