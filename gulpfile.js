@@ -1,31 +1,13 @@
-var gulp = require("gulp"),
-    sass = require("gulp-sass"),
-    clean = require("gulp-clean"),
-    min = require("gulp-minify"),
-    rename = require("gulp-rename"),
+var gulp = require('gulp');
+var sass = require('gulp-sass');
 
-var sassFiles = "VueJS-Practice/content/*.scss"
-var cssFiles = ["!VueJS-Practice/content/*.css", "!VueJS-Practice/content/*.min.css", "VueJS-Practice/content/**/*.css"]
-var destination = "VueJS-Practice/content"
+gulp.task('VueJS-Practice/content', function() {
+    gulp.src('VueJS-Practice/content/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./VueJS-Practice/content/**/*'))
+});
 
-gulp.task("default", function () {
-    return gulp.src(sassFiles)
-        .pipe(sass())
-        .pipe(gulp.dest(destination));
-})
-
-gulp.task("clean", function () {
-    return gulp.src(cssFiles)
-        .pipe(clean());
-})
-
-gulp.task("minify", function () {
-    return gulp.src("VueJS-Practice/content/*.css")
-        .pipe(min())
-        .pipe(rename({
-            suffix: ".min"
-        }))
-        .pipe(gulp.dest("VueJS-Practice/content"));
-})
-
-
+//Watch task
+gulp.task('default',function() {
+    gulp.watch('VueJS-Practice/content/**/*.scss',['VueJS-Practice/content']);
+});
