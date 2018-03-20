@@ -7,13 +7,16 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -25,7 +28,7 @@
 
 <body>
     <div id="formular" class="u-full-width u-full-height">
-        <form role="form" @submit="checkForm" method="post" class="form-horiontal">
+        <form role="form" method="post" class="form-horiontal">
             <div class="form-group personal-details">
                 <label for="firstName">First Name:</label>
                 <input class="u-full-with" type="text" v-model="firstName" />
@@ -59,42 +62,52 @@
             <div class="form-group form-lists">
                 <label for="languages">Languages:</label>
                 <label>
-                    English: <input type="checkbox" v-model="languages" />
+                    English:
+                    <input type="checkbox" v-model="languages" />
                 </label>
                 <label>
-                    Spanish: <input type="checkbox" v-model="languages" />
+                    Spanish:
+                    <input type="checkbox" v-model="languages" />
                 </label>
                 <label>
-                    French: <input type="checkbox" v-model="languages" />
+                    French:
+                    <input type="checkbox" v-model="languages" />
                 </label>
                 <label>
-                    Arabic: <input type="checkbox" v-model="languages" />
+                    Arabic:
+                    <input type="checkbox" v-model="languages" />
                 </label>
                 <label>
-                    Chinese: <input type="checkbox" v-model="languages" />
+                    Chinese:
+                    <input type="checkbox" v-model="languages" />
                 </label>
             </div>
             <div class="form-group form-lists">
                 <label for="selectRegion">Select your region:</label>
                 <label>
-                    European Union: <input type="radio" name="country" v-model="selectRegion" />
+                    European Union:
+                    <input type="radio" name="country" v-model="selectRegion" />
                 </label>
                 <label>
-                    United Kingdom: <input type="radio" name="country" v-model="selectRegion" />
+                    United Kingdom:
+                    <input type="radio" name="country" v-model="selectRegion" />
                 </label>
                 <label>
-                    Russia/Belarus: <input type="radio" name="country" v-model="selectRegion" />
+                    Russia/Belarus:
+                    <input type="radio" name="country" v-model="selectRegion" />
                 </label>
                 <label>
-                    Turkey: <input type="radio" name="country" v-model="selectRegion" />
+                    Turkey:
+                    <input type="radio" name="country" v-model="selectRegion" />
                 </label>
                 <label>
-                    Israel: <input type="radio" name="country" v-model="selectRegion" />
+                    Israel:
+                    <input type="radio" name="country" v-model="selectRegion" />
                 </label>
             </div>
-            <div class="form-group">
-                <input type="submit" />
-                <input type="reset" />
+            <div class="form-group form-validation__buttons">
+                <button type="submit"  @submit="checkForm">Submit</button>
+                <button type="reset">Reset</button>
             </div>
         </form>
     </div>
@@ -105,52 +118,62 @@
             data: {
                 firstName: null,
                 lastName: null,
-                age: 0,
+                age: null,
                 homeAddress: null,
                 emailAddress: null,
                 emailPassword: null,
-                fieldRequired: null,
             },
             methods: {
-                checkForm: function() {
+                checkForm: function () {
 
                 }
             },
         });
     </script>
 
-    <style type="text/css" scope>
+    <style type="text/css" scoped>
         #formular {
             background-color: #ebebeb;
             border: 1px solid #bbb;
-            margin: 50px auto;
-            max-width: 500px;
-            padding: 20px 30px;
+            margin: 25px auto;
+            max-width: 450px;
+            padding: 25px;
         }
-        
+
+        .form-validation__buttons {
+            margin-bottom: 0;
+        }
+
         #formular>form>div {
             display: flex;
             justify-content: space-between;
         }
-        
+
         #formular>form>div.personal-details {
             flex-direction: row;
         }
-        
+
         #formular>form>div.form-lists {
             flex-direction: column;
         }
-        
+
         #formular>form>div.form-lists label {
             font-weight: 400;
         }
-        
+
         #formular>form>div.form-lists label[for] {
             font-weight: 700;
         }
-        
+
         #formular>form>div input {
-            max-width: 250px;
+            margin-left: auto;
+            max-width: 300px;
+        }
+
+        #formular>form>div input[type="checkbox"],
+        #formular>form>div input[type="radio"] {
+            position: relative;
+            top: 3px;
         }
     </style>
 </body>
