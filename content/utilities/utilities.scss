@@ -3,10 +3,9 @@
     position: relative;
 }
 
-//Only when the parent has position: relative
 .u--absolute {
     position: absolute;
-}
+} //Only when the parent has position: relative
 
 .u-fixed {
     position: fixed;
@@ -15,10 +14,6 @@
 //Utilities for texts and links
 .u-text--bold {
     font-weight: bold;
-}
-
-.u-text--black {
-    color: #000;
 }
 
 .u-text--white {
@@ -40,7 +35,7 @@
 }
 
 .u-border {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 }
 
 //Utilities for margin, padding
@@ -74,6 +69,10 @@
 .u-flex--inline {
     display: inline-flex;
 }
+
+.u-flex--column {
+    flex-direction: column;
+} //mainly when the content is on column on all devices
 
 .u-center {
     align-items: center;

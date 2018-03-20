@@ -5,7 +5,7 @@
     }
 }
 
-@mixin border-values($top, $right, $bottom, $left, $style, $color) {
+@mixin borders($top, $right, $bottom, $left, $style, $color) {
     border: {
         top: $top;
         right: $right;
