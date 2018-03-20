@@ -42,6 +42,14 @@
             text-align: center;
         }
 
+        .dropdown-block__btn>.caret {
+            transform: rotate(-90deg);
+        }
+
+        .dropdown-block__btn>.rotateDown {
+            transform: rotate(0deg);
+        }
+
         .dropdown-block__list {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 15px;
@@ -60,7 +68,7 @@
     <div class="dropdown-block" @click="showNames = !showNames">
         <ul class="dropdown-block__list list-unstyled">
             <span class="dropdown-block__btn">Show List
-                <span class="caret"></span>
+                <span class="caret" :class="{ rotateDown : caretDown = !caretDown}"></span>
             </span>
             <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
         </ul>
@@ -71,17 +79,20 @@
             el: '.dropdown-block',
             data: {
                 showNames: false,
+                caretDown: false,
                 persons: {
-                    firstPerson: "Danielle McDonald", 
-                    secondPerson: "John Swift", 
-                    thirdPerson: "Angela Wycombe",
+                    first: "Danielle McDonald",
+                    second: "John Swift",
+                    third: "Angela Wycombe",
+                    fourth: "Samuel L Jackson",
+                    fifth: "Juliana Pike",
                 },
             },
             methods: {
-
-            }
+            },
         });
     </script>
+
 </body>
 
 </html>
