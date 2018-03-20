@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Dropdown</title>
+    <title>Show names</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -28,30 +28,41 @@
         .dropdown-block {
             border: 1px solid #ccc;
             border-radius: 8px;
+            height: 100%;
             margin: 50px auto;
-            max-width: 120px;
-            padding: 10px 15px;
+            min-height: 40px;
+            max-width: 180px;
             width: 100%;
         }
-        .dropdown-block__list {
-            margin: 0;
-            padding: 0;
-        }
-        .dropdown-block__list > .dropdown-block__btn {
-            display: inline;
+
+        .dropdown-block__btn {
+            cursor: pointer;
+            display: inherit;
+            padding: 10px 0;
             text-align: center;
+        }
+
+        .dropdown-block__list {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        .dropdown-block__list>li {
+            border-top: 1px solid #ccc;
+            padding: 10px 0;
         }
     </style>
 
 </head>
 
 <body>
-    <div class="dropdown-block">
-        <ul class="dropdown-block__list">
-            <span class="dropdown-block__btn" @click="showNames = !showNames">Show List
+    <div class="dropdown-block" @click="showNames = !showNames">
+        <ul class="dropdown-block__list list-unstyled">
+            <span class="dropdown-block__btn">Show List
                 <span class="caret"></span>
             </span>
-            <li v-for="person in persons" v-show="showNames" class="text-center">{{ person.name }}</li>
+            <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
         </ul>
     </div>
 
@@ -61,12 +72,10 @@
             data: {
                 showNames: false,
                 persons: {
-                    name: [
-                        "Danielle McDonald",
-                        "John Swift",
-                        "Angela Wycombe",
-                    ],
-                }
+                    firstPerson: "Danielle McDonald", 
+                    secondPerson: "John Swift", 
+                    thirdPerson: "Angela Wycombe",
+                },
             },
             methods: {
 
