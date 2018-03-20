@@ -42,8 +42,12 @@
             text-align: center;
         }
 
-        .dropdown-block__btn > .caret {
+        .dropdown-block__btn>.caret {
             transform: rotate(-90deg);
+        }
+
+        .dropdown-block__btn> .rotateDown {
+            transform: rotate(0deg);
         }
 
         .dropdown-block__list {
@@ -64,7 +68,7 @@
     <div class="dropdown-block" @click="showNames = !showNames">
         <ul class="dropdown-block__list list-unstyled">
             <span class="dropdown-block__btn">Show List
-                <span class="caret"></span>
+                <span class="caret" :class="{ rotateDown : caretDown}"></span>
             </span>
             <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
         </ul>
@@ -75,17 +79,23 @@
             el: '.dropdown-block',
             data: {
                 showNames: false,
+                caretDown: false,
                 persons: {
-                    firstPerson: "Danielle McDonald", 
-                    secondPerson: "John Swift", 
+                    firstPerson: "Danielle McDonald",
+                    secondPerson: "John Swift",
                     thirdPerson: "Angela Wycombe",
                 },
             },
             methods: {
-
+               /*rotateCaret() {
+                   if(!!showNames) {
+                       return this.caretDown = true;
+                   }
+               } */
             }
         });
     </script>
+
 </body>
 
 </html>
