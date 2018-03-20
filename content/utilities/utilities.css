@@ -25,6 +25,15 @@
 .u-no-border {
   border: 0; }
 
+.u-border {
+  border: 1px solid #ddd; }
+
+.u-margin--0 {
+  margin: 0; }
+
+.u-padding--0 {
+  padding: 0; }
+
 .u-bg--white {
   background-color: #fff; }
 
