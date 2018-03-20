@@ -36,7 +36,7 @@
             </div>
             <div class="form-group personal-details">
                 <label for="lastName">Last Name:</label>
-                <inputname="lastName" class="u-full-with" type="text" v-model="lastName" />
+                <input name="lastName" class="u-full-with" type="text" v-model="lastName" />
                 <span>{{ fieldRequired }}</span>
             </div>
             <div class="form-group personal-details">
@@ -124,21 +124,14 @@
                 emailPassword: '',
             },
             methods: {
-                firstName: function () {
+                checkForm: function () {
                     if (this.firstName.length < 6) {
                         alert("The first name is too short");
-                    } else {
-                        return firstName;
                     }
-                },
-                lastName: function () {
                     if (this.lastName.length < 6) {
                         alert("The last name is too short");
-                    } else {
-                        return lastName;
                     }
                 },
-                checkForm: function () {}
             },
         });
     </script>
