@@ -26,20 +26,24 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
+    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
+
 </head>
 
 <body>
     <div class="intro u-full-width u-full-height">
-        <p class="text-center" @click="fontSizeUp++">This font will now increase</p>
-        <p class="text-center" @click="fontSizeDown--">This font will now decrease</p>
+        <p class="text-center" @click="fontSizeUp++">This font will now increase {{ fontSizeUp  }}</p>
+        <p class="text-center" @click="fontSizeDown--">This font will now decrease {{ fontSizeDown }}</p>
     </div>
 
     <script type="text/javascript">
         new Vue({
             el: '.intro',
             data: {
-                fontSizeUp: 10,
-                fontSizeDown: 10,
+                return: {
+                    fontSizeUp: 10,
+                    fontSizeDown: 10,
+                }
             },
         });
     </script>
