@@ -46,7 +46,7 @@
             transform: rotate(-90deg);
         }
 
-        .dropdown-block__btn> .rotateDown {
+        .dropdown-block__btn>.rotateDown {
             transform: rotate(0deg);
         }
 
@@ -65,7 +65,7 @@
 </head>
 
 <body>
-    <div class="dropdown-block" @click="showNames = !showNames">
+    <div class="dropdown-block" @click="showList">
         <ul class="dropdown-block__list list-unstyled">
             <span class="dropdown-block__btn">Show List
                 <span class="caret" :class="{ rotateDown : caretDown}"></span>
@@ -81,18 +81,18 @@
                 showNames: false,
                 caretDown: false,
                 persons: {
-                    firstPerson: "Danielle McDonald",
-                    secondPerson: "John Swift",
-                    thirdPerson: "Angela Wycombe",
+                    first: "Danielle McDonald",
+                    second: "John Swift",
+                    third: "Angela Wycombe",
+                    fourth: "Samuel L Jackson",
+                    fifth: "Juliana Pike",
                 },
             },
             methods: {
-               /*rotateCaret() {
-                   if(!!showNames) {
-                       return this.caretDown = true;
-                   }
-               } */
-            }
+                showList: function () {
+                    return this.showNames = !this.showNames;
+                },
+            },
         });
     </script>
 
