@@ -5,6 +5,18 @@
     }
 }
 
+<<<<<<< HEAD:content/mixins/mixins.scss
+=======
+@mixin background($attachment, $position, $repeat, $size) {
+    background: {
+        attachment: $attachment;
+        position: $position;
+        repeat: $repeat;
+        size: $size;
+    }
+}
+
+>>>>>>> develop:VueJS-Practice/content/mixins/mixins.scss
 @mixin borders($top, $right, $bottom, $left, $style, $color) {
     border: {
         top: $top;
@@ -14,6 +26,14 @@
         style: $style;
         color: $color;
     }
+}
+
+@mixin font-style($size, $color, $family) {
+    font: {
+        size: $size;
+        family: $family;
+    }
+    color: $color;
 }
 
 @mixin css-triangle($color, $direction, $size) {
