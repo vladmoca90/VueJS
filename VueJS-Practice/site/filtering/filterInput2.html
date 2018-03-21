@@ -85,7 +85,8 @@
             computed: {
                 allBlogs: function () {
                     return this.blogs.filter((blog) => {
-                        return blog.content.match(this.query)
+                        return blog.content.match(this.query) || 
+                               blog.title.match(this.query)
                     });
                 }
             },
