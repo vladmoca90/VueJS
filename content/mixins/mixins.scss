@@ -5,8 +5,6 @@
     }
 }
 
-<<<<<<< HEAD:content/mixins/mixins.scss
-=======
 @mixin background($attachment, $position, $repeat, $size) {
     background: {
         attachment: $attachment;
@@ -16,7 +14,6 @@
     }
 }
 
->>>>>>> develop:VueJS-Practice/content/mixins/mixins.scss
 @mixin borders($top, $right, $bottom, $left, $style, $color) {
     border: {
         top: $top;
