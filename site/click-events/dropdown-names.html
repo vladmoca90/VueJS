@@ -31,11 +31,11 @@
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height u-border" @click="showNames = !showNames">
+    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
+        <div class="dropdown-box__btn">Show List
+            <span class="caret" :class="{ rotateDown : caretDown = !caretDown}"></span>
+        </div>
         <ul class="dropdown-box__list list-unstyled">
-            <span class="dropdown-box__btn">Show List
-                <span class="caret" :class="{ rotateDown : caretDown = !caretDown}"></span>
-            </span>
             <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
         </ul>
     </div>
