@@ -1,0 +1,26 @@
+.dropdown-box {
+    border-radius: 8px;
+    margin: 50px auto;
+    min-height: 40px;
+    max-width: 180px;
+    &__btn {
+        cursor: pointer;
+        display: inherit;
+        padding: 10px 0;
+        text-align: center;
+        .caret {
+            transform: rotate(-90deg);
+        }
+        .rotateDown {
+            transform: rotate(0deg);
+        }
+    }
+    &__list {
+        @include font-style(15px, initial, Arial);
+        margin-bottom: 0;
+        li {
+            border-top: 1px solid #ccc;
+            padding: 10px 0;
+        }
+    }
+}

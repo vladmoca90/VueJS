@@ -24,50 +24,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <style scoped>
-        .dropdown-block {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            height: 100%;
-            margin: 50px auto;
-            min-height: 40px;
-            max-width: 180px;
-            width: 100%;
-        }
+    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
-        .dropdown-block__btn {
-            cursor: pointer;
-            display: inherit;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .dropdown-block__btn>.caret {
-            transform: rotate(-90deg);
-        }
-
-        .dropdown-block__btn>.rotateDown {
-            transform: rotate(0deg);
-        }
-
-        .dropdown-block__list {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 15px;
-            margin-bottom: 0;
-        }
-
-        .dropdown-block__list>li {
-            border-top: 1px solid #ccc;
-            padding: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
 
 </head>
 
 <body>
-    <div class="dropdown-block" @click="showNames = !showNames">
-        <ul class="dropdown-block__list list-unstyled">
-            <span class="dropdown-block__btn">Show List
+    <div class="dropdown-box u-full-width u-full-height u-border" @click="showNames = !showNames">
+        <ul class="dropdown-box__list list-unstyled">
+            <span class="dropdown-box__btn">Show List
                 <span class="caret" :class="{ rotateDown : caretDown = !caretDown}"></span>
             </span>
             <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
@@ -76,7 +42,7 @@
 
     <script type="text/javascript">
         new Vue({
-            el: '.dropdown-block',
+            el: '.dropdown-box',
             data: {
                 showNames: false,
                 caretDown: false,
