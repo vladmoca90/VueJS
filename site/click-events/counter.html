@@ -23,18 +23,27 @@
 
     <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
 
+    <style scoped>
+        .counter-container {
+            margin: 25px auto;
+            max-width: 100px;
+        }
+        .counter-container > p {
+            margin: 15px 0;
+        }
+    </style>
+
 </head>
 
 <body>
-    <div id="counter-container">
-        <p></p>
-        <button role="button" @click="increase">Increase</button>
+    <div class="counter-container u-full-width">
+        <button role="button" class="btn btn-success" @click="increase">Increase</button>
         <p>{{ counter }}</p>
-        <button role="button" @click="decrease">Decrease</button>
+        <button role="button" class="btn btn-danger" @click="decrease">Decrease</button>
     </div>
     <script type="text/javascript">
         new Vue({
-            el: "#counter-container",
+            el: ".counter-container",
             data: {
                 counter: 0,
             },

@@ -28,11 +28,30 @@
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
+    <style scoped>
+        .app {
+            margin: 20px auto;
+            max-width: 180px;
+        }
+
+        .app__text {
+            line-height: 50px;
+            min-height: 50px;
+        }
+
+        .app__text > p {
+            margin: 0;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="app center-block u-full-width u-full-height">
-        <p class="text-center">This font will now increase {{ fontSize }}</p>
+        <input type="text" v-model="query" maxlength="10" />
+        <div class="app__text u-full-height">
+            <p class="text-center" :style="fontSize">{{ query }}</p>
+        </div>
         <button class="btn btn-success" @click="increaseFont">Increase</button>
         <button class="btn btn-danger" @click="decreaseFont">Decrease</button>
     </div>
@@ -41,13 +60,14 @@
         new Vue({
             el: '.app',
             data: {
-               fontSize: 12 + 'px',
+                query: '',
+                fontSize: '12px',
             },
             methods: {
-                increaseFont: function() {
+                increaseFont: function () {
                     return this.fontSize += 1 + 'px';
                 },
-                decreaseFont: function() {
+                decreaseFont: function () {
                     return this.fontSize -= 1 + 'px';
                 }
             }
