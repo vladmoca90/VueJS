@@ -1,12 +1,11 @@
 @import '../mixins/mixins.scss';
-
 .dropdown-box {
     background-color: #7986CB;
     border-radius: 8px;
     @include font-style(15px, #fff, Arial);
     margin: 50px auto;
     min-height: 40px;
-    max-width: 150px;
+    max-width: 140px;
     &__btn {
         cursor: pointer;
         display: inherit;
@@ -21,9 +20,18 @@
     }
     &__list {
         margin-bottom: 0;
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         li {
             border-top: 1px solid #ccc;
             padding: 10px;
+            &:last-of-type {
+                border: {
+                    bottom-left-radius: 8px;
+                    bottom-right-radius: 8px;
+                }
+            }
             &:hover {
                 background-color: #3949AB;
                 cursor: pointer;

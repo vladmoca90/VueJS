@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Animation 1</title>
+    <title>Animation button</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -39,7 +39,7 @@
                 <h1>Animations</h1>
                 <button class="btn btn-primary" @click="load = !load">Load / Remove element</button>
                 <br><br>
-                <transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @enter-cancelled="enterCancelled" @before-leave="beforeLeave" @leave="leave" @after-leave="afterLeave" @leave-cancel="leaveCancel">
+                <transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @enter-cancelled="enterCancelled" @before-leave="beforeLeave" @leave="leave" @after-leave="afterLeave" @leave-cancel="leaveCancelled">
                     <div class="trans-block" v-if="load"></div>
                 </transition>
             </div>
