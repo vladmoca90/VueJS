@@ -33,11 +33,13 @@
 <body>
     <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
         <div class="dropdown-box__btn">Show List
-            <span class="caret" :class="{ rotateDown : caretDown = !caretDown}"></span>
+            <span class="caret" :class="{ rotateDown : caretDown = !caretDown }"></span>
         </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
-        </ul>
+        <transition name="slide-down">
+            <ul class="dropdown-box__list list-unstyled">
+                <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
+            </ul>
+        </transition>
     </div>
 
     <script type="text/javascript">
