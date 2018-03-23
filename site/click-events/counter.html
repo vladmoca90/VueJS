@@ -26,19 +26,24 @@
 </head>
 
 <body>
-    <div id="count">
+    <div id="counter-container">
+        <p></p>
         <button role="button" @click="increase">Increase</button>
         <p>{{ counter }}</p>
+        <button role="button" @click="decrease">Decrease</button>
     </div>
     <script type="text/javascript">
         new Vue({
-            el: "#count",
+            el: "#counter-container",
             data: {
                 counter: 0,
             },
             methods: {
                 increase: function() {
-                    this.counter += 1;
+                    this.counter += 10;
+                },
+                decrease: function() {
+                    this.counter -= 10;
                 },
             },
         });

@@ -31,20 +31,26 @@
 </head>
 
 <body>
-    <div class="intro u-full-width u-full-height">
-        <p class="text-center" @click="fontSizeUp++">This font will now increase {{ fontSizeUp  }}</p>
-        <p class="text-center" @click="fontSizeDown--">This font will now decrease {{ fontSizeDown }}</p>
+    <div class="app center-block u-full-width u-full-height">
+        <p class="text-center">This font will now increase {{ fontSize }}</p>
+        <button class="btn btn-success" @click="increaseFont">Increase</button>
+        <button class="btn btn-danger" @click="decreaseFont">Decrease</button>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: '.intro',
+            el: '.app',
             data: {
-                return: {
-                    fontSizeUp: 10,
-                    fontSizeDown: 10,
-                }
+               fontSize: 12 + 'px',
             },
+            methods: {
+                increaseFont: function() {
+                    return this.fontSize += 1 + 'px';
+                },
+                decreaseFont: function() {
+                    return this.fontSize -= 1 + 'px';
+                }
+            }
         });
     </script>
 
