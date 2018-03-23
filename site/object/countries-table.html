@@ -38,18 +38,34 @@
     <table class="countries__table table table-dark">
         <thead>
             <th>Name</th>
-            <th>Population</th>
+            <th>Population (millions)</th>
             <th>Capital</th>
             <th>Language</th>
             <th>Other cities</th>
-            <th>UN membership</th>
+        </thead>
+        <tbody>
+            <tr v-for="country in countries">
+                <td>{{ country.name }}</td>
+                <td>{{ country.population }}</td>
+                <td>{{ country.capital }}</td>
+                <td>{{ country.language }}</td>
+                <td>{{ country.otherCities }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="countries__statistics table table-dark">
+        <thead>
+            <th>Total countries</th>
+            <th>Total population (millions)</th>
+            <th>Number of different language</th>
         </thead>
         <tbody>
             <tr>
                 <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
-    </table>
 </div>
 
     <script type="text/javascript">
@@ -105,6 +121,9 @@
                         UNmember: true,
                     },
                 ],
+            },
+            methods: {
+
             },
         });
     </script>
