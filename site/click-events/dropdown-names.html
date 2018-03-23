@@ -35,11 +35,9 @@
         <div class="dropdown-box__btn">Show List
             <span class="caret" :class="{ rotateDown : caretDown = !caretDown }"></span>
         </div>
-        <transition name="slide-down">
-            <ul class="dropdown-box__list list-unstyled">
-                <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
-            </ul>
-        </transition>
+        <ul class="dropdown-box__list list-unstyled">
+            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
+        </ul>
     </div>
 
     <script type="text/javascript">

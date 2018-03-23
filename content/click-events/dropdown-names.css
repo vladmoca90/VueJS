@@ -16,17 +16,12 @@
       transform: rotate(-90deg); }
     .dropdown-box__btn .rotateDown {
       transform: rotate(0deg); }
-  .dropdown-box .slide-down-enter-active,
-  .dropdown-box .slide-down-leave-active {
-    transition: height 0.5s linear; }
   .dropdown-box__list {
-    margin-bottom: 0;
-    transition-property: all;
-    transition-duration: .5s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+    margin-bottom: 0; }
     .dropdown-box__list li {
       border-top: 1px solid #ccc;
-      padding: 10px; }
+      padding: 10px;
+      transition: background 0.4s; }
       .dropdown-box__list li:last-of-type {
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px; }
