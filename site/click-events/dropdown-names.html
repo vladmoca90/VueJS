@@ -33,10 +33,10 @@
 <body>
     <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
         <div class="dropdown-box__btn">Show List
-            <span class="caret" :class="{ rotateDown : caretDown = !caretDown}"></span>
+            <span class="caret" :class="{ rotateDown : caretDown = !caretDown }"></span>
         </div>
         <ul class="dropdown-box__list list-unstyled">
-            <li v-show="showNames" v-for="person in persons" class="text-center">{{ person }}</li>
+            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
         </ul>
     </div>
 
@@ -46,13 +46,13 @@
             data: {
                 showNames: false,
                 caretDown: false,
-                persons: {
-                    first: "Danielle McDonald",
-                    second: "John Swift",
-                    third: "Angela Wycombe",
-                    fourth: "Samuel L Jackson",
-                    fifth: "Juliana Pike",
-                },
+                persons: [
+                    "Danielle McDonald",
+                    "John Swift",
+                    "Angela Wycombe",
+                    "Samuel L Jackson",
+                    "Juliana Pike",
+                ],
             },
         });
     </script>

@@ -1,5 +1,4 @@
 @import '../mixins/mixins.scss';
-
 .dropdown-box {
     background-color: #7986CB;
     border-radius: 8px;
@@ -24,6 +23,13 @@
         li {
             border-top: 1px solid #ccc;
             padding: 10px;
+            transition: background 0.4s;
+            &:last-of-type {
+                border: {
+                    bottom-left-radius: 8px;
+                    bottom-right-radius: 8px;
+                }
+            }
             &:hover {
                 background-color: #3949AB;
                 cursor: pointer;
