@@ -77,9 +77,7 @@
                 allCountries: function () {
                     return this.countries.filter((country) => {
                         return country.name.match(this.query) ||
-                            country.continent.match(this.query) ||
-                            country.name.toUpperCase.indexOf(query.toUpperCase > -1) ||
-                            country.continent.toUpperCase.indexOf(query.toUpperCase > -1)
+                               country.continent.match(this.query)
                     });
                 }
             },
