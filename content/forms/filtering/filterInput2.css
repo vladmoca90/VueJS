@@ -1,0 +1,14 @@
+@import url("../../mixins/mixins.scss");
+.filter-container {
+  margin: 0 auto;
+  max-width: 600px; }
+  .filter-container__input {
+    display: inline-block;
+    margin: 20px auto;
+    padding-left: 5px; }
+  .filter-container__text {
+    font-size: 14px;
+    padding: 15px 0; }
+  .filter-container__heading {
+    margin: 0;
+    padding-bottom: 15px; }

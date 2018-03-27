@@ -1,0 +1,10 @@
+@import url("../../mixins/mixins.scss");
+.filter-container {
+  max-width: 200px; }
+  .filter-container__input {
+    margin: 20px auto;
+    padding: 5px; }
+  .filter-container__list {
+    font-size: 15px; }
+    .filter-container__list-item {
+      text-align: center; }
