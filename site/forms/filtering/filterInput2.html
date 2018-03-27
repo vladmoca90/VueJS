@@ -24,50 +24,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
+    <link rel="stylesheet" href="../../../content/forms/filtering/filterInput2.css" />
 
-    <style type="text/css">
-        @import url('../../content/utilities/utilities.css');
-        #app {
-            margin: 0 auto;
-            max-width: 550px;
-        }
-
-        #app>input {
-            display: inline-block;
-            margin: 20px auto;
-            padding-left: 5px;
-        }
-
-        #app>div.content-text {
-            border-radius: 10px;
-            font-size: 14px !important;
-            padding: 20px !important;
-        }
-
-        #app>div.content-text>h3 {
-            margin: 0;
-            padding-bottom: 15px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="../../../content/utilities/utilities.css" />
 
 </head>
 
 <body>
 
-    <div id="app" class="u-full-width">
-        <h1>Blog in blogs</h1>
-        <input class="u-full-width" type="text" placeholder="Search..." v-model="query" />
-        <div v-for="blog in allBlogs" class="jumbotron content-text">
-            <h3>{{ blog.title }}</h3>
+    <div class="filter-container u-full-width">
+        <h1 class="text-center">Blog in blogs</h1>
+        <input class="filter-container__input u-full-width" type="text" placeholder="Search..." v-model="query" />
+        <div v-for="blog in allBlogs" class="filter-container__text">
+            <h3 class="filter-container__heading text-center">{{ blog.title }}</h3>
             {{ blog.content }}
         </div>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: '#app',
+            el: '.filter-container',
             data: {
                 blogs: [],
                 query: '',

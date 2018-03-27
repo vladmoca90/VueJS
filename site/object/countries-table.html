@@ -3,11 +3,12 @@
 
 <head>
 
-    <title>Object with countries</title>
+    <title>Table with countries</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -28,25 +29,48 @@
 
     <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
 
+    <link rel="stylesheet" type="text/css" href="../../content/object/countries-table.css" />
+
 </head>
 
 <body>
-    <table class="main-table table table-dark">
+    <div class="countries u-full-width">
+    <table class="countries__table table table-bordered">
         <thead>
-            <tr>
-                <th></th>
+            <th>Name</th>
+            <th>Population (millions)</th>
+            <th>Capital</th>
+            <th>Language</th>
+            <th>Other cities</th>
+        </thead>
+        <tbody>
+            <tr v-for="country in countries">
+                <td>{{ country.name }}</td>
+                <td>{{ country.population }}</td>
+                <td>{{ country.capital }}</td>
+                <td>{{ country.language }}</td>
+                <td>{{ country.otherCities }}</td>
             </tr>
+        </tbody>
+    </table>
+    <table class="countries__statistics table table-bordered">
+        <thead>
+            <th>Total countries</th>
+            <th>Total population (millions)</th>
+            <th>Number of different language</th>
         </thead>
         <tbody>
             <tr>
                 <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
-    </table>
+</div>
 
     <script type="text/javascript">
         new Vue({
-            el: '.main-table',
+            el: '.countries__table',
             data: {
                 countries: [{
                         name: "Taiwan",
@@ -98,16 +122,11 @@
                     },
                 ],
             },
+            methods: {
+
+            },
         });
     </script>
-
-    <style type="text/css">
-        .main-table {
-            font-size: 15px;
-            margin: 50px auto;
-            max-width: 300px;
-        }
-    </style>
 </body>
 
 </html>

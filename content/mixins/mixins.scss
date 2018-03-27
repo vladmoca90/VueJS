@@ -5,9 +5,10 @@
     }
 }
 
-@mixin background($attachment, $position, $repeat, $size) {
+@mixin background($attachment, $image, $position, $repeat, $size) {
     background: {
         attachment: $attachment;
+        image: $image;
         position: $position;
         repeat: $repeat;
         size: $size;

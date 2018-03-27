@@ -24,40 +24,27 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
+    <link rel="stylesheet" href="../../../content/utilities/utilities.css" />
 
-    <style>
-        .app {
-            max-width: 200px;
-        }
-
-        .app>input {
-            margin: 20px auto;
-            padding: 5px;
-        }
-
-        .app ul>li {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="../../../content/forms/filtering/filterInput1.css" />
 
 </head>
 
 <body>
 
-    <div class="app u-full-width center-block">
-        <input class="u-full-width" type="text" v-model="query" placeholder="Search" />
+    <div class="filter-container u-full-width center-block">
+        <input class="filter-container__input u-full-width" type="text" v-model="query" placeholder="Search" />
         <div>
-            <ul class="list-group" v-for="country in allCountries">
-                <li class="list-group-item">{{ country.name }}</li>
-                <li class="list-group-item">{{ country.continent}}</li>
+            <ul class="filter-container__list list-group" v-for="country in allCountries">
+                <li class="filter-container__list-item list-group-item">{{ country.name }}</li>
+                <li class="filter-container__list-item list-group-item">{{ country.continent}}</li>
             </ul>
         </div>
     </div>
 
     <script type="text/javascript">
         new Vue({
-            el: '.app',
+            el: '.filter-container',
             data: {
                 query: '',
                 countries: [{
@@ -90,7 +77,9 @@
                 allCountries: function () {
                     return this.countries.filter((country) => {
                         return country.name.match(this.query) ||
-                            country.continent.match(this.query)
+                            country.continent.match(this.query) ||
+                            country.name.toUpperCase.indexOf(query.toUpperCase > -1) ||
+                            country.continent.toUpperCase.indexOf(query.toUpperCase > -1)
                     });
                 }
             },
