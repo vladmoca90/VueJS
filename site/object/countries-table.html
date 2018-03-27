@@ -35,50 +35,60 @@
 
 <body>
     <div class="countries u-full-width">
-    <table class="countries__table table table-bordered">
-        <thead>
-            <th>Name</th>
-            <th>Population (millions)</th>
-            <th>Capital</th>
-            <th>Language</th>
-            <th>Other cities</th>
-        </thead>
-        <tbody>
-            <tr v-for="country in countries">
-                <td>{{ country.name }}</td>
-                <td>{{ country.population }}</td>
-                <td>{{ country.capital }}</td>
-                <td>{{ country.language }}</td>
-                <td>{{ country.otherCities }}</td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="countries__statistics table table-bordered">
-        <thead>
-            <th>Total countries</th>
-            <th>Total population (millions)</th>
-            <th>Number of different language</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-</div>
+        <table class="countries__table table table-bordered">
+            <thead>
+                <th>Name</th>
+                <th>Population (millions)</th>
+                <th>Capital</th>
+                <th>Language</th>
+                <th>Other cities</th>
+            </thead>
+            <tbody>
+                <tr v-for="country in countries">
+                    <td>{{ country.name }}</td>
+                    <td>{{ country.population }}</td>
+                    <td>{{ country.capital }}</td>
+                    <td>{{ country.language }}</td>
+                    <td>{{ country.otherCities[0] }}, {{ country.otherCities[1] }}, {{ country.otherCities[2] }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="countries__statistics table table-bordered">
+            <thead>
+                <th>Total countries</th>
+                <th>Total population (millions)</th>
+                <th>Number of different language</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <script type="text/javascript">
         new Vue({
             el: '.countries__table',
             data: {
-                countries: [{
-                        name: "Taiwan",
-                        population: 22, //in millions
-                        capital: "Taipei",
-                        language: "Cantonese",
-                        otherCities: ["Tainan", "Kaohsiung", "Taichung"],
-                        UNmember: false,
+                countries: [
+                    {
+                        name: "Portugal",
+                        population: 10, //in millions
+                        capital: "Lisbon",
+                        language: "Portuguese",
+                        otherCities: ["Porto", "Funchal", "Faro"],
+                        UNmember: true,
+                    },{
+                        name: "United States",
+                        population: 315, //in millions
+                        capital: "Washington DC",
+                        language: "English",
+                        otherCities: ["Chicago", "Los Angeles", "New York"],
+                        UNmember: true,
                     },
                     {
                         name: "Israel",
@@ -89,11 +99,11 @@
                         UNmember: true,
                     },
                     {
-                        name: "Albania",
-                        population: 3.5, //in millions
-                        capital: "Tirana",
-                        language: "Albanian",
-                        otherCities: ["Vlore", "Elbasan", "Durres"],
+                        name: "Australia",
+                        population: 24, //in millions
+                        capital: "Canberra",
+                        language: "English",
+                        otherCities: ["Brisbane", "Melbourne", "Sydney"],
                         UNmember: true,
                     },
                     {
@@ -106,8 +116,8 @@
                     },
                     {
                         name: "Palestine",
-                        population: 3.5, //in millions
-                        capital: "East Jerusalem",
+                        population: 4, //in millions
+                        capital: "Ramallah",
                         language: "Arabic",
                         otherCities: ["Bethleehem", "Gaza", "Hebron"],
                         UNmember: false,
@@ -118,6 +128,13 @@
                         capital: "New Delhi",
                         language: "Hindi",
                         otherCities: ["Madras", "Mumbai", "Varanasi"],
+                        UNmember: true,
+                    },{
+                        name: "Morocco",
+                        population: 33, //in millions
+                        capital: "Rabat",
+                        language: "Arabic",
+                        otherCities: ["Fes", "Marrakesh", "Casablanca"],
                         UNmember: true,
                     },
                 ],
