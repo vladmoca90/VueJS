@@ -25,34 +25,20 @@
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
-    <style type="text/css">
-        @import '../../content/utilities/utilities.css';
-        .parent-container {
-            font-family: Calibri;
-            font-size: 16px;
-            margin: 50px auto;
-            max-width: 400px;
-        }
-        th, td {
-            text-align: center;
-        }
-        tbody>tr:hover {
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="../../content/object/namesMarks.css" />
 
 </head>
 
 <body>
-    <div class="parent-container u-full-width">
+    <div class="table-container u-full-width">
         <table role="presentation" class="table table-bordered table-dark table-hover">
-            <thead>
+            <thead class="table-head">
                 <tr>
                     <th>Name</th>
                     <th>Mark</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-body">
                 <tr v-for="student in students"
                     :key="student.name">
                     <td>{{ student.name }}</td>
