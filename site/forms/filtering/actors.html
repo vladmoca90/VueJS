@@ -27,8 +27,8 @@
 
 <body>
 
-    <section class="filter-container u-full-width">
-        <input type="text" role="textbox" class="filter-container__input u-full-width" />
+    <section class="filter-container u-full-width" v-for="actor in actors">
+        <input type="text" role="textbox" class="filter-container__input u-full-width" v-model="query" />
         <article class="filter-container__content u-border">
             <h2 role="heading" class="filter-container__heading">Russell Crowe</h2>
             <h4 role="heading" class="filter-container__sub-heading">7 April 1964</h4>
@@ -71,7 +71,15 @@
     new Vue({
         el: '.filter-container',
         data: {
-
+            query: '',
+            actors: [
+                {
+                name: 'Russell Crowe',
+                dateOfBirth: '7 April 1964',
+                placeOfBirth: 'Wellington, New Zealand',
+                description: 'Russell Ira Crowe is an actor, film producer and musician. Although a New Zealand citizen, he has lived most of his life in Australia. He came to international attention for his role as the Roman General Maximus Decimus Meridius in the 2000 historical epic film Gladiator, directed by Ridley Scott, for which Crowe won an Academy Award for Best Actor, a Broadcast Film Critics Association Award for Best Actor, an Empire Award for Best Actor and a London Film Critics Circle Award for Best Actor and 10 further nominations for best actor.',
+                }
+            ],
         },
         methods: {
 
