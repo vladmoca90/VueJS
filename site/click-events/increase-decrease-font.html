@@ -39,7 +39,7 @@
             min-height: 50px;
         }
 
-        .app__text > p {
+        .app__text>p {
             margin: 0;
         }
     </style>
@@ -55,26 +55,23 @@
         <button class="btn btn-success" @click="increaseFont">Increase</button>
         <button class="btn btn-danger" @click="decreaseFont">Decrease</button>
     </div>
-
-    <script type="text/javascript">
-        new Vue({
-            el: '.app',
-            data: {
-                query: '',
-                fontSize: '12px',
-            },
-            methods: {
-                increaseFont: function () {
-                    return this.fontSize++;
-                },
-                decreaseFont: function () {
-                    return this.fontSize--;
-                }
-            }
-        });
-    </script>
-
-
 </body>
+<script type="text/javascript">
+    new Vue({
+        el: '.app',
+        data: {
+            query: '',
+            fontSize: '12px',
+        },
+        methods: {
+            increaseFont: function () {
+                return this.fontSize++;
+            },
+            decreaseFont: function () {
+                return this.fontSize--;
+            }
+        }
+    });
+</script>
 
 </html>
