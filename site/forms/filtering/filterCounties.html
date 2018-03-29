@@ -24,7 +24,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-    <link rel="stylesheet" href="../../../content/forms/filtering/filterInput2.css" />
+    <link rel="stylesheet" href="../../../content/forms/filtering/filterCounties.css" />
 
     <link rel="stylesheet" href="../../../content/utilities/utilities.css" />
 
@@ -33,11 +33,11 @@
 <body>
 
     <div class="filter-container u-full-width">
-        <h1 class="text-center">Blog in blogs</h1>
+        <h1 class="text-center">UK Counties</h1>
         <input class="filter-container__input u-full-width" type="text" placeholder="Search..." v-model="query" />
-        <div v-for="blog in allBlogs" class="filter-container__text">
-            <h3 class="filter-container__heading text-center">{{ blog.title }}</h3>
-            {{ blog.content }}
+        <div v-for="county in counties" class="filter-container__text">
+            <h3 class="filter-container__heading text-center">{{ county.title }}</h3>
+            {{ county.content }}
         </div>
     </div>
 </body>
@@ -45,9 +45,8 @@
     new Vue({
         el: '.filter-container',
         data: {
-            blogs: [],
             query: '',
-            blogs: [{
+            counties: [{
                 title: 'Berskshire',
                 content: 'Berkshire is a county in south east England, west of London and is one of the home counties. It was recognised by the Queen as the Royal County of Berkshire in 1957 because of the presence of Windsor Castle, and letters patent were issued in 1974. Berkshire is a county of historic origin and is a home county',
             }, {
@@ -59,10 +58,10 @@
             }, ],
         },
         computed: {
-            allBlogs: function () {
-                return this.blogs.filter((blog) => {
-                    return blog.content.match(this.query) ||
-                        blog.title.match(this.query)
+            counties: function () {
+                return this.counties.filter((county) => {
+                    return county.content.match(this.query) ||
+                        county.title.match(this.query)
                 });
             }
         },
