@@ -24,6 +24,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
+    <link rel="stylesheet" href="../../content/forms/validation.css" />
+
 </head>
 
 <body>
@@ -111,76 +113,29 @@
             </div>
         </form>
     </div>
-
-    <script type="text/javascript">
-        new Vue({
-            el: "#formular",
-            data: {
-                firstName: '',
-                lastName: '',
-                age: null,
-                homeAddress: '',
-                emailAddress: '',
-                emailPassword: '',
-            },
-            methods: {
-                formValidation: function () {
-                    if (this.firstName.length < 6) {
-                        alert("The first name is too short");
-                    }
-                    if (this.lastName.length < 6) {
-                        alert("The last name is too short");
-                    }
-                },
-            },
-        });
-    </script>
-
-    <style type="text/css" scoped>
-        #formular {
-            background-color: #ebebeb;
-            border: 1px solid #bbb;
-            margin: 25px auto;
-            max-width: 450px;
-            padding: 25px;
-        }
-
-        .form-validation__buttons {
-            margin-bottom: 0;
-        }
-
-        #formular>form>div {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #formular>form>div.personal-details {
-            flex-direction: row;
-        }
-
-        #formular>form>div.form-lists {
-            flex-direction: column;
-        }
-
-        #formular>form>div.form-lists label {
-            font-weight: 400;
-        }
-
-        #formular>form>div.form-lists label[for] {
-            font-weight: 700;
-        }
-
-        #formular>form>div input {
-            margin-left: auto;
-            max-width: 300px;
-        }
-
-        #formular>form>div input[type="checkbox"],
-        #formular>form>div input[type="radio"] {
-            position: relative;
-            top: 3px;
-        }
-    </style>
 </body>
+<script type="text/javascript">
+    new Vue({
+        el: "#formular",
+        data: {
+            firstName: '',
+            lastName: '',
+            age: null,
+            homeAddress: '',
+            emailAddress: '',
+            emailPassword: '',
+        },
+        methods: {
+            formValidation: function () {
+                if (this.firstName.length < 6) {
+                    alert("The first name is too short");
+                }
+                if (this.lastName.length < 6) {
+                    alert("The last name is too short");
+                }
+            },
+        },
+    });
+</script>
 
 </html>

@@ -1,4 +1,3 @@
-@import url("../../mixins/mixins.scss");
 .filter-container {
   max-width: 200px; }
   .filter-container__input {

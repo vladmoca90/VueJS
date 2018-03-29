@@ -21,24 +21,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
-</head>
-
-<body>
-    <div id="intro" class="u-full-width u-full-height">
-        <input type="text" maxlength="20" size="20" v-model="query" />
-        <p>{{ query }}</p>
-    </div>
-
-    <script type="text/javascript">
-        new Vue({
-            el: '#intro',
-            data: {
-                query: '',
-            },
-        });
-    </script>
-
-    <style scope>
+ <style scope>
         #intro {
             margin: 0 auto;
             max-width: 200px;
@@ -49,6 +32,21 @@
             margin: 70px auto;
         }
     </style>
-</body>
 
+</head>
+
+<body>
+    <div id="intro" class="u-full-width u-full-height">
+        <input type="text" maxlength="20" size="20" v-model="query" />
+        <p>{{ query }}</p>
+    </div>
+</body>
+ <script type="text/javascript">
+        new Vue({
+            el: '#intro',
+            data: {
+                query: '',
+            },
+        });
+    </script>
 </html>

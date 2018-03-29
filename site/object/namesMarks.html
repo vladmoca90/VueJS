@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -39,77 +39,71 @@
                 </tr>
             </thead>
             <tbody class="table-body">
-                <tr v-for="student in students"
-                    :key="student.name">
+                <tr v-for="student in students" :key="student.name">
                     <td>{{ student.name }}</td>
                     <td>{{ student.mark }}</td>
                 </tr>
             </tbody>
         </table>
-
 </body>
-
-    <script type="text/javascript">
-        new Vue({
-            el: "table",
-            data: {
-                students: [
-                    {
-                        name: "Zanfir Corina-Raluca",
-                        mark: 8.65,
-                    },
-                    {
-                        name: "Barboi Andrei",
-                        mark: 8.00,
-                    },
-                    {
-                        name: "Despre Ioana-Francesca",
-                        mark: 9.76,
-                    },
-                    {
-                        name: "Antochi Andreea-Daniela",
-                        mark: 8.59,
-                    },
-                    {
-                        name: "Ilie Andrei-Cristian",
-                        mark: 7.44,
-                    },
-                    {
-                        name: "Ciucur Alina",
-                        mark: 8.94,
-                    },
-                    {
-                        name: "Toma Carmen-Nicoleta",
-                        mark: 9.25,
-                    },
-                     {
-                        name: "Balineanu Contantin-Ionut",
-                        mark: 7.79,
-                    }, 
-                     {
-                        name: "Serban Marilena-Alina",
-                        mark: 8.20,
-                    },
-                ],
-            },
-            computed: {
-                sortNames: function() {
-                    this.students.sort(function(a, b) {
-                        var nameA = a.student.name;
-                        var nameB = b.student.name;
-                        if(nameA > nameB) {
-                            return 1;
-                        }
-                        else if(nameA < nameB) {
-                            return -1;
-                        }
-                        else {
-                            return 0;
-                        }
-                    });
+<script type="text/javascript">
+    new Vue({
+        el: "table",
+        data: {
+            students: [{
+                    name: "Zanfir Corina-Raluca",
+                    mark: 8.65,
                 },
+                {
+                    name: "Barboi Andrei",
+                    mark: 8.00,
+                },
+                {
+                    name: "Despre Ioana-Francesca",
+                    mark: 9.76,
+                },
+                {
+                    name: "Antochi Andreea-Daniela",
+                    mark: 8.59,
+                },
+                {
+                    name: "Ilie Andrei-Cristian",
+                    mark: 7.44,
+                },
+                {
+                    name: "Ciucur Alina",
+                    mark: 8.94,
+                },
+                {
+                    name: "Toma Carmen-Nicoleta",
+                    mark: 9.25,
+                },
+                {
+                    name: "Balineanu Contantin-Ionut",
+                    mark: 7.79,
+                },
+                {
+                    name: "Serban Marilena-Alina",
+                    mark: 8.20,
+                },
+            ],
+        },
+        computed: {
+            sortNames: function () {
+                this.students.sort(function (a, b) {
+                    var nameA = a.student.name;
+                    var nameB = b.student.name;
+                    if (nameA > nameB) {
+                        return 1;
+                    } else if (nameA < nameB) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
+                });
             },
-        });
-    </script>
+        },
+    });
+</script>
 
 </html>
