@@ -1,10 +1,10 @@
-@import url("../mixins/mixins.scss");
 .table-container {
-  font-family: Calibri;
   font-size: 16px;
+  font-family: Calibri;
+  color: #fff;
   margin: 50px auto;
   max-width: 400px; }
-  .table-container-head, .table-container-body {
+  .table-container th, .table-container td {
     text-align: center; }
   .table-container-body tr:hover {
     cursor: pointer; }
