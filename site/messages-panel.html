@@ -21,7 +21,7 @@
 
     <script src="https://unpkg.com/vue@2.1.8/dist/vue.js" type="text/javascript"></script>
 
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../content/utilities/utilities.css" />
 
@@ -33,31 +33,32 @@
     <div class="messages-panel u-full-height u-full-width u-flex">
         <div class="panel users-panel u-full-height u-full-width u-border u-bg--white">
             <div class="users-panel__top">
+                <i class="glyphicon glyphicon-search users-panel__search-icon"></i>
                 <input class="users-panel__search-bar u-full-width" type="text" role="textbox" placeholder="Search..." v-model="query" />
             </div>
             <div class="users-panel__content">
-                <div class="users-panel__person u-full-height u-full-width u-relative" @click="stayActive">
+                <div class="users-panel__person u-full-height u-full-width u-relative" :class="{stayActive : active}">
                     <div class="user-icon u-border u--absolute"></div>
                 </div>
                 <div class="users-panel__person u-full-height u-full-width"></div>
                 <div class="users-panel__person u-full-height u-full-width"></div>
             </div>
         </div>
-    <div class="panel comments-panel u-full-height u-full-width u-border u-bg--white">
-        <div class="comments-panel__top u-full-height u-full-width u-flex u-relative">
-            <div class="user-icon u-border u--absolute"></div>
-            <span class="comments-panel__top-name"></span>
-            <div class="comments-panel__status"></div>
-        </div>
-        <div class="comments-panel__texts">
+        <div class="panel comments-panel u-full-height u-full-width u-border u-bg--white">
+            <div class="comments-panel__top u-full-height u-full-width u-flex u-relative">
+                <div class="user-icon u-border u--absolute"></div>
+                <span class="comments-panel__top-name"></span>
+                <div class="comments-panel__status"></div>
+            </div>
+            <div class="comments-panel__texts">
 
+            </div>
+            <textarea class="comments-panel__textarea u-full-height u-full-width" v-model="writeComment"></textarea>
+            <div class="comments-panel__bottom u-full-height u-flex">
+                <!-- <input type="checkbox" /> -->
+                <button type="button" class="btn btn-primary comments-panel__button" @click="sendComment">SEND</button>
+            </div>
         </div>
-        <textarea class="comments-panel__textarea u-full-height u-full-width" v-model="writeComment"></textarea>
-        <div class="comments-panel__bottom u-full-height u-flex">
-            <!-- <input type="checkbox" /> -->
-            <button type="button" class="btn btn-primary comments-panel__button" @click="sendComment">SEND</button>
-        </div>
-    </div>
     </div>
 </body>
 <script type="text/javascript">
