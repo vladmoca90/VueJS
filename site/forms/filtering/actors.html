@@ -29,7 +29,7 @@
 
     <section class="box u-full-width">
         <input type="text" role="textbox" class="box__filter u-full-width" v-model="query" />
-        <article class="box-article u-border" v-for="actor in actors">
+        <article class="box-article u-border" v-for="actor in actors" :key="actor">
             <h2 role="heading" class="box-article__heading">{{ actor.name }}</h2>
             <h4 role="heading" class="box-article__heading-sub">{{ actor.dateOfBirth }}</h4>
             <h4 role="heading" class="box-article__heading-sub">{{ actor.placeOfBirth }}</h4>
