@@ -12,6 +12,14 @@
      .panel {
          font-size: 15px;
      }
+     .user-icon {
+         border-radius: 100%;
+         bottom: 0;
+         height: 35px;
+         margin: auto;
+         top: 0;
+         width: 35px;
+     }
      .users-panel {
          max-width: 300px;
          min-height: 565px;
@@ -28,22 +36,17 @@
              }
          }
          &__content {
-            @include overflow-x-y(hidden, auto);
+             @include overflow-x-y(hidden, auto);
          }
          &__person {
              border-top: 1px solid #ccc;
-             min-height: 73px;
+             min-height: 70px;
+             padding: 5px 10px;
              &:active {
                  border-left: 2px solid #003e81;
              }
              &:last-of-type {
                  border-bottom: 1px solid #ccc;
-             }
-             &-img {
-                 border-radius: 100%;
-                 min-height: 38px;
-                 margin: 15px 5px;
-                 max-width: 38px;
              }
          }
      }
@@ -53,11 +56,6 @@
              border-bottom: 1px solid #ccc;
              min-height: 50px;
              padding: 5px 10px;
-             &-img {
-                 border-radius: 100%;
-                 min-height: 38px;
-                 max-width: 38px;
-             }
          }
          &__texts {
              min-height: 360px;
