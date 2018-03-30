@@ -31,7 +31,7 @@
          max-width: 300px;
          min-height: 565px;
          &__top {
-             margin: 9px 10px;
+             margin: 9px 20px;
          }
          &__search {
              &-icon {
@@ -41,7 +41,7 @@
              }
              &-bar {
                  @include borders(0, 0, 1px, 0, solid, #ccc);
-                 padding: 4px 4px 4px 24px;
+                 padding: 4px 4px 3px 24px;
              }
          }
          &__content {
