@@ -24,90 +24,96 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
+    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
+
     <link rel="stylesheet" href="../../content/forms/validation.css" />
 
 </head>
 
 <body>
-    <div id="formular" class="u-full-width u-full-height">
-        <form role="form" method="post" class="form-horizontal">
-            <div class="form-group personal-details">
+    <div class="formular u-full-width u-full-height u-border">
+        <form role="form" method="post" class="formular-content form-horizontal">
+            <div class="form-group formular-content__personal u-flex">
                 <label for="firstName">First Name:</label>
                 <input name="firstName" class="u-full-with" type="text" v-model="firstName" />
                 <span>{{ fieldRequired }}</span>
             </div>
-            <div class="form-group personal-details">
+            <div class="form-group formular-content__personal u-flex">
                 <label for="lastName">Last Name:</label>
                 <input name="lastName" class="u-full-with" type="text" v-model="lastName" />
                 <span>{{ fieldRequired }}</span>
             </div>
-            <div class="form-group personal-details">
+            <div class="form-group formular-content__personal u-flex">
                 <label for="age">Age:</label>
                 <input name="age" class="u-full-with" type="text" v-model="age" />
                 <span>{{ fieldRequired }}</span>
             </div>
-            <div class="form-group personal-details">
+            <div class="form-group formular-content__personal u-flex">
                 <label for="address">Address:</label>
                 <input name="homeAddress" class="u-full-with" type="text" v-model="homeAddress" />
                 <span>{{ fieldRequired }}</span>
             </div>
-            <div class="form-group personal-details">
+            <div class="form-group formular-content__personal u-flex">
                 <label for="email">Email:</label>
                 <input name="emailAddress" class="u-full-with" type="email" v-model="emailAddress" />
                 <span>{{ fieldRequired }}</span>
             </div>
-            <div class="form-group personal-details">
+            <div class="form-group formular-content__personal u-flex">
                 <label for="address">Password:</label>
                 <input name="password" class="u-full-with" type="password" v-model="emailPassword" />
                 <span>{{ fieldRequired }}</span>
             </div>
-            <div class="form-group form-lists">
+            <div class="form-group formular-content__list u-flex">
                 <label for="languages">Languages:</label>
-                <label>
-                    English:
-                    <input type="checkbox" v-model="languages" />
-                </label>
-                <label>
-                    Spanish:
-                    <input type="checkbox" v-model="languages" />
-                </label>
-                <label>
-                    French:
-                    <input type="checkbox" v-model="languages" />
-                </label>
-                <label>
-                    Arabic:
-                    <input type="checkbox" v-model="languages" />
-                </label>
-                <label>
-                    Chinese:
-                    <input type="checkbox" v-model="languages" />
-                </label>
+                <div class="u-flex u-flex--column">
+                    <label>
+                        English:
+                        <input type="checkbox" v-model="languages" />
+                    </label>
+                    <label>
+                        Spanish:
+                        <input type="checkbox" v-model="languages" />
+                    </label>
+                    <label>
+                        French:
+                        <input type="checkbox" v-model="languages" />
+                    </label>
+                    <label>
+                        Arabic:
+                        <input type="checkbox" v-model="languages" />
+                    </label>
+                    <label>
+                        Chinese:
+                        <input type="checkbox" v-model="languages" />
+                    </label>
+                </div>
             </div>
-            <div class="form-group form-lists">
+            <div class="form-group formular-content__list u-flex">
                 <label for="selectRegion">Select your region:</label>
-                <label>
-                    European Union:
-                    <input type="radio" name="country" v-model="selectRegion" />
-                </label>
-                <label>
-                    United Kingdom:
-                    <input type="radio" name="country" v-model="selectRegion" />
-                </label>
-                <label>
-                    Russia/Belarus:
-                    <input type="radio" name="country" v-model="selectRegion" />
-                </label>
-                <label>
-                    Turkey:
-                    <input type="radio" name="country" v-model="selectRegion" />
-                </label>
-                <label>
-                    Israel:
-                    <input type="radio" name="country" v-model="selectRegion" />
-                </label>
+                <div class="u-flex u-flex--column">
+                    <label>
+                        European Union:
+                        <input type="radio" name="country" v-model="selectRegion" />
+                    </label>
+                    <label>
+                        United Kingdom:
+                        <input type="radio" name="country" v-model="selectRegion" />
+                    </label>
+                    <label>
+                        Russia/Belarus:
+                        <input type="radio" name="country" v-model="selectRegion" />
+                    </label>
+                    <label>
+                        Turkey:
+                        <input type="radio" name="country" v-model="selectRegion" />
+                    </label>
+                    <label>
+                        Israel:
+                        <input type="radio" name="country" v-model="selectRegion" />
+                    </label>
+                </div>
             </div>
-            <div class="form-group form-validation__buttons">
+            <div class="form-group formular-content__buttons u-flex">
                 <button type="submit" @submit="formValidation">Submit</button>
                 <button type="reset">Reset</button>
             </div>
@@ -116,7 +122,7 @@
 </body>
 <script type="text/javascript">
     new Vue({
-        el: "#formular",
+        el: ".formular",
         data: {
             firstName: '',
             lastName: '',
