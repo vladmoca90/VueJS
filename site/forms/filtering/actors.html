@@ -27,9 +27,9 @@
 
 <body>
 
-    <section class="box u-full-width" v-for="actor in actors">
+    <section class="box u-full-width">
         <input type="text" role="textbox" class="box__filter u-full-width" v-model="query" />
-        <article class="box-article u-border">
+        <article class="box-article u-border" v-for="actor in actors">
             <h2 role="heading" class="box-article__heading">{{ actor.name }}</h2>
             <h4 role="heading" class="box-article__heading-sub">{{ actor.dateOfBirth }}</h4>
             <h4 role="heading" class="box-article__heading-sub">{{ actor.placeOfBirth }}</h4>
@@ -41,10 +41,11 @@
 </body>
 <script>
     new Vue({
-        el: '.box-article',
+        el: '.box',
         data: {
             query: '',
-            actors: [{
+            actors: [
+                {
                 name: ['Russell Crowe', 'Natalie Portman', 'Gerard Butler'],
                 dateOfBirth: ['7 April 1964', '9 June 1981', '13 November 1969'],
                 placeOfBirth: ['Wellington, New Zealand', 'Jerusalem, Israel', 'Paisley, Scotland'],
@@ -53,10 +54,11 @@
                     'Natalie Portman (born Neta-Lee Hershlag) is an actress and film producer with dual Israeli and American citizenship. Portman is best known for her roles as Padmé Amidala in the Star Wars prequel trilogy and Nina Sayers in Black Swan (2010); she won an Academy Award, Golden Globe Award, and Screen Actors Guild Award, among other accolades, for her performance in the latter.',
                     'Gerard James Butler is a Scottish actor, producer, and singer. After studying law, Butler turned to acting in the mid-1990s with small roles in productions such as Mrs Brown (1997), the James Bond film Tomorrow Never Dies (1997), and Tale of the Mummy (1998). In 2000, he starred as Dracula in the horror film Dracula 2000 with Christopher Plummer and Jonny Lee Miller.'
                 ],
-            }],
+            }
+            ],
         },
         computed: {
-            allActors: function () {
+            actors: function () {
 
             }
         }
