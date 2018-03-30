@@ -1,0 +1,82 @@
+ @import 'mixins/mixins.scss';
+
+ body {
+     background-color: #e0ffff;
+ }
+
+ .messages-panel {
+     flex-direction: row;
+     justify-content: space-between;
+     margin: 30px auto;
+     max-width: 850px;
+     .panel {
+         font-size: 15px;
+     }
+     .user-icon {
+         border-radius: 100%;
+         bottom: 0;
+         height: 35px;
+         margin: auto;
+         top: 0;
+         width: 35px;
+     }
+     .users-panel {
+         max-width: 300px;
+         min-height: 565px;
+         &__top {
+             margin: 10px;
+         }
+         &__search-bar {
+             font-size: 15px;
+             @include borders(0, 0, 0, 0, solid, #ccc);
+             padding: 4px;
+             &:active,
+             &:focus {
+                 box-shadow: 0 0 0 #000 !important;
+             }
+         }
+         &__content {
+             @include overflow-x-y(hidden, auto);
+         }
+         &__person {
+             border-top: 1px solid #ccc;
+             min-height: 70px;
+             padding: 5px 10px;
+             &:active {
+                 border-left: 2px solid #003e81;
+             }
+             &:last-of-type {
+                 border-bottom: 1px solid #ccc;
+             }
+         }
+     }
+     .comments-panel {
+         max-width: 520px;
+         &__top {
+             border-bottom: 1px solid #ccc;
+             min-height: 50px;
+             padding: 5px 10px;
+         }
+         &__texts {
+             min-height: 360px;
+             overflow-y: auto;
+         }
+         &__textarea {
+             font-size: 14px;
+             @include borders(1px, 0, 1px, 0, solid, #ccc);
+             min-height: 90px;
+             padding: 5px;
+         }
+         &__bottom {
+             max-height: 60px;
+             justify-content: flex-end;
+             padding: 10px 12px 15px;
+         }
+         &__button {
+             border-radius: 0;
+             font-size: 15px;
+             margin-left: auto;
+             padding: 5px 18px;
+         }
+     }
+ }

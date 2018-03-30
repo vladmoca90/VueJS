@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Comments section</title>
+    <title>Messages Panel</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,45 +23,59 @@
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
+    <link rel="stylesheet" href="../content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../../content/forms/commentsSection.css" />
+    <link rel="stylesheet" href="../content/messages-panel.css" />
 
 </head>
 
 <body>
-    <div class="comments-panel u-full-width u-full-height u-border">
-        <div class="comments-panel__top u-full-width u-full-height u-flex">
-            <div class="comments-panel__top-img u-full-height u-full-width u-border"></div>
+    <div class="messages-panel u-full-height u-full-width u-flex">
+        <div class="panel users-panel u-full-height u-full-width u-border u-bg--white">
+            <div class="users-panel__top">
+                <input class="users-panel__search-bar u-full-width" type="text" role="textbox" placeholder="Search..." v-model="query" />
+            </div>
+            <div class="users-panel__content">
+                <div class="users-panel__person u-full-height u-full-width u-relative" @click="stayActive">
+                    <div class="user-icon u-border u--absolute"></div>
+                </div>
+                <div class="users-panel__person u-full-height u-full-width"></div>
+                <div class="users-panel__person u-full-height u-full-width"></div>
+            </div>
+        </div>
+    <div class="panel comments-panel u-full-height u-full-width u-border u-bg--white">
+        <div class="comments-panel__top u-full-height u-full-width u-flex u-relative">
+            <div class="user-icon u-border u--absolute"></div>
             <span class="comments-panel__top-name"></span>
             <div class="comments-panel__status"></div>
         </div>
         <div class="comments-panel__texts">
 
         </div>
-        <textarea class="comments-panel__textarea u-full-width u-full-height" v-model="writeComment">
-
-        </textarea>
+        <textarea class="comments-panel__textarea u-full-height u-full-width" v-model="writeComment"></textarea>
         <div class="comments-panel__bottom u-full-height u-flex">
             <!-- <input type="checkbox" /> -->
             <button type="button" class="btn btn-primary comments-panel__button" @click="sendComment">SEND</button>
         </div>
     </div>
+    </div>
 </body>
 <script type="text/javascript">
     new Vue({
-        el: '.comments-panel',
+        el: '.messages-panel',
         data: {
-            wrtiteComment: '',
+            query: '',
+            stayActive: false,
+            writeComment: '',
             profile: [{
                 img: '',
                 name: '',
                 status: '',
             }],
+            conversations: [],
         },
-        methods: {
-
-        },
+        computed: {},
+        methods: {},
     });
 </script>
 
