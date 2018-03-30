@@ -57,7 +57,7 @@
             }, ],
         },
         computed: {
-            counties: function () {
+            allCounties: function () {
                 return this.counties.filter((county) => {
                     return county.content.match(this.query) ||
                         county.title.match(this.query)
