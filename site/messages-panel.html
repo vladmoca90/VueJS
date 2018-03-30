@@ -39,6 +39,8 @@
             <div class="users-panel__content">
                 <div class="users-panel__person u-full-height u-full-width u-relative" :class="{stayActive : active}">
                     <div class="user-icon u-border u--absolute"></div>
+                    <span></span>
+                    <span></span>
                 </div>
                 <div class="users-panel__person u-full-height u-full-width"></div>
                 <div class="users-panel__person u-full-height u-full-width"></div>
@@ -53,8 +55,13 @@
             <div class="comments-panel__texts"></div>
             <textarea class="comments-panel__textarea u-full-height u-full-width" v-model="writeComment"></textarea>
             <div class="comments-panel__bottom u-full-height u-flex">
-                <!-- <input type="checkbox" /> -->
-                <button type="button" class="btn btn-primary comments-panel__button" @click.enter="sendComment">SEND</button>
+                <div>
+                    <i class="material-icons comments-panel__stickers"></i>
+                    <button type="button" class="comments-panel__button-clip">
+                        <i class="fa fa-paperclip"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary comments-panel__button-send" @click.enter="sendComment">SEND</button>
+                </div>
             </div>
         </div>
     </div>

@@ -19,12 +19,13 @@ body {
   .messages-panel textarea {
     color: #444;
     font-size: 14px; }
-    .messages-panel input:focus,
-    .messages-panel textarea:focus {
-      outline: none !important; }
+  .messages-panel input:focus,
+  .messages-panel textarea:focus,
+  .messages-panel button:focus {
+    outline: none !important; }
   .messages-panel .users-panel {
     max-width: 300px;
-    min-height: 565px; }
+    min-height: 568px; }
     .messages-panel .users-panel__top {
       margin: 9px 20px; }
     .messages-panel .users-panel__search-icon {
@@ -38,7 +39,7 @@ body {
       border-left: 0;
       border-style: solid;
       border-color: #ccc;
-      padding: 4px 4px 3px 24px; }
+      padding: 4px 4px 4px 24px; }
     .messages-panel .users-panel__content {
       overflow-x: hidden;
       overflow-y: auto; }
@@ -72,7 +73,15 @@ body {
       max-height: 60px;
       justify-content: flex-end;
       padding: 10px 12px 15px; }
-    .messages-panel .comments-panel__button {
+    .messages-panel .comments-panel__stickers {
+      color: #ffd902; }
+    .messages-panel .comments-panel__button-send {
       border-radius: 0;
       margin-left: auto;
       padding: 5px 18px; }
+    .messages-panel .comments-panel__button-clip {
+      border-radius: 100%;
+      border: 0;
+      padding: 1px 10px 2px;
+      font-size: 19px;
+      color: #444; }
