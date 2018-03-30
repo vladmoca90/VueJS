@@ -1,7 +1,7 @@
  @import 'mixins/mixins.scss';
 
  body {
-     background-color: #c7f6fcf1;
+     background-color: #e0ffff;
  }
 
  .messages-panel {
@@ -14,18 +14,34 @@
      }
      .users-panel {
          max-width: 300px;
-         min-height: 569px;
+         min-height: 565px;
+         &__top {
+             margin: 5px 12px;
+         }
+         &__search-bar {
+             font-size: 14px;
+             @include borders(0, 0, 1px, 0, solid, #ccc);
+             padding: 4px;
+
+             &:active,
+             &:focus {
+                 box-shadow: 0 0 0 #000 !important;
+             }
+         }
+         &__content {
+
+         }
      }
      .comments-panel {
-         max-width: 525px;
+         max-width: 520px;
          &__top {
              border-bottom: 1px solid #ccc;
-             min-height: 55px;
+             min-height: 50px;
              padding: 5px 10px;
              &-img {
                  border-radius: 100%;
-                 min-height: 42px;
-                 max-width: 42px;
+                 min-height: 38px;
+                 max-width: 38px;
              }
          }
          &__texts {
@@ -33,6 +49,7 @@
              overflow-y: auto;
          }
          &__textarea {
+             font-size: 14px;
              @include borders(1px, 0, 1px, 0, solid, #ccc);
              min-height: 90px;
              padding: 5px;
