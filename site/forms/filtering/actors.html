@@ -37,8 +37,8 @@
         <input type="text" role="textbox" class="box__filter u-full-width" v-model="query" />
         <article class="box-article u-border" v-for="actor in actors">
             <h2 role="heading" class="box-article__heading">{{ actor.name }}</h2>
-            <h4 role="heading" class="box-article__heading-sub">{{ actor.dateOfBirth }}</h4>
-            <h4 role="heading" class="box-article__heading-sub">{{ actor.placeOfBirth }}</h4>
+            <p role="heading" class="box-article__heading-sub">{{ actor.dateOfBirth }}</p>
+            <p role="heading" class="box-article__heading-sub">{{ actor.placeOfBirth }}</p>
             <hr role="separator">
             <p role="text" class="box-article__text">{{ actor.biography }}</p>
         </article>
