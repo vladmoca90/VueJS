@@ -1,34 +1,30 @@
-#formular {
+.formular {
   background-color: #ebebeb;
-  border: 1px solid #bbb;
   margin: 25px auto;
-  max-width: 450px;
+  max-width: 480px;
   padding: 25px; }
-
-.form-validation__buttons {
-  margin-bottom: 0; }
-
-#formular > form > div {
-  display: flex;
-  justify-content: space-between; }
-
-#formular > form > div.personal-details {
-  flex-direction: row; }
-
-#formular > form > div.form-lists {
-  flex-direction: column; }
-
-#formular > form > div.form-lists label {
-  font-weight: 400; }
-
-#formular > form > div.form-lists label[for] {
-  font-weight: 700; }
-
-#formular > form > div input {
-  margin-left: auto;
-  max-width: 300px; }
-
-#formular > form > div input[type="checkbox"],
-#formular > form > div input[type="radio"] {
-  position: relative;
-  top: 3px; }
+  .formular-content div {
+    justify-content: space-between; }
+    .formular-content div.form-group {
+      margin-left: 0;
+      margin-right: 0; }
+    .formular-content div input {
+      margin-left: auto;
+      max-width: 300px; }
+    .formular-content div input[type="checkbox"],
+    .formular-content div input[type="radio"] {
+      position: relative;
+      top: 3px; }
+  .formular-content__personal {
+    flex-direction: row; }
+  .formular-content__buttons {
+    margin-bottom: 0; }
+  .formular-content__list {
+    flex-direction: row; }
+    .formular-content__list label {
+      font-weight: 400; }
+    .formular-content__list label[for="languages"],
+    .formular-content__list label[for="selectRegion"] {
+      font-weight: 700;
+      margin-bottom: 8px;
+      margin-right: auto; }
