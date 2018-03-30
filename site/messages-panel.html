@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Comments section</title>
+    <title>Messages Panel</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,14 +23,17 @@
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
+    <link rel="stylesheet" href="../content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../../content/forms/commentsSection.css" />
+    <link rel="stylesheet" href="../content/messages-panel.css" />
 
 </head>
 
 <body>
-    <div class="comments-panel u-full-width u-full-height u-border">
+    <div class="messages-panel u-full-height u-full-width u-flex">
+        <div class="panel users-panel u-full-width u-full-height u-border u-bg--white">
+        </div>
+    <div class="panel comments-panel u-full-width u-full-height u-border u-bg--white">
         <div class="comments-panel__top u-full-width u-full-height u-flex">
             <div class="comments-panel__top-img u-full-height u-full-width u-border"></div>
             <span class="comments-panel__top-name"></span>
@@ -46,6 +49,7 @@
             <!-- <input type="checkbox" /> -->
             <button type="button" class="btn btn-primary comments-panel__button" @click="sendComment">SEND</button>
         </div>
+    </div>
     </div>
 </body>
 <script type="text/javascript">
