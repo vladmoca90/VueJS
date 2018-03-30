@@ -24,6 +24,19 @@ body {
       padding: 4px; }
       .messages-panel .users-panel__search-bar:active, .messages-panel .users-panel__search-bar:focus {
         box-shadow: 0 0 0 #000 !important; }
+    .messages-panel .users-panel__content {
+      overflow-y: auto;
+      padding-top: 10px; }
+    .messages-panel .users-panel__person {
+      border-top: 1px solid #ccc;
+      min-height: 75px; }
+      .messages-panel .users-panel__person:last-of-type {
+        border-bottom: 1px solid #ccc; }
+      .messages-panel .users-panel__person-img {
+        border-radius: 100%;
+        min-height: 38px;
+        margin: 16px 5px;
+        max-width: 38px; }
   .messages-panel .comments-panel {
     max-width: 520px; }
     .messages-panel .comments-panel__top {
