@@ -16,34 +16,33 @@
          max-width: 300px;
          min-height: 565px;
          &__top {
-             margin: 5px 12px;
+             margin: 10px;
          }
          &__search-bar {
-             font-size: 14px;
-             @include borders(0, 0, 1px, 0, solid, #ccc);
+             font-size: 15px;
+             @include borders(0, 0, 0, 0, solid, #ccc);
              padding: 4px;
-
              &:active,
              &:focus {
                  box-shadow: 0 0 0 #000 !important;
              }
          }
          &__content {
-             overflow-y: auto;
-             padding-top: 10px;
+            @include overflow-x-y(hidden, auto);
          }
-
          &__person {
              border-top: 1px solid #ccc;
-             min-height: 75px;
-
+             min-height: 73px;
+             &:active {
+                 border-left: 2px solid #003e81;
+             }
              &:last-of-type {
                  border-bottom: 1px solid #ccc;
              }
              &-img {
                  border-radius: 100%;
                  min-height: 38px;
-                 margin: 16px 5px;
+                 margin: 15px 5px;
                  max-width: 38px;
              }
          }

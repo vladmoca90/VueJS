@@ -36,7 +36,7 @@
                 <input class="users-panel__search-bar u-full-width" type="text" role="textbox" placeholder="Search..." v-model="query" />
             </div>
             <div class="users-panel__content">
-                <div class="users-panel__person u-full-height u-full-width">
+                <div class="users-panel__person u-full-height u-full-width" @click="stayActive">
                     <div class="users-panel__person-img u-full-height u-full-width u-border"></div>
                 </div>
                 <div class="users-panel__person u-full-height u-full-width"></div>
@@ -65,7 +65,8 @@
         el: '.messages-panel',
         data: {
             query: '',
-            wrtiteComment: '',
+            stayActive: false,
+            writeComment: '',
             profile: [{
                 img: '',
                 name: '',
