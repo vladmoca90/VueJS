@@ -27,35 +27,21 @@
 
 <body>
 
-    <section class="filter-container u-full-width" v-for="actor in actors">
-        <input type="text" role="textbox" class="filter-container__input u-full-width" v-model="query" />
-        <article class="filter-container__content u-border">
-            <h2 role="heading" class="filter-container__heading"></h2>
-            <h4 role="heading" class="filter-container__sub-heading"></h4>
-            <h4 role="heading" class="filter-container__sub-heading--small"></h4>
+    <section class="box u-full-width" v-for="actor in actors">
+        <input type="text" role="textbox" class="box__filter u-full-width" v-model="query" />
+        <article class="box-article u-border">
+            <h2 role="heading" class="box-article__heading">{{ actor.name }}</h2>
+            <h4 role="heading" class="box-article__heading-sub">{{ actor.dateOfBirth }}</h4>
+            <h4 role="heading" class="box-article__heading-sub">{{ actor.placeOfBirth }}</h4>
             <hr role="separator">
-            <p role="text" class="filter-container__text"></p>
-        </article>
-        <article class="filter-container__content u-border">
-            <h2 role="heading" class="filter-container__heading"></h2>
-            <h4 role="heading" class="filter-container__sub-heading"></h4>
-            <h4 role="heading" class="filter-container__sub-heading--small"></h4>
-            <hr role="separator">
-            <p role="text" class="filter-container__text"></p>
-        </article>
-        <article class="filter-container__content u-border">
-            <h2 role="heading" class="filter-container__heading"></h2>
-            <h4 role="heading" class="filter-container__sub-heading"></h4>
-            <h4 role="heading" class="filter-container__sub-heading--small"></h4>
-            <hr role="separator">
-            <p role="text" class="filter-container__text"></p>
+            <p role="text" class="box-article__text">{{ actor.description }}</p>
         </article>
     </section>
 
 </body>
 <script>
     new Vue({
-        el: '.filter-container',
+        el: '.box-article',
         data: {
             query: '',
             actors: [{
