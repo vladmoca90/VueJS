@@ -23,6 +23,8 @@
 
     <script src="https://unpkg.com/vue@2.1.8/dist/vue.js" type="text/javascript"></script>
 
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="../../../content/utilities/utilities.css" />
 
     <link rel="stylesheet" href="../../../content/forms/filtering/actors.css" />
@@ -33,7 +35,7 @@
 
     <section class="box u-full-width">
         <input type="text" role="textbox" class="box__filter u-full-width" v-model="query" />
-        <article class="box-article u-border" v-for="actor in actors" :key="actor">
+        <article class="box-article u-border" v-for="actor in actors" :key="actor.name">
             <h2 role="heading" class="box-article__heading">{{ actor.name }}</h2>
             <h4 role="heading" class="box-article__heading-sub">{{ actor.dateOfBirth }}</h4>
             <h4 role="heading" class="box-article__heading-sub">{{ actor.placeOfBirth }}</h4>
@@ -60,7 +62,7 @@
             },
         },
         computed: {
-            actors: function () {
+            allActors: function () {
 
             }
         }
