@@ -29,7 +29,7 @@ body {
     .messages-panel .users-panel__top {
       margin: 9px 20px; }
     .messages-panel .users-panel__search-icon {
-      color: #ccc;
+      color: #aaa;
       font-size: 19px;
       top: 5px; }
     .messages-panel .users-panel__search-bar {
@@ -46,6 +46,14 @@ body {
         border-left: 2px solid #003e81; }
       .messages-panel .users-panel__person:last-of-type {
         border-bottom: 1px solid #ccc; }
+    .messages-panel .users-panel__buttons {
+      color: #aaa;
+      cursor: pointer;
+      font-size: 16px;
+      right: 15px;
+      top: 10px; }
+      .messages-panel .users-panel__buttons:hover {
+        color: #444; }
   .messages-panel .comments-panel {
     max-width: 520px; }
     .messages-panel .comments-panel__top {
@@ -69,13 +77,14 @@ body {
       justify-content: flex-end;
       padding: 10px 12px 15px; }
     .messages-panel .comments-panel__stickers {
+      color: #777;
       cursor: pointer;
       font-size: 24px;
       margin: 5px 13px; }
     .messages-panel .comments-panel__button-clip {
       border-radius: 100%;
       border: 0;
-      color: #444;
+      color: #777;
       cursor: pointer;
       font-size: 19px;
       margin-right: auto;

@@ -37,11 +37,14 @@
                 <i class="fa fa-search users-panel__search-icon u--absolute"></i>
                 <input class="users-panel__search-bar u-full-width" type="text" role="textbox" placeholder="Search..." v-model="query" />
             </div>
-            <div class="users-panel__content">
+            <div class="users-panel__content u-relative">
                 <div class="users-panel__person u-full-height u-full-width u-relative" :class="{stayActive : active}">
                     <div class="user-icon u-border u--absolute"></div>
                     <span></span>
-                    <span></span>
+                    <div class="users-panel__buttons u--absolute">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
                 </div>
                 <div class="users-panel__person u-full-height u-full-width"></div>
                 <div class="users-panel__person u-full-height u-full-width"></div>

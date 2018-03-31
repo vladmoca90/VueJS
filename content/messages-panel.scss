@@ -37,7 +37,7 @@
          }
          &__search {
              &-icon {
-                 color: #ccc;
+                 color: #aaa;
                  font-size: 19px;
                  top: 5px;
              }
@@ -58,6 +58,16 @@
              }
              &:last-of-type {
                  border-bottom: 1px solid #ccc;
+             }
+         }
+         &__buttons {
+             color: #aaa;
+             cursor: pointer;
+             font-size: 16px;
+             right: 15px;
+             top: 10px;
+             &:hover {
+                 color: #444;
              }
          }
      }
@@ -83,6 +93,7 @@
              padding: 10px 12px 15px;
          }
          &__stickers {
+             color: #777;
              cursor: pointer;
              font-size: 24px;
              margin: 5px 13px;
@@ -91,7 +102,7 @@
              &-clip {
                  border-radius: 100%;
                  border: 0;
-                 color: #444;
+                 color: #777;
                  cursor: pointer;
                  font-size: 19px;
                  margin-right: auto;
