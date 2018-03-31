@@ -34,7 +34,7 @@ body {
       top: 5px; }
     .messages-panel .users-panel__search-bar {
       border: 0;
-      padding: 4px 4px 4px 24px; }
+      padding: 4px 4px 4px 25px; }
     .messages-panel .users-panel__content {
       overflow-x: hidden;
       overflow-y: auto; }
@@ -52,7 +52,9 @@ body {
       font-size: 16px;
       right: 15px;
       top: 10px; }
-      .messages-panel .users-panel__buttons:hover {
+      .messages-panel .users-panel__buttons span:first-of-type {
+        margin-right: 5px; }
+      .messages-panel .users-panel__buttons span:hover {
         color: #444; }
   .messages-panel .comments-panel {
     max-width: 520px; }

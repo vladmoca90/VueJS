@@ -43,7 +43,7 @@
              }
              &-bar {
                  border: 0;
-                 padding: 4px 4px 4px 24px;
+                 padding: 4px 4px 4px 25px;
              }
          }
          &__content {
@@ -66,7 +66,10 @@
              font-size: 16px;
              right: 15px;
              top: 10px;
-             &:hover {
+             span:first-of-type {
+                 margin-right: 5px;
+             }
+             span:hover {
                  color: #444;
              }
          }
