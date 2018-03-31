@@ -25,7 +25,7 @@ body {
     outline: none !important; }
   .messages-panel .users-panel {
     max-width: 300px;
-    min-height: 568px; }
+    min-height: 567px; }
     .messages-panel .users-panel__top {
       margin: 9px 20px; }
     .messages-panel .users-panel__search-icon {
@@ -33,12 +33,7 @@ body {
       font-size: 19px;
       top: 5px; }
     .messages-panel .users-panel__search-bar {
-      border-top: 0;
-      border-right: 0;
-      border-bottom: 1px;
-      border-left: 0;
-      border-style: solid;
-      border-color: #ccc;
+      border: 0;
       padding: 4px 4px 4px 24px; }
     .messages-panel .users-panel__content {
       overflow-x: hidden;
@@ -74,14 +69,17 @@ body {
       justify-content: flex-end;
       padding: 10px 12px 15px; }
     .messages-panel .comments-panel__stickers {
-      color: #ffd902; }
-    .messages-panel .comments-panel__button-send {
-      border-radius: 0;
-      margin-left: auto;
-      padding: 5px 18px; }
+      cursor: pointer;
+      font-size: 24px;
+      margin: 5px 13px; }
     .messages-panel .comments-panel__button-clip {
       border-radius: 100%;
       border: 0;
-      padding: 1px 10px 2px;
+      color: #444;
+      cursor: pointer;
       font-size: 19px;
-      color: #444; }
+      margin-right: auto;
+      padding: 1px 10px 2px; }
+    .messages-panel .comments-panel__button-send {
+      border-radius: 0;
+      padding: 5px 18px; }
