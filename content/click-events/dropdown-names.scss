@@ -11,15 +11,16 @@
     max-width: 150px;
     &__btn {
         cursor: pointer;
-        display: inherit;
         padding: 10px 0;
         text-align: center;
         &-arrow {
-            /*@include css-triangle(#fff, right, 7px);*/
-            transform: rotate(-90deg);
+            display: inline-block;
+            @include css-triangle(#fff, right, 5px);
+            margin: 3px 0 0 4px;
+            transform: rotate(0deg);
         }
         .rotateDown {
-            transform: rotate(0deg);
+            transform: rotate(90deg);
         }
     }
     &__list {
