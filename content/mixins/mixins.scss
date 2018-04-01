@@ -44,7 +44,7 @@
     width: 0;
 }
 
-@mixin font-style($size, $color, $family) {
+@mixin font-prop($size, $color, $family) {
     font: {
         size: $size;
         family: $family;
@@ -60,7 +60,7 @@
 }
 
 @mixin push--auto {
-    margin: {
+    margin: { 
         left: auto;
         right: auto;
     }

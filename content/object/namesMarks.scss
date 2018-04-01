@@ -1,7 +1,7 @@
 @import '../mixins/mixins.scss';
 
 .table-container {
-    @include font-style(16px, #fff, Calibri);
+    @include font-props(16px, #fff, Calibri);
     margin: 50px auto;
     max-width: 400px;
     th, td {

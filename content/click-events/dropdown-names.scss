@@ -5,7 +5,7 @@
 .dropdown-box {
     background-color: #7986CB;
     border-radius: 8px;
-    @include font-style(15px, #fff, Arial);
+    @include font-prop(15px, #fff, Arial);
     margin: 50px auto;
     min-height: 40px;
     max-width: 150px;
