@@ -17,8 +17,7 @@ body {
     width: 35px; }
   .messages-panel input,
   .messages-panel textarea {
-    color: #444;
-    font-size: 14px; }
+    color: #444; }
   .messages-panel input:focus,
   .messages-panel textarea:focus,
   .messages-panel button:focus {
@@ -33,7 +32,6 @@ body {
       font-size: 19px;
       top: 5px; }
     .messages-panel .users-panel__search-bar {
-      border: 0;
       padding: 4px 4px 4px 25px; }
     .messages-panel .users-panel__content {
       overflow-x: hidden;
@@ -43,7 +41,7 @@ body {
       min-height: 70px;
       padding: 5px 10px; }
       .messages-panel .users-panel__person:active {
-        border-left: 2px solid #003e81; }
+        border-left: 2px solid #7986CB; }
       .messages-panel .users-panel__person:last-of-type {
         border-bottom: 1px solid #ccc; }
     .messages-panel .users-panel__buttons {
@@ -85,7 +83,6 @@ body {
       margin: 5px 13px; }
     .messages-panel .comments-panel__button-clip {
       border-radius: 100%;
-      border: 0;
       color: #777;
       cursor: pointer;
       font-size: 19px;

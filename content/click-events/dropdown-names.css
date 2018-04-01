@@ -12,7 +12,8 @@
     display: inherit;
     padding: 10px 0;
     text-align: center; }
-    .dropdown-box__btn .caret {
+    .dropdown-box__btn-arrow {
+      /*@include css-triangle(#fff, right, 7px);*/
       transform: rotate(-90deg); }
     .dropdown-box__btn .rotateDown {
       transform: rotate(0deg); }
