@@ -45,7 +45,7 @@
                     <td>{{ country.population }}</td>
                     <td>{{ country.capital }}</td>
                     <td>{{ country.language }}</td>
-                    <td>{{ country.otherCities[0] }}, {{ country.otherCities[1] }}, {{ country.otherCities[2] }}</td>
+                    <td><div class="countries__table-division--inline" v-for="city in country.otherCities">{{ city}},&nbsp;</div></td>
                 </tr>
             </tbody>
         </table>
@@ -58,9 +58,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{ }}</td>
+                    <td>{{ }}</td>
+                    <td>{{ }}</td>
                 </tr>
             </tbody>
         </table>
@@ -70,6 +70,9 @@
     new Vue({
         el: '.countries__table',
         data: {
+            totalCountries: 0,
+            totalPopulation: 0,
+            totalDifLang: 0,
             countries: [{
                     name: "Portugal",
                     population: 10, //in millions
@@ -133,6 +136,9 @@
                     UNmember: true,
                 },
             ],
+        },
+        computed: {
+
         },
         methods: {
 

@@ -5,6 +5,8 @@
     font-size: 15px; }
     .countries__table th, .countries__table td {
       text-align: center; }
+    .countries__table-division--inline {
+      display: inline-block; }
   .countries__statistics {
     margin-top: 25px; }
     .countries__statistics th, .countries__statistics td {
