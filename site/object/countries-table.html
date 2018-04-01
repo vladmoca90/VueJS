@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="../../content/utilities.css" />
+    <link rel="stylesheet" type="text/css" href="../../content/utilities/utilities.css" />
 
     <link rel="stylesheet" type="text/css" href="../../content/object/countries-table.css" />
 
@@ -58,7 +58,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ }}</td>
+                    <td>{{ countries.length }}</td>
                     <td>{{ }}</td>
                     <td>{{ }}</td>
                 </tr>
@@ -70,9 +70,6 @@
     new Vue({
         el: '.countries__table',
         data: {
-            totalCountries: 0,
-            totalPopulation: 0,
-            totalDifLang: 0,
             countries: [{
                     name: "Portugal",
                     population: 10, //in millions
@@ -137,11 +134,8 @@
                 },
             ],
         },
-        computed: {
-
-        },
         methods: {
-
+          
         },
     });
 </script>

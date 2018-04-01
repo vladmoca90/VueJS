@@ -31,7 +31,7 @@
 
 <body>
     <div class="table-container u-full-width">
-        <table role="presentation" class="table table-bordered table-dark table-hover">
+        <table role="presentation" class="table table-bordered table-dark">
             <thead class="table-head">
                 <tr>
                     <th>Name</th>
@@ -39,7 +39,7 @@
                 </tr>
             </thead>
             <tbody class="table-body">
-                <tr v-for="student in students" :key="student.name">
+                <tr v-for="student in students">
                     <td>{{ student.name }}</td>
                     <td>{{ student.mark }}</td>
                 </tr>
@@ -89,18 +89,8 @@
             ],
         },
         computed: {
-            sortNames: function () {
-                this.students.sort(function (a, b) {
-                    var nameA = a.student.name;
-                    var nameB = b.student.name;
-                    if (nameA > nameB) {
-                        return 1;
-                    } else if (nameA < nameB) {
-                        return -1;
-                    } else {
-                        return 0;
-                    }
-                });
+            sortStudents: function () {
+                
             },
         },
     });
