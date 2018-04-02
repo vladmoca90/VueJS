@@ -13,26 +13,20 @@
 .u-text--white {
   color: #fff; }
 
+.u-bg--white {
+  background-color: #fff; }
+
 .u-full-width {
   width: 100%; }
 
 .u-full-height {
   height: 100%; }
 
-.u-no-border {
-  border: 0; }
-
 .u-border {
   border: 1px solid #ccc; }
 
-.u-margin--0 {
-  margin: 0; }
-
-.u-padding--0 {
-  padding: 0; }
-
-.u-bg--white {
-  background-color: #fff; }
+.u-inline {
+  display: inline; }
 
 .u-block {
   display: block; }
@@ -53,11 +47,11 @@
   align-items: center;
   justify-content: center; }
 
-.u-flexend {
-  justify-content: flex-end; }
+.u-space-around {
+  justify-content: space-around; }
 
 .u-space-between {
   justify-content: space-between; }
 
-.u-space-around {
-  justify-content: space-around; }
+.u-space-evenly {
+  justify-content: space-evenly; }

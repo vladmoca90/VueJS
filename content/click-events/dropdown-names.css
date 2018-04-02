@@ -5,8 +5,8 @@
   font-family: Arial;
   color: #fff;
   margin: 50px auto;
-  min-height: 40px;
-  max-width: 150px; }
+  max-width: 150px;
+  min-height: 40px; }
   .dropdown-box__btn {
     cursor: pointer;
     padding: 10px 0;

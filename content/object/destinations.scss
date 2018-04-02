@@ -1,0 +1,79 @@
+@import '../mixins/mixins.scss';
+
+@import '../variables/variables.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 50px 100px;
+    .card {
+        border-radius: 8px;
+        font-family: $gill-sans;
+        margin-bottom: 50px;
+        &__img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            height: 225px;
+        }
+        &__content {
+            border-top: $side-gray;
+            color: #444;
+            min-height: 325px;
+            padding: 20px;
+            &-heading {
+                font-size: 21px;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            &-subheading {
+                color: #aaa;
+                font-size: 18px;
+                letter-spacing: 1px;
+                margin-bottom: 5px;
+            }
+            &-text {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            &-link {
+                border-bottom: 1px solid transparent;
+                bottom: 20px;
+                color: #444;
+                cursor: pointer;
+                left: 0;
+                right: 0;
+                text-align: center;
+                text-decoration: none;
+                &::after {
+                    content: '>';
+                    right: -6px;
+                    position: absolute;
+                    opacity: 0;
+                    top: -1px;
+                    transition: all 0.4s;
+                }
+                &:hover {
+                    border-color: #444;
+                    &::after {
+                        opacity: 1;
+                        right: -13px;
+                    }
+                }
+                &--offers {
+                    color: #c0002b;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    &:hover {
+                        border-color: #c0002b;
+                        &::after {
+                            top: -2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

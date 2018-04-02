@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+section {
+  margin: 50px 100px; }
+  section .card {
+    border-radius: 8px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-bottom: 50px; }
+    section .card__img {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      height: 225px; }
+    section .card__content {
+      border-top: 1px solid #ccc;
+      color: #444;
+      min-height: 325px;
+      padding: 20px; }
+      section .card__content-heading {
+        font-size: 21px;
+        margin-bottom: 5px;
+        text-align: center; }
+      section .card__content-subheading {
+        color: #aaa;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-bottom: 5px; }
+      section .card__content-text {
+        font-size: 15px;
+        margin-bottom: 10px; }
+      section .card__content-link {
+        border-bottom: 1px solid transparent;
+        bottom: 20px;
+        color: #444;
+        cursor: pointer;
+        left: 0;
+        right: 0;
+        text-align: center;
+        text-decoration: none; }
+        section .card__content-link::after {
+          content: '>';
+          right: -6px;
+          position: absolute;
+          opacity: 0;
+          top: -1px;
+          transition: all 0.4s; }
+        section .card__content-link:hover {
+          border-color: #444; }
+          section .card__content-link:hover::after {
+            opacity: 1;
+            right: -13px; }
+        section .card__content-link--offers {
+          color: #c0002b;
+          font-weight: bolder;
+          text-transform: uppercase; }
+          section .card__content-link--offers:hover {
+            border-color: #c0002b; }
+            section .card__content-link--offers:hover::after {
+              top: -2px; }
