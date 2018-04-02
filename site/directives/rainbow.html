@@ -49,15 +49,20 @@
     </div>
 </body>
 <script type="text/javascript">
-    Vue.directive('v-rainbow', {
+   /* Vue.directive('v-rainbow', {
         bind(el, binding, vnode) {
-           /* el.style.color='#' + Math.random().toString().slice(2, 8); */
-           el.style.color='red';
+            el.style.color='#' + Math.random().toString().slice(2, 8);
         }
-    });
+    }); */
     new Vue({
         el: '.some-text',
-        data: {
+        data: {},
+        directives: {
+            'rainbow': {
+                bind(el, binding, vnode) {
+                    el.style.color='#' + Math.random().toString().slice(2, 8);
+                }
+            }
         }
     });
 </script>
