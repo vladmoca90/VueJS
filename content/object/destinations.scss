@@ -3,12 +3,13 @@
 @import '../variables/variables.scss';
 
 body {
+    @include background(fixed, url('../../images/destinations/background.jpg'), no-repeat, cover);
     margin: 0;
     padding: 0;
 }
 
 section {
-    margin: 50px 100px;
+    margin: 50px 100px 0;
     .card {
         border-radius: 8px;
         font-family: $gill-sans;
