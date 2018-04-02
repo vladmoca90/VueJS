@@ -27,9 +27,14 @@
 
     <style>
         .some-text {
+            line-height: 50px;
             margin: 50px auto;
             max-width: 150px;
+            min-height: 50px;
             text-align: center;
+        }
+        p {
+            margin: 0;
         }
     </style>
 
@@ -37,15 +42,8 @@
 
 <body>
 
-    <div class="some-text u-full-width">
-        <p v-rainbow>My name is Vlad</p>
-        <p v-rainbow>My name is Vlad</p>
-        <p v-rainbow>My name is Vlad</p>
-        <p v-rainbow>My name is Vlad</p>
-        <p v-rainbow>My name is Vlad</p>
-        <p v-rainbow>My name is Vlad</p>
-        <p v-rainbow>My name is Vlad</p>
-        <p v-rainbow>My name is Vlad</p>
+    <div class="some-text u-full-height u-full-width" v-border>
+        <p>My name is Vlad</p>
     </div>
 </body>
 <script type="text/javascript">
@@ -53,10 +51,12 @@
         el: '.some-text',
         data: {},
         directives: {
-            'rainbow': {
+            'border': {
                 bind(el, binding, vnode) {
-                    el.style.color='#' + Math.random().toString().slice(2, 8);
-                }
+                    el.style.borderWidth='1px';
+                    el.style.borderStyle='solid';
+                    el.style.borderColor='#ccc';
+                },
             }
         }
     });
