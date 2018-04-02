@@ -64,11 +64,11 @@ section {
                     }
                 }
                 &--offers {
-                    color: #c0002b;
+                    color: $red-medium;
                     font-weight: bolder;
                     text-transform: uppercase;
                     &:hover {
-                        border-color: #c0002b;
+                        border-color: $red-medium;
                         &::after {
                             top: -2px;
                         }
