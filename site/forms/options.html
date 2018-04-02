@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Filter Dropdown</title>
+    <title>Options</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -25,26 +25,29 @@
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
+    <style>
+        #options {
+            margin: 50px auto;
+            max-width: 90px;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <div id="app" class="u-full-width">
-        <select v-model="makeSelection">
-            <option v-for="country in countries">{{ country }}</option>
+    <div id="options" class="u-full-width">
+        <select v-model="selected">
+            <option v-for="country in countries" :value="selected">{{ country }}</option>
         </select>
     </div>
 </body>
 <script type="text/javascript">
     new Vue({
-        el: '#app',
+        el: '#options',
         data: {
-            countries: ["Romania", "Canada", "India", "Brazil", "Australia", "Israel", "France", "Armenia"],
-        },
-        computed: {
-            makeSelection: function () {
-
-            },
+            selected: "Romania",
+            countries: ["Romania", "Canada", "India", "Brazil", "Australia", "Israel", "France"],
         },
     });
 </script>
