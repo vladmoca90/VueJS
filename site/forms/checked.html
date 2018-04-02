@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Search bar</title>
+    <title>Checked</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -26,15 +26,22 @@
 </head>
 
 <body>
-    <div id="intro" class="text-center">
-        <input type="search" v-model="query" />
+    <div id="intro">
+        <input type="checkbox" id="jack" name="checkName" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" name="checkName" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" name="checkName" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span>
     </div>
 </body>
 <script type="text/javascript">
     new Vue({
         el: '#intro',
         data: {
-            query: 'Alexandru Mocanu',
+            checkedNames: [],
         },
     });
 </script>
