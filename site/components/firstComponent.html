@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Options</title>
+    <title>First Vue Component</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,34 +23,33 @@
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
-
-    <style>
-        #options {
-            margin: 50px auto;
-            max-width: 90px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../content/utilities/utilities.css" />
 
 </head>
 
 <body>
-
-    <div id="options" class="u-full-width">
-        <select v-model="selected">
-            <option v-for="country in countries" :value="selected">{{ country }}</option>
-        </select>
+    <!-- Components with a local registration -->
+    <div id="app">
+        <my-component></my-component>
+        <scnd-comp></scnd-comp>
     </div>
 </body>
 <script type="text/javascript">
-    new Vue({
-        el: '#options',
-        data: {
-            selected: '',
-            countries: ["Romania", "Canada", "India", "Brazil", "Australia", "Israel", "France"],
-        },
-    });
-</script>
+    var Child = {
+        template: "<div>This is my first local component</div>"
+    }
 
+    var scnd = {
+        template: "<div>This is the second local component</div>"
+    }
+
+    new Vue({
+        el: "#app",
+        components: {
+            "my-component": Child,
+            "scnd-comp": scnd
+        }
+    })
+</script>
 
 </html>

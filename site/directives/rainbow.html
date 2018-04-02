@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>First Vue Component Local</title>
+    <title>Color directive</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,33 +23,44 @@
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="../content/utilities/utilities.css" />
+    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
+
+    <style>
+        .some-text {
+            margin: 50px auto;
+            max-width: 150px;
+            text-align: center;
+        }
+    </style>
 
 </head>
 
 <body>
-    <!-- Components with a local registration -->
-    <div id="app">
-        <my-component></my-component>
-        <scnd-comp></scnd-comp>
+
+    <div class="some-text u-full-width">
+        <p v-rainbow>My name is Vlad</p>
+        <p v-rainbow>My name is Vlad</p>
+        <p v-rainbow>My name is Vlad</p>
+        <p v-rainbow>My name is Vlad</p>
+        <p v-rainbow>My name is Vlad</p>
+        <p v-rainbow>My name is Vlad</p>
+        <p v-rainbow>My name is Vlad</p>
+        <p v-rainbow>My name is Vlad</p>
     </div>
 </body>
 <script type="text/javascript">
-    var Child = {
-        template: "<div>This is my first local component</div>"
-    }
-
-    var scnd = {
-        template: "<div>This is the second local component</div>"
-    }
-
-    new Vue({
-        el: "#app",
-        components: {
-            "my-component": Child,
-            "scnd-comp": scnd
+    Vue.directive('v-rainbow', {
+        bind(el, binding, vnode) {
+           /* el.style.color='#' + Math.random().toString().slice(2, 8); */
+           el.style.color='red';
         }
-    })
+    });
+    new Vue({
+        el: '.some-text',
+        data: {
+        }
+    });
 </script>
+
 
 </html>
