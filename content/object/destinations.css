@@ -7,13 +7,13 @@ body {
   padding: 0; }
 
 .main {
-  margin: 50px auto;
+  margin: 40px auto;
   max-width: 1100px; }
   .main #search-bar {
     display: inherit;
     font-size: 15px;
-    margin: 0 auto 30px;
-    max-width: 300px;
+    margin: 0 auto 40px;
+    max-width: 345px;
     padding: 5px; }
     .main #search-bar:focus {
       outline: 0; }
@@ -54,22 +54,27 @@ body {
             margin-bottom: 0;
             right: 0;
             text-align: center; }
-          .main .cards .card-content__text-link {
+        .main .cards .card-content__link {
+          bottom: 20px;
+          left: 0;
+          right: 0;
+          text-align: center; }
+          .main .cards .card-content__link-text {
             border-bottom: 1px solid transparent;
             color: #444;
             cursor: pointer;
             text-decoration: none;
             transition: all ease-in-out 0.4s; }
-            .main .cards .card-content__text-link::after {
+            .main .cards .card-content__link-text::after {
               content: '>';
               right: 125px;
               position: absolute;
               opacity: 0;
               top: 1px;
               transition: all ease 0.4s; }
-            .main .cards .card-content__text-link:hover {
+            .main .cards .card-content__link-text:hover {
               border-bottom: 1px solid #444; }
-              .main .cards .card-content__text-link:hover::after {
+              .main .cards .card-content__link-text:hover::after {
                 opacity: 1;
                 right: 115px; }
 

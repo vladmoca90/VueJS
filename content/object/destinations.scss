@@ -9,13 +9,13 @@ body {
 }
 
 .main {
-    margin: 50px auto;
+    margin: 40px auto;
     max-width: 1100px;
     #search-bar {
         display: inherit;
         font-size: 15px;
-        margin: 0 auto 30px;
-        max-width: 300px;
+        margin: 0 auto 40px;
+        max-width: 345px;
         padding: 5px;
         &:focus {
             outline: 0;
@@ -63,7 +63,13 @@ body {
                         right: 0;
                         text-align: center;
                     }
-                    &-link {
+                }
+                &__link {
+                    bottom: 20px;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    &-text {
                         border-bottom: 1px solid transparent;
                         color: #444;
                         cursor: pointer;
