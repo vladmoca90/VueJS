@@ -57,8 +57,10 @@ body {
         .main .cards .card-content__link {
           bottom: 20px;
           left: 0;
+          margin: 0 auto;
           right: 0;
-          text-align: center; }
+          text-align: center;
+          width: 40%; }
           .main .cards .card-content__link-text {
             border-bottom: 1px solid transparent;
             color: #444;
@@ -67,7 +69,7 @@ body {
             transition: all ease-in-out 0.4s; }
             .main .cards .card-content__link-text::after {
               content: '>';
-              right: 125px;
+              right: 12px;
               position: absolute;
               opacity: 0;
               top: 1px;
@@ -76,7 +78,7 @@ body {
               border-bottom: 1px solid #444; }
               .main .cards .card-content__link-text:hover::after {
                 opacity: 1;
-                right: 115px; }
+                right: 7px; }
 
 @media (max-width: 767px) {
   .cards {

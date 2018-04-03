@@ -67,8 +67,10 @@ body {
                 &__link {
                     bottom: 20px;
                     left: 0;
+                    margin: 0 auto;
                     right: 0;
                     text-align: center;
+                    width: 40%;
                     &-text {
                         border-bottom: 1px solid transparent;
                         color: #444;
@@ -77,7 +79,7 @@ body {
                         transition: all ease-in-out 0.4s;
                         &::after {
                             content: '>';
-                            right: 125px;
+                            right: 12px;
                             position: absolute;
                             opacity: 0;
                             top: 1px;
@@ -87,7 +89,7 @@ body {
                             border-bottom: 1px solid #444;
                             &::after {
                                 opacity: 1;
-                                right: 115px;
+                                right: 7px;
                             }
                         }
                     }
