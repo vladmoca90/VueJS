@@ -31,53 +31,16 @@
 
 <body>
     <section role="main">
-        <div class="container-fluid">
-            <div role="row" class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card u-border">
-                        <img src="../../images/destinations/Malaysia.jpg" class="card__img u-full-width u-full-height" />
-                        <div class="card__content u-full-height u-relative">
-                            <p role="heading" class="card__content-heading">Malaysia</p>
-                            <p role="heading" class="card__content-subheading u-text--bold">Asia</p>
-                            <p role="text" class="card__content-text">Malaysia is a Southeast Asian country occupying parts of the Malay Peninsula and the island of
-                                Borneo. It's known for its beaches, rainforests and mix of Malay, Chinese, Indian and European
-                                cultural influences. The capital, Kuala Lumpur, is home to colonial buildings, busy shopping
-                                districts such as Bukit Bintang and skyscrapers such as the iconic, 451m-tall Petronas Twin
-                                Towers.
-                            </p>
-                            <a href="#" class="card__content-link u--absolute">See our offers</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card u-border">
-                        <img src="../../images/destinations/Thailand.jpg" class="card__img u-full-width u-full-height" />
-                        <div class="card__content u-full-height u-relative">
-                            <p role="heading" class="card__content-heading">Thailand</p>
-                            <p role="heading" class="card__content-subheading u-text--bold">Asia</p>
-                            <p role="text" class="card__content-text">Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces,
-                                ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an
-                                ultramodern cityscape rises next to quiet canalside communities and the iconic temples of
-                                Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew).
-                            </p>
-                            <a href="#" class="card__content-link u--absolute">See our offers</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card u-border">
-                        <img src="../../images/destinations/Japan.jpg" class="card__img u-full-width u-full-height" />
-                        <div class="card__content u-full-height u-relative">
-                            <p role="heading" class="card__content-heading">Japan</p>
-                            <p role="heading" class="card__content-subheading u-text--bold">Asia</p>
-                            <p role="text" class="card__content-text">Japan is an island nation in the Pacific Ocean with dense cities, imperial palaces, mountainous
-                                national parks and thousands of shrines and temples. Shinkansen bullet trains connect the
-                                main islands of Kyushu (with Okinawa's subtropical beaches), Honshu (home to Tokyo and Hiroshima’s
-                                atomic-bomb memorial) and Hokkaido (famous for skiing).
-                            </p>
-                            <a href="#" class="card__content-link card__content-link--offers u--absolute">Best offers</a>
-                        </div>
-                    </div>
+        <div class="cards u-full-width u-flex u-space-between">
+            <div class="card u-border" v-for="destination in destinations">
+                <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
+                <div class="card__content u-full-height">
+                    <p role="heading" class="card__content-heading">{{ destination.title }}</p>
+                    <p role="heading" class="card__content-subheading u-text--bold">{{ destination.subtitle }}</p>
+                    <p role="text" class="card__content-text">{{ destination.content }}</p>
+                    <p>
+                        <a role="link" href="#" class="card__content-link u-relative">See our offers</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -85,8 +48,31 @@
 </body>
 <script type="text/javascript">
     new Vue({
-        el: '',
-        data: {},
+        el: '.cards',
+        data: {
+            destinations: [{
+                    image: '../../images/destinations/Malaysia.jpg',
+                    imgInformation: 'Malaysia travel',
+                    title: 'Malaysia',
+                    subtitle: 'Asia',
+                    content: 'Malaysia is a Southeast Asian country occupying parts of the Malay Peninsula and the island of Borneo. Its known for its beaches, rainforests and mix of Malay, Chinese, Indian and European cultural influences. The capital, Kuala Lumpur, is home to colonial buildings, busy shopping districts such as Bukit Bintang and skyscrapers such as the iconic, 451m-tall Petronas Twin Towers.',
+                },
+                {
+                    image: '../../images/destinations/Thailand.jpg',
+                    imgInformation: 'Thailand travel',
+                    title: 'Thailand',
+                    subtitle: 'Asia',
+                    content: 'Thailand is a Southeast Asian country. Its known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew).',
+                },
+                {
+                    image: '../../images/destinations/Japan.jpg',
+                    imgInformation: 'Japan travel',
+                    title: 'Japan',
+                    subtitle: 'Asia',
+                    content: 'Japan is an island nation in the Pacific Ocean with dense cities, imperial palaces, mountainous national parks and thousands of shrines and temples. Shinkansen bullet trains connect the main islands of Kyushu (with Okinawas subtropical beaches), Honshu (home to Tokyo and Hiroshimas atomic-bomb memorial) and Hokkaido (famous for skiing).',
+                },
+            ],
+        },
         computed: {},
     });
 </script>
