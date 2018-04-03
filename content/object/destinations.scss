@@ -67,18 +67,15 @@ section {
                             right: -13px;
                         }
                     }
-                   /* &--offers {
-                        color: $red-medium;
-                        font-weight: bolder;
-                        text-transform: uppercase;
-                        &:hover {
-                            &::after {
-                                top: -2px;
-                            }
-                        }
-                    } */
                 }
             }
         }
+    }
+}
+
+@media (max-width: 767px) {
+    .cards {
+        align-items: center;
+        flex-direction: column;
     }
 }

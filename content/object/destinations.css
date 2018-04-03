@@ -44,17 +44,7 @@ section {
         cursor: pointer;
         left: 0;
         right: 0;
-        text-decoration: none;
-        /* &--offers {
-                        color: $red-medium;
-                        font-weight: bolder;
-                        text-transform: uppercase;
-                        &:hover {
-                            &::after {
-                                top: -2px;
-                            }
-                        }
-                    } */ }
+        text-decoration: none; }
         section .cards .card__content-link::after {
           content: '>';
           right: -6px;
@@ -65,3 +55,8 @@ section {
         section .cards .card__content-link:hover::after {
           opacity: 1;
           right: -13px; }
+
+@media (max-width: 767px) {
+  .cards {
+    align-items: center;
+    flex-direction: column; } }
