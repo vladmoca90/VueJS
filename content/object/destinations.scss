@@ -1,9 +1,9 @@
 @import '../mixins/mixins.scss';
-
 @import '../variables/variables.scss';
-
 body {
-    @include background(fixed, url('../../images/destinations/background.jpg'), no-repeat, cover);
+    @include background(fixed, url('../../images/destinations/background.jpg'),
+    no-repeat,
+    cover);
     margin: 0;
     padding: 0;
 }
@@ -32,6 +32,11 @@ body {
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
                 height: 225px;
+                transition: filter 0.5s;
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(75%);
+                }
             }
             &-content {
                 border-top: $side-gray;

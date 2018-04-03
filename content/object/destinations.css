@@ -27,7 +27,11 @@ body {
       .main .cards .card__img {
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
-        height: 225px; }
+        height: 225px;
+        transition: filter 0.5s; }
+        .main .cards .card__img:hover {
+          cursor: pointer;
+          filter: brightness(75%); }
       .main .cards .card-content {
         border-top: 1px solid #ccc;
         color: #444;
