@@ -34,12 +34,12 @@
         <div class="cards u-full-width u-flex u-space-between">
             <div class="card u-border" v-for="destination in destinations">
                 <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
-                <div class="card__content u-full-height">
-                    <p role="heading" class="card__content-heading">{{ destination.title }}</p>
-                    <p role="heading" class="card__content-subheading u-text--bold">{{ destination.subtitle }}</p>
-                    <p role="text" class="card__content-text">{{ destination.content }}</p>
-                    <p>
-                        <a role="link" href="#" class="card__content-link u-relative">See our offers</a>
+                <div class="card-content u-full-height u-relative">
+                    <p role="heading" class="card-content__heading">{{ destination.title }}</p>
+                    <p role="heading" class="card-content__subheading u-text--bold">{{ destination.subtitle }}</p>
+                    <p role="text" class="card-content__text">{{ destination.content }}</p>
+                    <p class="card-content__text u--absolute">
+                        <a role="link" href="#" class="card-content__text-link">See our offers</a>
                     </p>
                 </div>
             </div>

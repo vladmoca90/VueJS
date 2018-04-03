@@ -1,9 +1,9 @@
 @import '../mixins/mixins.scss';
-
 @import '../variables/variables.scss';
-
 body {
-    @include background(fixed, url('../../images/destinations/background.jpg'), no-repeat, cover);
+    @include background(fixed, url('../../images/destinations/background.jpg'),
+    no-repeat,
+    cover);
     margin: 0;
     padding: 0;
 }
@@ -22,50 +22,49 @@ body {
             border-top-right-radius: 8px;
             height: 225px;
         }
-        &__content {
+        &-content {
             border-top: $side-gray;
             color: #444;
             min-height: 325px;
             padding: 20px;
-            &-heading {
+            &__heading {
                 font-size: 21px;
                 margin-bottom: 5px;
                 text-align: center;
             }
-            &-subheading {
+            &__subheading {
                 color: #aaa;
                 font-size: 18px;
                 letter-spacing: 1px;
                 margin-bottom: 5px;
             }
-            &-text {
+            &__text {
                 font-size: 15px;
                 margin-bottom: 10px;
-                +p {
+                &:last-child {
+                    bottom: 20px;
+                    left: 0;
                     margin-bottom: 0;
+                    right: 0;
                     text-align: center;
                 }
-            }
-            &-link {
-                border-bottom: 1px solid transparent;
-                bottom: 0;
-                color: #444;
-                cursor: pointer;
-                left: 0;
-                right: 0;
-                text-decoration: none;
-                &::after {
-                    content: '>';
-                    right: -6px;
-                    position: absolute;
-                    opacity: 0;
-                    top: -1px;
-                    transition: all 0.4s;
-                }
-                &:hover {
+                &-link {
+                    color: #444;
+                    cursor: pointer;
+                    text-decoration: none;
                     &::after {
-                        opacity: 1;
-                        right: -13px;
+                        content: '>';
+                        right: 125px;
+                        position: absolute;
+                        opacity: 0;
+                        top: 1px;
+                        transition: all 0.4s;
+                    }
+                    &:hover {
+                        &::after {
+                            opacity: 1;
+                            right: 115px;
+                        }
                     }
                 }
             }
