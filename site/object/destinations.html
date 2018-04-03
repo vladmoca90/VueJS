@@ -30,9 +30,10 @@
 </head>
 
 <body>
-    <section role="main">
+    <section role="main" class="main u-full-width">
+        <input id="search-bar" class="u-full-width" type="text" placeholder="Search..."  v-model="query" />
         <div class="cards u-full-width u-flex u-space-between">
-            <div class="card u-border" v-for="destination in destinations">
+            <div class="card u-border" v-for="destination in allDestinations">
                 <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
                 <div class="card-content u-full-height u-relative">
                     <p role="heading" class="card-content__heading">{{ destination.title }}</p>
@@ -48,8 +49,9 @@
 </body>
 <script type="text/javascript">
     new Vue({
-        el: '.cards',
+        el: '.main',
         data: {
+            query: '',
             destinations: [{
                     image: '../../images/destinations/Malaysia.jpg',
                     imgInformation: 'Malaysia travel',
@@ -94,7 +96,16 @@
                 },
             ],
         },
-        computed: {},
+        computed: {
+            allDestinations: function () {
+                return this.destinations.filter((destination) => {
+                    return destination.imgInformation.match(this.query) ||
+                    destination.title.match(this.query) ||
+                    destination.subtitle.match(this.query) ||
+                    destination.content.match(this.query)
+                });
+            }
+        },
     });
 </script>
 
