@@ -49,18 +49,21 @@ body {
                     text-align: center;
                 }
                 &-link {
+                    border-bottom: 1px solid transparent;
                     color: #444;
                     cursor: pointer;
                     text-decoration: none;
+                    transition: all ease-in-out 0.4s;
                     &::after {
                         content: '>';
                         right: 125px;
                         position: absolute;
                         opacity: 0;
                         top: 1px;
-                        transition: all 0.4s;
+                        transition: all ease 0.4s;
                     }
                     &:hover {
+                        border-bottom: 1px solid #444;
                         &::after {
                             opacity: 1;
                             right: 115px;

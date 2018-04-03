@@ -43,19 +43,23 @@ body {
           right: 0;
           text-align: center; }
         .cards .card-content__text-link {
+          border-bottom: 1px solid transparent;
           color: #444;
           cursor: pointer;
-          text-decoration: none; }
+          text-decoration: none;
+          transition: all ease-in-out 0.4s; }
           .cards .card-content__text-link::after {
             content: '>';
             right: 125px;
             position: absolute;
             opacity: 0;
             top: 1px;
-            transition: all 0.4s; }
-          .cards .card-content__text-link:hover::after {
-            opacity: 1;
-            right: 115px; }
+            transition: all ease 0.4s; }
+          .cards .card-content__text-link:hover {
+            border-bottom: 1px solid #444; }
+            .cards .card-content__text-link:hover::after {
+              opacity: 1;
+              right: 115px; }
 
 @media (max-width: 767px) {
   .cards {
