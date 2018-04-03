@@ -37,7 +37,7 @@
                 <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
                 <div class="card-content u-full-height u-relative">
                     <p role="heading" class="card-content__heading">{{ destination.title }}</p>
-                    <p role="heading" class="card-content__subheading u-text--bold">{{ destination.subtitle }}</p>
+                    <p role="heading" class="card-content__subheading u-text--bold">{{ destination.subtitle | uppercaseSubTitle }}</p>
                     <p role="text" class="card-content__text">{{ destination.content }}</p>
                     <p class="card-content__text u--absolute">
                         <a role="link" href="#" class="card-content__text-link">See our offers</a>
@@ -104,7 +104,12 @@
                     destination.subtitle.match(this.query) ||
                     destination.content.match(this.query)
                 });
-            }
+            },
+        },
+        filters: {
+            uppercaseSubTitle: function(value) {
+                return value.toUpperCase();
+            },
         },
     });
 </script>

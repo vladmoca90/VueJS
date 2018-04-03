@@ -35,11 +35,11 @@ body {
         padding: 20px; }
         .main .cards .card-content__heading {
           font-size: 21px;
-          margin-bottom: 5px;
+          margin-bottom: 7px;
           text-align: center; }
         .main .cards .card-content__subheading {
           color: #888;
-          font-size: 18px;
+          font-size: 16px;
           margin-bottom: 5px; }
         .main .cards .card-content__text {
           font-size: 15px;
