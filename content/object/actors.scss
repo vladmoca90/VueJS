@@ -1,4 +1,6 @@
-@import '../../mixins/mixins.scss';
+@import '../mixins/mixins.scss';
+
+@import '../variables/variables.scss';
 
 body {
     margin: 0;
@@ -6,7 +8,7 @@ body {
 }
 
 .box {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: $gill-sans;
     margin: 0 auto;
     max-width: 600px;
 
