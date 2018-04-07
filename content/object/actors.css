@@ -3,7 +3,7 @@ body {
   padding: 0; }
 
 .box {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0 auto;
   max-width: 600px; }
   .box__filter {
@@ -14,16 +14,15 @@ body {
     margin-bottom: 15px;
     padding: 15px; }
     .box-article__heading {
-      margin-bottom: 15px;
-      margin-top: 0;
+      margin: 0 auto 15px;
       text-align: center; }
       .box-article__heading-sub {
-        font-size: 15px;
+        font-size: 16px;
         margin-bottom: 5px; }
         .box-article__heading-sub:nth-of-type(1) {
           text-transform: uppercase; }
         .box-article__heading-sub:nth-of-type(2) {
           font-style: italic; }
     .box-article__text {
-      font-size: 13px;
+      font-size: 14px;
       margin-bottom: 0; }
