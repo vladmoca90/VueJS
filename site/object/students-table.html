@@ -39,7 +39,7 @@
                 </tr>
             </thead>
             <tbody class="table-body">
-                <tr v-for="student in students">
+                <tr v-for="student in sortedStudents">
                     <td>{{ student.name }}</td>
                     <td>{{ student.mark }}</td>
                 </tr>
@@ -91,7 +91,7 @@
         },
         computed: {
             sortedStudents: function () {
-
+                
             },
         },
     });
