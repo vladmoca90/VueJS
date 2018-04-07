@@ -33,10 +33,14 @@
     <div class="table-box u-full-width">
         <table class="table table-bordered">
             <thead>
-                <th></th>
+                <th>Number</th>
+                <th>ToFixed value</th>
+                <th>ToPrecision value</th>
             </thead>
             <tbody>
-                <tr>
+                <tr v-for="number in numbers">
+                    <td>{{ number }}</td>
+                    <td></td>
                     <td></td>
                 </tr>
             </tbody>
@@ -44,7 +48,15 @@
     </div>
 </body>
 <script type="text/javascript">
-   
+    new Vue({
+        el: '.table-box',
+        data: {
+            numbers: [1.9806234, 4.4586775, 22.66574, 7.004756324, 3.3365, 97.56354646],
+        },
+        computed: {
+
+        }
+    });
 </script>
 
 </html>

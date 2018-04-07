@@ -3,5 +3,14 @@
 @import '../variables/variables.scss';
 
 .table-box {
+    margin: 30px auto;
     max-width: 400px;
+
+    table {
+        @include font-prop(15px, #444, $arial);
+
+        th, td {
+            text-align: center;
+        }
+    }
 }
