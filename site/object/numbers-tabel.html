@@ -21,8 +21,6 @@
 
     <script src="https://unpkg.com/vue@2.1.8/dist/vue.js" type="text/javascript"></script>
 
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" type="text/css" href="../../content/utilities/utilities.css" />
 
     <link rel="stylesheet" type="text/css" href="../../content/object/numbers-table.css" />
@@ -33,15 +31,15 @@
     <div class="table-box u-full-width">
         <table class="table table-bordered">
             <thead>
-                <th>Number</th>
-                <th>ToFixed value</th>
-                <th>ToPrecision value</th>
+                <th>Numbers</th>
+                <th>To Fixed value</th>
+                <th>To Precision value</th>
             </thead>
             <tbody>
                 <tr v-for="number in numbers">
                     <td>{{ number }}</td>
-                    <td></td>
-                    <td></td>
+                    <td>{{ toFixedValue(number) }}</td>
+                    <td>{{ toPrecisionValue(number) }}</td>
                 </tr>
             </tbody>
         </table>
@@ -51,11 +49,16 @@
     new Vue({
         el: '.table-box',
         data: {
-            numbers: [1.9806234, 4.4586775, 22.66574, 7.004756324, 3.3365, 97.56354646],
+            numbers: [1.7932044, 4.4586777, 22.66574, 7.00256324, 3.3365, 97.563546, 14.7650002],
         },
-        computed: {
-
-        }
+        methods: {
+            toFixedValue: function(number) {
+                return number.toFixed(3);
+            },
+            toPrecisionValue: function(number) {
+                return number.toPrecision(5);
+            }
+        },
     });
 </script>
 

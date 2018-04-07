@@ -45,7 +45,9 @@
                     <td>{{ country.population }}</td>
                     <td>{{ country.capital }}</td>
                     <td>{{ country.language }}</td>
-                    <td><div class="countries__table-division--inline" v-for="city in country.otherCities">{{ city}},&nbsp;</div></td>
+                    <td>
+                        <div class="countries__table-division--inline" v-for="city in country.otherCities">{{ city }}&nbsp;</div>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -135,7 +137,7 @@
             ],
         },
         methods: {
-          
+
         },
     });
 </script>
