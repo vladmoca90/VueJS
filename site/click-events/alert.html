@@ -27,14 +27,20 @@
 
     <link rel="stylesheet" type="text/css" href="../content/utilities.css" />
 
+    <style scoped>
+    .btn-box {
+        margin: 20px auto;
+    }
+    </style>
+
 </head>
 
 <body>
     <div class="container">
-        <div>
+        <div class="btn-box">
             <button role="button" :class="alertButton" @click="alertMessage">Alert button</button>
         </div>
-        <div>
+        <div class="btn-box">
             <button role="button" :class="promptButton" @click="promptMessage">Prompt button</button>
         </div>
     </div>

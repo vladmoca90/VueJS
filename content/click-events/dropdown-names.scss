@@ -3,9 +3,9 @@
 @import '../variables/variables.scss';
 
 .dropdown-box {
-    background-color: #7986CB;
+    background-color: #069;
     border-radius: 8px;
-    @include font-prop(15px, #fff, Arial);
+    @include font-prop(15px, #fff, $arial);
     margin: 50px auto;
     max-width: 150px;
     min-height: 40px;
@@ -28,7 +28,7 @@
         li {
             border-top: $side-gray;
             padding: 10px;
-            transition: background 0.4s;
+            transition: background 0.4s ease-in;
             &:last-of-type {
                 border: {
                     bottom-left-radius: 8px;
@@ -36,7 +36,7 @@
                 }
             }
             &:hover {
-                background-color: #3949AB;
+                background-color: #222;
                 cursor: pointer;
             }
         }
