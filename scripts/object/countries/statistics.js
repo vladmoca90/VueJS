@@ -1,5 +1,5 @@
 new Vue({
-    el: '.countries__table',
+    el: '.countries__statistics',
     data: {
         countries: [
             {
@@ -9,7 +9,7 @@ new Vue({
                 language: "Portuguese",
                 otherCities: ["Porto", "Funchal", "Faro"],
                 UNmember: true,
-            }, 
+            },
             {
                 name: "United States",
                 population: 315, //in millions
@@ -68,8 +68,27 @@ new Vue({
         ],
     },
     methods: {
-        totalNumberOfCountries: function () {
-            return countries.length;
-        }
+        totalPopulation: function (countries) {
+
+            if (countries.length == 0) {
+                throw new Error('The array is empty');
+            }
+
+            if (countries.length == 1) {
+                return countries[0].population;
+            }
+
+            var total = countries[0].population;
+
+            for (i = 0; i < countries.length; i++) {
+                total += countries[i].population;
+            }
+
+            return total;
+        },
+        numberOfDifferentLang: function () {
+            var counter = 0;
+
+        },
     },
 });

@@ -52,7 +52,7 @@
             </tbody>
         </table>
 
-        <table class="countries__statistics table table-dark">
+        <table class="countries__statistics table table-bordered">
             <thead>
                 <th>Total countries</th>
                 <th>Total population (millions)</th>
@@ -60,14 +60,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ totalNumberOfCountries() }}</td>
-                    <td>{{ }}</td>
-                    <td>{{ }}</td>
+                    <td>{{ countries.length }}</td>
+                    <td>{{ totalPopulation(countries) }}</td>
+                    <td>{{  }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </body>
-<script type="text/javascript" src="../../scripts/object/countries/countries__table.js"></script>
-<script type="text/javascript" src="../../scripts/object/countries/countries__statistics.js"></script>
+<script type="text/javascript" src="../../scripts/object/countries/countries.js"></script>
+<script type="text/javascript" src="../../scripts/object/countries/statistics.js"></script>
 </html>
