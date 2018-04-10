@@ -7,8 +7,7 @@ body {
   padding: 0; }
 
 .main {
-  margin: 40px auto;
-  max-width: 1100px; }
+  margin: 30px auto; }
   .main #search-bar {
     display: inherit;
     font-size: 15px;
@@ -47,7 +46,7 @@ body {
           margin-bottom: 5px; }
         .main .cards .card-content__text {
           font-size: 15px;
-          margin-bottom: 10px; }
+          margin-bottom: 0; }
           .main .cards .card-content__text:last-child {
             bottom: 20px;
             left: 0;
@@ -55,12 +54,8 @@ body {
             right: 0;
             text-align: center; }
         .main .cards .card-content__link {
-          bottom: 20px;
-          left: 0;
-          margin: 0 auto;
-          right: 0;
-          text-align: center;
-          width: 40%; }
+          margin: 20px auto 0;
+          width: 38%; }
           .main .cards .card-content__link-text {
             border-bottom: 1px solid transparent;
             color: #444;
