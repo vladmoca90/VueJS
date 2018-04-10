@@ -42,7 +42,7 @@ new Vue({
                 imgInformation: 'Spain travel',
                 title: 'Spain',
                 subtitle: 'Europe',
-                content: 'Spain, a country on Europes Iberian Peninsula, includes 17 autonomous regions with diverse geography and cultures. Capital city Madrid is home to the Royal Palace and Prado museum, housing works by European masters. Segovia has a medieval castle (the Alcazar) and an intact Roman aqueduct. The capital of Catalonia, Barcelona, is defined by Antoni Gaudi whimsical modernist landmarks like the Sagrada Família church.',
+                content: 'Spain, a country on Europes Iberian Peninsula, includes 17 autonomous regions with diverse geography and cultures. Capital city Madrid is home to the Royal Palace and Prado museum, housing works by European masters. Segovia has a medieval castle (the Alcazar) and an intact Roman aqueduct. The capital of Catalonia, Barcelona, is defined by Antoni Gaudi whimsical modernist landmarks like the Sagrada Familia church.',
             },
         ],
     },

@@ -7,7 +7,7 @@ body {
   padding: 0; }
 
 .main {
-  margin: 30px auto; }
+  margin: 40px auto; }
   .main #search-bar {
     display: inherit;
     font-size: 15px;
@@ -43,10 +43,9 @@ body {
         .main .cards .card-content__subheading {
           color: #888;
           font-size: 16px;
-          margin-bottom: 5px; }
+          margin-bottom: 7px; }
         .main .cards .card-content__text {
-          font-size: 15px;
-          margin-bottom: 0; }
+          font-size: 15px; }
           .main .cards .card-content__text:last-child {
             bottom: 20px;
             left: 0;
@@ -54,8 +53,7 @@ body {
             right: 0;
             text-align: center; }
         .main .cards .card-content__link {
-          margin: 20px auto 0;
-          width: 38%; }
+          text-align: center; }
           .main .cards .card-content__link-text {
             border-bottom: 1px solid transparent;
             color: #444;
@@ -64,16 +62,16 @@ body {
             transition: all ease-in-out 0.4s; }
             .main .cards .card-content__link-text::after {
               content: '>';
-              right: 12px;
+              right: -10px;
               position: absolute;
               opacity: 0;
-              top: 1px;
+              top: 0;
               transition: all ease 0.4s; }
             .main .cards .card-content__link-text:hover {
               border-bottom: 1px solid #444; }
               .main .cards .card-content__link-text:hover::after {
                 opacity: 1;
-                right: 7px; }
+                right: -15px; }
 
 @media (max-width: 767px) {
   .cards {

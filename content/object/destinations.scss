@@ -9,7 +9,7 @@ body {
 }
 
 .main {
-    margin: 30px auto;
+    margin: 40px auto;
     #search-bar {
         display: inherit;
         font-size: 15px;
@@ -50,11 +50,10 @@ body {
                 &__subheading {
                     color: #888;
                     font-size: 16px;
-                    margin-bottom: 5px;
+                    margin-bottom: 7px;
                 }
                 &__text {
                     font-size: 15px;
-                    margin-bottom: 0;
                     &:last-child {
                         bottom: 20px;
                         left: 0;
@@ -64,8 +63,7 @@ body {
                     }
                 }
                 &__link {
-                    margin: 20px auto 0;
-                    width: 38%;
+                    text-align: center;
                     &-text {
                         border-bottom: 1px solid transparent;
                         color: #444;
@@ -74,17 +72,17 @@ body {
                         transition: all ease-in-out 0.4s;
                         &::after {
                             content: '>';
-                            right: 12px;
+                            right: -10px;
                             position: absolute;
                             opacity: 0;
-                            top: 1px;
+                            top: 0;
                             transition: all ease 0.4s;
                         }
                         &:hover {
                             border-bottom: 1px solid #444;
                             &::after {
                                 opacity: 1;
-                                right: 7px;
+                                right: -15px;
                             }
                         }
                     }
