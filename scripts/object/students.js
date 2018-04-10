@@ -1,7 +1,8 @@
 new Vue({
     el: ".table-container",
     data: {
-        students: [{
+        students: [
+            {
                 name: "Zanfir Andreea",
                 mark: 8.65,
             },

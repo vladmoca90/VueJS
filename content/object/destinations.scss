@@ -10,7 +10,6 @@ body {
 
 .main {
     margin: 40px auto;
-    max-width: 1100px;
     #search-bar {
         display: inherit;
         font-size: 15px;
@@ -51,11 +50,10 @@ body {
                 &__subheading {
                     color: #888;
                     font-size: 16px;
-                    margin-bottom: 5px;
+                    margin-bottom: 7px;
                 }
                 &__text {
                     font-size: 15px;
-                    margin-bottom: 10px;
                     &:last-child {
                         bottom: 20px;
                         left: 0;
@@ -65,12 +63,7 @@ body {
                     }
                 }
                 &__link {
-                    bottom: 20px;
-                    left: 0;
-                    margin: 0 auto;
-                    right: 0;
                     text-align: center;
-                    width: 40%;
                     &-text {
                         border-bottom: 1px solid transparent;
                         color: #444;
@@ -79,17 +72,17 @@ body {
                         transition: all ease-in-out 0.4s;
                         &::after {
                             content: '>';
-                            right: 12px;
+                            right: -10px;
                             position: absolute;
                             opacity: 0;
-                            top: 1px;
+                            top: 0;
                             transition: all ease 0.4s;
                         }
                         &:hover {
                             border-bottom: 1px solid #444;
                             &::after {
                                 opacity: 1;
-                                right: 7px;
+                                right: -15px;
                             }
                         }
                     }
