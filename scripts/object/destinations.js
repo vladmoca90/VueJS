@@ -2,7 +2,8 @@ new Vue({
     el: '.main',
     data: {
         query: '',
-        destinations: [{
+        destinations: [
+            {
                 image: '../../images/destinations/Malaysia.jpg',
                 imgInformation: 'Malaysia travel',
                 title: 'Malaysia',
