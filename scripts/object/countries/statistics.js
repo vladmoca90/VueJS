@@ -90,12 +90,12 @@ new Vue({
             var differentLanguages = [];
 
             for (i = 0; i < countries.length; i++) {
-                if (countries.indexOf(countries[i].language) == -1) {
+                if (differentLanguages.indexOf(countries[i].language) == -1) {
                     differentLanguages.push(countries[i].language);
                 }
             }
 
-            return differentLanguages.length;
+            return differentLanguages;
         },
     },
 });
