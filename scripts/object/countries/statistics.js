@@ -92,7 +92,7 @@ new Vue({
             var difference = countries[0].language;
 
             for (i = 0; i < countries.length; i++) {
-                if (difference.indexOf() == -1) {
+                if (difference !== countries[i].language) {
                     count++
                 }
             }
