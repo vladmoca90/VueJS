@@ -3,15 +3,14 @@
 new Vue({
     el: '.countries__statistics',
     data: {
-        countries: [
-            {
+        countries: [{
                 name: "Portugal",
                 population: 10, //in millions
                 capital: "Lisbon",
                 language: "Portuguese",
                 otherCities: ["Porto", "Funchal", "Faro"],
                 UNmember: true,
-            }, 
+            },
             {
                 name: "United States",
                 population: 315, //in millions
@@ -70,8 +69,19 @@ new Vue({
         ],
     },
     methods: {
-        totalNumberOfCountries: function () {
-            return countries.length;
-        }
+        totalPopulation: function (countries) {
+
+            var total = countries[0].population;
+
+            for (i = 0; i < countries.length; i++) {
+                total += countries[i].population;
+            }
+
+            return total;
+        },
+        numberOfDifferentLang: function () {
+            /* var counter = 0; */
+
+        },
     },
 });
