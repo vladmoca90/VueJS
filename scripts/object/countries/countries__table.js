@@ -67,9 +67,4 @@ new Vue({
             },
         ],
     },
-    methods: {
-        totalNumberOfCountries: function () {
-            return countries.length;
-        }
-    },
 });
