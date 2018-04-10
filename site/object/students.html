@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Dropdown with names</title>
+    <title>Names and marks</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -25,20 +25,28 @@
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
+    <link rel="stylesheet" href="../../content/object/students.css" />
 
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
-        <div class="dropdown-box__btn">Show List
-            <span class="dropdown-box__btn-arrow" :class="{ rotateDown : arrowDown = !arrowDown }"></span>
-        </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
-        </ul>
+    <div class="table-container u-full-width">
+        <table role="presentation" class="table table-bordered table-dark">
+            <thead class="table-head">
+                <tr>
+                    <th>Name</th>
+                    <th>Mark</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <tr v-for="student in sortedStudents">
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.mark }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
+<script type="text/javascript" src="../../scripts/object/students.js"></script>
 
-<script type="text/javascript" src="../../scripts/click-events/dropdown-names.js"></script>
 </html>

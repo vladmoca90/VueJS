@@ -1,0 +1,48 @@
+@import '../mixins/mixins.scss';
+
+@import '../variables/variables.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    font-family: $gill-sans;
+    margin: 0 auto;
+    max-width: 600px;
+
+    &__filter {
+        font-size: 15px;
+        margin: 25px 0;
+    }
+
+    &-article {
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+
+        &__heading {
+            margin: 0 auto 15px;
+            text-align: center;
+
+            &-sub {
+                font-size: 16px;
+                margin-bottom: 5px;
+
+                &:nth-of-type(1) {
+                    text-transform: uppercase;
+                }
+
+                &:nth-of-type(2) {
+                    font-style: italic;
+                }
+            }
+        }
+
+        &__text {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+    }
+}

@@ -3,9 +3,10 @@
     position: relative;
 }
 
+//Only when the parent has position: relative
 .u--absolute {
     position: absolute;
-} //Only when the parent has position: relative
+}
 
 .u-fixed {
     position: fixed;
@@ -20,6 +21,12 @@
     color: #fff;
 }
 
+//Utilities for background
+
+.u-bg--white {
+    background-color: #fff;
+}
+
 //Utilities for sizes
 .u-full-width {
     width: 100%;
@@ -30,29 +37,15 @@
 }
 
 //Utilities for border
-.u-no-border {
-    border: 0;
-}
-
 .u-border {
     border: 1px solid #ccc;
 }
 
-//Utilities for margin, padding
-.u-margin--0 {
-    margin: 0;
-}
-
-.u-padding--0 {
-    padding: 0;
-}
-
-//Utilities for background
-.u-bg--white {
-    background-color: #fff;
-}
-
 //Utilities for displays
+.u-inline {
+    display: inline;
+}
+
 .u-block {
     display: block;
 }
@@ -72,21 +65,21 @@
 
 .u-flex--column {
     flex-direction: column;
-} //mainly when the content is on column on all devices
+} //if the element is on column on all devices
 
 .u-center {
     align-items: center;
     justify-content: center;
 }
 
-.u-flexend {
-    justify-content: flex-end;
+.u-space-around {
+    justify-content: space-around;
 }
 
 .u-space-between {
     justify-content: space-between;
 }
 
-.u-space-around {
-    justify-content: space-around;
+.u-space-evenly {
+    justify-content: space-evenly;
 }

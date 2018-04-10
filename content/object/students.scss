@@ -1,0 +1,17 @@
+@import '../mixins/mixins.scss';
+
+@import '../variables/variables.scss';
+
+.table-container {
+    @include font-prop(16px, #fff, $arial);
+    margin: 50px auto;
+    max-width: 400px;
+    th, td {
+        text-align: center;
+    }
+    &-body {
+        tr:hover {
+            cursor: pointer;
+        }
+    }
+}

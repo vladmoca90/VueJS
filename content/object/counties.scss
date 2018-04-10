@@ -1,0 +1,22 @@
+@import '../mixins/mixins.scss';
+
+.filter-container {
+    margin: 0 auto;
+    max-width: 600px;
+    &__input {
+        display: inline-block;
+        margin: 25px auto;
+        padding-left: 5px;
+    }
+    &__text {
+        background-color: #ee9;
+        border-radius: 8px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    &__heading {
+        margin: 0;
+        padding-bottom: 15px;
+    }
+}

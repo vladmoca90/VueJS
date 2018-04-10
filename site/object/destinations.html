@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Dropdown with names</title>
+    <title>Destinations</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -25,20 +25,27 @@
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
+    <link rel="stylesheet" href="../../content/object/destinations.css" />
 
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
-        <div class="dropdown-box__btn">Show List
-            <span class="dropdown-box__btn-arrow" :class="{ rotateDown : arrowDown = !arrowDown }"></span>
+    <section role="main" class="main u-full-width">
+        <input id="search-bar" class="u-full-width" type="text" placeholder="Search..."  v-model="query" />
+        <div class="cards u-full-width u-flex u-space-between">
+            <div class="card u-bg--white u-border" v-for="destination in allDestinations">
+                <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
+                <div class="card-content u-full-height u-relative">
+                    <p role="heading" class="card-content__heading">{{ destination.title }}</p>
+                    <p role="heading" class="card-content__subheading u-text--bold">{{ destination.subtitle | uppercaseSubTitle }}</p>
+                    <p role="text" class="card-content__text">{{ destination.content }}</p>
+                    <div class="card-content__link u--absolute">
+                        <a role="link" href="#" class="card-content__link-text">See our offers</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
-        </ul>
-    </div>
+    </section>
 </body>
-
-<script type="text/javascript" src="../../scripts/click-events/dropdown-names.js"></script>
+<script type="text/javascript" src="../../scripts/object/destinations.js"></script>
 </html>

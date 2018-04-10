@@ -1,15 +1,7 @@
-@mixin overflow-x-y($x, $y) {
-    overflow: {
-        x: $x;
-        y: $y;
-    }
-}
-
-@mixin background($attachment, $image, $position, $repeat, $size) {
+@mixin background($attachment, $image, $repeat, $size) {
     background: {
         attachment: $attachment;
         image: $image;
-        position: $position;
         repeat: $repeat;
         size: $size;
     }
@@ -24,14 +16,6 @@
         style: $style;
         color: $color;
     }
-}
-
-@mixin font-style($size, $color, $family) {
-    font: {
-        size: $size;
-        family: $family;
-    }
-    color: $color;
 }
 
 @mixin css-triangle($color, $direction, $size) {
@@ -54,5 +38,29 @@
         border-top: $size solid transparent;
         border-bottom: $size solid transparent;
         border-right: $size solid $color;
+    }
+    height: 0;
+    width: 0;
+}
+
+@mixin font-prop($size, $color, $family) {
+    font: {
+        size: $size;
+        family: $family;
+    }
+    color: $color;
+}
+
+@mixin overflow-x-y($x, $y) {
+    overflow: {
+        x: $x;
+        y: $y;
+    }
+}
+
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
     }
 }

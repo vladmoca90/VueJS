@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Dropdown with names</title>
+    <title>Counties</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -24,21 +24,21 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
-
-    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
+    
+    <link rel="stylesheet" href="../../content/object/counties.css" />
 
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
-        <div class="dropdown-box__btn">Show List
-            <span class="dropdown-box__btn-arrow" :class="{ rotateDown : arrowDown = !arrowDown }"></span>
+
+    <div class="filter-container u-full-width">
+        <h1 class="text-center">UK Counties</h1>
+        <input class="filter-container__input u-full-width" type="text" placeholder="Search..." v-model="query" />
+        <div v-for="county in counties" class="filter-container__text">
+            <h3 class="filter-container__heading text-center">{{ county.title }}</h3>
+            {{ county.content }}
         </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
-        </ul>
     </div>
 </body>
-
-<script type="text/javascript" src="../../scripts/click-events/dropdown-names.js"></script>
+<script src="../../scripts/object/counties.js"></script>
 </html>

@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Dropdown with names</title>
+    <title>Numbers</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -21,24 +21,31 @@
 
     <script src="https://unpkg.com/vue@2.1.8/dist/vue.js" type="text/javascript"></script>
 
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
-
-    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
+    <link rel="stylesheet" type="text/css" href="../../content/object/numbers.css" />
 
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
-        <div class="dropdown-box__btn">Show List
-            <span class="dropdown-box__btn-arrow" :class="{ rotateDown : arrowDown = !arrowDown }"></span>
-        </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
-        </ul>
+    <div class="table-box u-full-width">
+        <table class="table table-bordered">
+            <thead>
+                <th>Numbers</th>
+                <th>To Fixed value</th>
+                <th>To Precision value</th>
+                <th>Power</th>
+            </thead>
+            <tbody>
+                <tr v-for="number in numbers">
+                    <td>{{ number }}</td>
+                    <td>{{ toFixedValue(number) }}</td>
+                    <td>{{ toPrecisionValue(number) }}</td>
+                    <td>{{ powerValue(number) }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
-
-<script type="text/javascript" src="../../scripts/click-events/dropdown-names.js"></script>
+<script type="text/javascript" src="../../scripts/object/numbers.js"></script>
 </html>

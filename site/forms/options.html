@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Dropdown with names</title>
+    <title>Options</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -25,20 +25,32 @@
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
+    <style>
+        #options {
+            margin: 50px auto;
+            max-width: 90px;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
-        <div class="dropdown-box__btn">Show List
-            <span class="dropdown-box__btn-arrow" :class="{ rotateDown : arrowDown = !arrowDown }"></span>
-        </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
-        </ul>
+
+    <div id="options" class="u-full-width">
+        <select v-model="selected">
+            <option v-for="country in countries" :value="selected">{{ country }}</option>
+        </select>
     </div>
 </body>
+<script type="text/javascript">
+    new Vue({
+        el: '#options',
+        data: {
+            selected: '',
+            countries: ["Romania", "Canada", "India", "Brazil", "Australia", "Israel", "France"],
+        },
+    });
+</script>
 
-<script type="text/javascript" src="../../scripts/click-events/dropdown-names.js"></script>
+
 </html>

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-    <title>Dropdown with names</title>
+    <title>Greeting</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -23,22 +23,31 @@
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../../content/utilities/utilities.css" />
-
-    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
+    <link rel="stylesheet" type="text/css" href="../../content/utilities/utilities.css" />
 
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
-        <div class="dropdown-box__btn">Show List
-            <span class="dropdown-box__btn-arrow" :class="{ rotateDown : arrowDown = !arrowDown }"></span>
-        </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
-        </ul>
+    <div id="app">
+        <greeting></greeting>
     </div>
 </body>
+<script type="text/javascript">
+    var greetingComp = Vue.component('greeting', {
+        template: '<p>Hey there, I am {{ name }}</p>.',
+        data: function () {
+            return {
+                name: 'Vlad',
+            }
+        },
+    });
 
-<script type="text/javascript" src="../../scripts/click-events/dropdown-names.js"></script>
+    new Vue({
+        el: '#app',
+        components: {
+            'greeting': greetingComp,
+        }
+    });
+</script>
+
 </html>

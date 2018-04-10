@@ -1,29 +1,34 @@
 @import '../mixins/mixins.scss';
+
+@import '../variables/variables.scss';
+
 .dropdown-box {
-    background-color: #7986CB;
+    background-color: #069;
     border-radius: 8px;
-    @include font-style(15px, #fff, Arial);
+    @include font-prop(15px, #fff, $arial);
     margin: 50px auto;
-    min-height: 40px;
     max-width: 150px;
+    min-height: 40px;
     &__btn {
         cursor: pointer;
-        display: inherit;
         padding: 10px 0;
         text-align: center;
-        .caret {
-            transform: rotate(-90deg);
+        &-arrow {
+            display: inline-block;
+            @include css-triangle(#fff, right, 5px);
+            margin: 3px 0 0 4px;
+            transform: rotate(0deg);
         }
         .rotateDown {
-            transform: rotate(0deg);
+            transform: rotate(90deg);
         }
     }
     &__list {
         margin-bottom: 0;
         li {
-            border-top: 1px solid #ccc;
+            border-top: $side-gray;
             padding: 10px;
-            transition: background 0.4s;
+            transition: background 0.4s ease-in;
             &:last-of-type {
                 border: {
                     bottom-left-radius: 8px;
@@ -31,7 +36,7 @@
                 }
             }
             &:hover {
-                background-color: #3949AB;
+                background-color: #222;
                 cursor: pointer;
             }
         }

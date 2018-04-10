@@ -35,7 +35,7 @@
         <div class="panel users-panel u-full-height u-full-width u-border u-bg--white">
             <div class="users-panel__top u-relative">
                 <i class="fa fa-search users-panel__search-icon u--absolute"></i>
-                <input class="users-panel__search-bar u-full-width" type="text" role="textbox" placeholder="Search..." v-model="query" />
+                <input class="users-panel__search-bar u-full-width u-no-border" type="text" role="textbox" placeholder="Search..." v-model="query" />
             </div>
             <div class="users-panel__content u-relative">
                 <div class="users-panel__person u-full-height u-full-width u-relative" :class="{stayActive : active}">
@@ -63,7 +63,7 @@
             <div class="comments-panel__texts"></div>
             <textarea class="comments-panel__textarea u-full-height u-full-width" v-model="writeComment"></textarea>
             <div class="comments-panel__bottom u-full-height u-flex">
-                <button type="button" class="comments-panel__button-clip" @click="chooseDocument">
+                <button type="button" class="comments-panel__button-clip u-no-border" @click="chooseDocument">
                     <i class="fa fa-paperclip"></i>
                 </button>
                 <i class="far fa-smile comments-panel__stickers" @click="chooseSticker"></i>

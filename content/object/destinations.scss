@@ -1,0 +1,107 @@
+@import '../mixins/mixins.scss';
+
+@import '../variables/variables.scss';
+
+body {
+    @include background(fixed, url('../../images/destinations/background.jpg'), no-repeat, cover);
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin: 40px auto;
+    max-width: 1100px;
+    #search-bar {
+        display: inherit;
+        font-size: 15px;
+        margin: 0 auto 40px;
+        max-width: 345px;
+        padding: 5px;
+        &:focus {
+            outline: 0;
+        }
+    }
+    .cards {
+        flex-flow: row wrap;
+        .card {
+            border-radius: 8px;
+            font-family: $gill-sans;
+            margin-bottom: 50px;
+            max-width: 350px;
+            &__img {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                height: 225px;
+                transition: filter 0.5s;
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(75%);
+                }
+            }
+            &-content {
+                border-top: $side-gray;
+                color: #444;
+                min-height: 350px;
+                padding: 20px;
+                &__heading {
+                    font-size: 21px;
+                    margin-bottom: 7px;
+                    text-align: center;
+                }
+                &__subheading {
+                    color: #888;
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+                &__text {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                    &:last-child {
+                        bottom: 20px;
+                        left: 0;
+                        margin-bottom: 0;
+                        right: 0;
+                        text-align: center;
+                    }
+                }
+                &__link {
+                    bottom: 20px;
+                    left: 0;
+                    margin: 0 auto;
+                    right: 0;
+                    text-align: center;
+                    width: 40%;
+                    &-text {
+                        border-bottom: 1px solid transparent;
+                        color: #444;
+                        cursor: pointer;
+                        text-decoration: none;
+                        transition: all ease-in-out 0.4s;
+                        &::after {
+                            content: '>';
+                            right: 12px;
+                            position: absolute;
+                            opacity: 0;
+                            top: 1px;
+                            transition: all ease 0.4s;
+                        }
+                        &:hover {
+                            border-bottom: 1px solid #444;
+                            &::after {
+                                opacity: 1;
+                                right: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .cards {
+        align-items: center;
+        flex-direction: column;
+    }
+}

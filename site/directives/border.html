@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Dropdown with names</title>
+    <title>Color directive</title>
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -25,20 +25,42 @@
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
+    <style>
+        .some-text {
+            line-height: 50px;
+            margin: 50px auto;
+            max-width: 150px;
+            min-height: 50px;
+            text-align: center;
+        }
+        p {
+            margin: 0;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
-        <div class="dropdown-box__btn">Show List
-            <span class="dropdown-box__btn-arrow" :class="{ rotateDown : arrowDown = !arrowDown }"></span>
-        </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
-        </ul>
+
+    <div class="some-text u-full-height u-full-width" v-border>
+        <p>My name is Vlad</p>
     </div>
 </body>
+<script type="text/javascript">
+    new Vue({
+        el: '.some-text',
+        data: {},
+        directives: {
+            'border': {
+                bind(el, binding, vnode) {
+                    el.style.borderWidth='1px';
+                    el.style.borderStyle='solid';
+                    el.style.borderColor='#ccc';
+                },
+            }
+        }
+    });
+</script>
 
-<script type="text/javascript" src="../../scripts/click-events/dropdown-names.js"></script>
+
 </html>

@@ -1,0 +1,26 @@
+@import '../mixins/mixins.scss';
+
+.countries {
+    margin: 35px auto;
+    max-width: 900px;
+
+    &__table {
+        font-size: 15px;
+
+        th, td {
+            text-align: center;
+        }
+
+        &-division--inline {
+            display: inline-block;
+        }
+    }
+
+    &__statistics {
+        margin-top: 25px;
+        
+        th, td {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import '../mixins/mixins.scss';
+
+@import '../variables/variables.scss';
+
+.table-box {
+    margin: 30px auto;
+    max-width: 500px;
+
+    table {
+        @include font-prop(15px, #444, $arial);
+
+        th, td {
+            text-align: center;
+        }
+    }
+}

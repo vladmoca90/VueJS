@@ -1,0 +1,64 @@
+new Vue({
+    el: '.main',
+    data: {
+        query: '',
+        destinations: [{
+                image: '../../images/destinations/Malaysia.jpg',
+                imgInformation: 'Malaysia travel',
+                title: 'Malaysia',
+                subtitle: 'Asia',
+                content: 'Malaysia is a Southeast Asian country occupying parts of the Malay Peninsula and the island of Borneo. Its known for its beaches, rainforests and mix of Malay, Chinese, Indian and European cultural influences. The capital, Kuala Lumpur, is home to colonial buildings, busy shopping districts such as Bukit Bintang and skyscrapers such as the iconic, 451m-tall Petronas Twin Towers.',
+            },
+            {
+                image: '../../images/destinations/Thailand.jpg',
+                imgInformation: 'Thailand travel',
+                title: 'Thailand',
+                subtitle: 'Asia',
+                content: 'Thailand is a Southeast Asian country. Its known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin.',
+            },
+            {
+                image: '../../images/destinations/Japan.jpg',
+                imgInformation: 'Japan travel',
+                title: 'Japan',
+                subtitle: 'Asia',
+                content: 'Japan is an island nation in the Pacific Ocean with dense cities, imperial palaces, mountainous national parks and thousands of shrines and temples. Shinkansen bullet trains connect the main islands of Kyushu (with Okinawas subtropical beaches), Honshu (home to Tokyo and Hiroshimas atomic-bomb memorial) and Hokkaido (famous for skiing). Tokyo, the capital, is known for skyscrapers, shopping and pop culture.',
+            },
+            {
+                image: '../../images/destinations/UK.jpg',
+                imgInformation: 'United Kingdom travel',
+                title: 'United Kingdom',
+                subtitle: 'Europe',
+                content: 'The United Kingdom, made up of England, Scotland, Wales and Northern Ireland, is an island nation in northwestern Europe. England – birthplace of Shakespeare and The Beatles – is home to the capital, London, a globally influential centre of finance and culture. England is also site of Neolithic Stonehenge, Bath’s Roman spa and centuries-old universities at Oxford and Cambridge.',
+            },
+            {
+                image: '../../images/destinations/Italy.jpg',
+                imgInformation: 'Italy travel',
+                title: 'Italy',
+                subtitle: 'Europe',
+                content: 'Italy, a European country with a long Mediterranean coastline, has left a powerful mark on Western culture and cuisine. Its capital, Rome, is home to the Vatican as well as landmark art and ancient ruins. Other major cities include Florence, with Renaissance masterpieces such as Michelangelo’s "David" and Brunelleschis Duomo; Venice, the city of canals; and Milan, Italy’s fashion capital.',
+            },
+            {
+                image: '../../images/destinations/Spain.jpg',
+                imgInformation: 'Spain travel',
+                title: 'Spain',
+                subtitle: 'Europe',
+                content: 'Spain, a country on Europe’s Iberian Peninsula, includes 17 autonomous regions with diverse geography and cultures. Capital city Madrid is home to the Royal Palace and Prado museum, housing works by European masters. Segovia has a medieval castle (the Alcázar) and an intact Roman aqueduct. Catalonia’s capital, Barcelona, is defined by Antoni Gaudí’s whimsical modernist landmarks like the Sagrada Família church.',
+            },
+        ],
+    },
+    computed: {
+        allDestinations: function () {
+            return this.destinations.filter((destination) => {
+                return destination.imgInformation.match(this.query) ||
+                    destination.title.match(this.query) ||
+                    destination.subtitle.match(this.query) ||
+                    destination.content.match(this.query)
+            });
+        },
+    },
+    filters: {
+        uppercaseSubTitle: function (value) {
+            return value.toUpperCase();
+        },
+    },
+});

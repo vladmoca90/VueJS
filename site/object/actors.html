@@ -3,7 +3,9 @@
 
 <head>
 
-    <title>Dropdown with names</title>
+    <title>Actors</title>
+
+    <meta charset="utf-8" />
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -25,20 +27,24 @@
 
     <link rel="stylesheet" href="../../content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../../content/click-events/dropdown-names.css" />
+    <link rel="stylesheet" href="../../content/object/actors.css" />
 
 </head>
 
 <body>
-    <div class="dropdown-box u-full-width u-full-height" @click="showNames = !showNames">
-        <div class="dropdown-box__btn">Show List
-            <span class="dropdown-box__btn-arrow" :class="{ rotateDown : arrowDown = !arrowDown }"></span>
-        </div>
-        <ul class="dropdown-box__list list-unstyled">
-            <li class="text-center" v-show="showNames" v-for="person in persons">{{ person }}</li>
-        </ul>
-    </div>
-</body>
 
-<script type="text/javascript" src="../../scripts/click-events/dropdown-names.js"></script>
+    <section class="box u-full-width">
+        <input type="text" role="textbox" class="box__filter u-full-width" v-model="query" />
+        <article class="box-article u-border" v-for="actor in allActors">
+            <h2 role="heading" class="box-article__heading">{{ actor.name }}</h2>
+            <p role="heading" class="box-article__heading-sub">{{ actor.dateOfBirth }}</p>
+            <p role="heading" class="box-article__heading-sub">{{ actor.placeOfBirth }}</p>
+            <hr role="separator">
+            <p role="text" class="box-article__text">{{ actor.biography }}</p>
+        </article>
+    </section>
+
+</body>
+<script src="../../scripts/object/actors.js"></script>
+
 </html>

@@ -1,0 +1,16 @@
+.filter-container {
+  margin: 0 auto;
+  max-width: 600px; }
+  .filter-container__input {
+    display: inline-block;
+    margin: 25px auto;
+    padding-left: 5px; }
+  .filter-container__text {
+    background-color: #ee9;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 20px; }
+  .filter-container__heading {
+    margin: 0;
+    padding-bottom: 15px; }
