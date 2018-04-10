@@ -1,4 +1,4 @@
-new Vue({
+var countries = new Vue({
     el: '.countries__table',
     data: {
         countries: [
@@ -9,7 +9,7 @@ new Vue({
                 language: "Portuguese",
                 otherCities: ["Porto", "Funchal", "Faro"],
                 UNmember: true,
-            }, 
+            },
             {
                 name: "United States",
                 population: 315, //in millions
