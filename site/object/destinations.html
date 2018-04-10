@@ -32,7 +32,7 @@
 <body>
     <section role="main" class="main u-full-width">
         <input id="search-bar" class="u-full-width" type="text" placeholder="Search..."  v-model="query" />
-        <div class="cards u-full-width u-flex u-space-between">
+        <div class="cards u-full-width u-flex u-space-evenly">
             <div class="card u-bg--white u-border" v-for="destination in allDestinations">
                 <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
                 <div class="card-content u-full-height u-relative">
