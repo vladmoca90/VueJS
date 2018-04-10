@@ -89,7 +89,7 @@ new Vue({
 
             var differentLanguages = [];
 
-            for (i = 0; i < countries.length; i++) {
+            for (i = 1; i < countries.length; i++) {
                 if (countries.indexOf(countries[i].language) == -1) {
                     differentLanguages.push(countries[i].language);
                 }
