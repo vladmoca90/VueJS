@@ -87,17 +87,15 @@ new Vue({
         },
         numberOfDifferentLang: function (countries) {
 
-            var count = 0;
-
-            var difference = countries[0].language;
+         /*   var difference = [];
 
             for (i = 0; i < countries.length; i++) {
-                if (difference !== countries[i].language) {
-                    count++;
+                if (indexOf(countries[i].language) == -1) {
+                    difference.push(countries[i].languages);
                 }
             }
 
-            return count;
+            return difference.length; */
         },
     },
 });
