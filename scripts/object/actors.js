@@ -2,7 +2,8 @@ new Vue({
     el: '.box',
     data: {
         query: '',
-        actors: [{
+        actors: [
+            {
                 name: 'Russell Crowe',
                 dateOfBirth: '7 April 1964',
                 placeOfBirth: 'Wellington, New Zealand',
