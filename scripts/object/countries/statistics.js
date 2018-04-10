@@ -77,7 +77,7 @@ new Vue({
                 return countries[0].population;
             }
 
-            var total = countries[0].population;
+            var total = 0;
 
             for (i = 0; i < countries.length; i++) {
                 total += countries[i].population;
@@ -89,7 +89,7 @@ new Vue({
 
             var differentLanguages = [];
 
-            for (i = 1; i < countries.length; i++) {
+            for (i = 0; i < countries.length; i++) {
                 if (countries.indexOf(countries[i].language) == -1) {
                     differentLanguages.push(countries[i].language);
                 }
