@@ -1,5 +1,5 @@
 new Vue({
-    el: '.filter-container',
+    el: '.filter',
     data: {
         query: '',
         counties: [{

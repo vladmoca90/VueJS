@@ -1,7 +1,8 @@
 new Vue({
     el: '.countries__statistics',
     data: {
-        countries: [{
+        countries: [
+            {
                 name: 'Portugal',
                 population: 10, //in millions
                 capital: 'Lisbon',
@@ -77,7 +78,7 @@ new Vue({
                 return countries[0].population;
             }
 
-            var total = countries[0].population;
+            var total = 0;
 
             for (i = 0; i < countries.length; i++) {
                 total += countries[i].population;
@@ -87,15 +88,18 @@ new Vue({
         },
         numberOfDifferentLang: function (countries) {
 
+            var count = 0;
+
             var differentLanguages = [];
 
-            for (i = 1; i < countries.length; i++) {
-                if (countries.indexOf(countries[i].language) == -1) {
+            for (i = 0; i < countries.length; i++) {
+                if (differentLanguages.indexOf(countries[i].language) == -1) {
                     differentLanguages.push(countries[i].language);
+                    count++;
                 }
             }
 
-            return differentLanguages.length;
+            return count;
         },
     },
 });

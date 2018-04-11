@@ -35,12 +35,12 @@
         <div class="cards u-full-width u-flex u-space-evenly">
             <div class="card u-bg--white u-border" v-for="destination in allDestinations">
                 <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
-                <div class="card-content u-full-height">
-                    <p role="heading" class="card-content__heading">{{ destination.title }}</p>
-                    <p role="heading" class="card-content__subHeading u-text--bold">{{ destination.subtitle | uppercaseSubTitle }}</p>
-                    <p role="text" class="card-content__text">{{ destination.content }}</p>
-                    <div class="card-content__link">
-                        <a role="link" href="#" class="card-content__link-text u-relative">See our offers</a>
+                <div class="card__content u-full-height u-relative">
+                    <p role="heading" class="card__heading">{{ destination.title }}</p>
+                    <p role="heading" class="card__subHeading u-text--bold">{{ destination.subtitle | uppercaseSubTitle }}</p>
+                    <p role="text" class="card__text">{{ destination.content }}</p>
+                    <div class="card__link-container u--absolute">
+                        <a role="link" href="#" class="card__link u-relative">See our offers</a>
                     </div>
                 </div>
             </div>
