@@ -31,12 +31,12 @@
 
 <body>
 
-    <div class="filter u-full-width">
+    <div class="counties u-full-width">
         <h1 class="text-center">UK Counties</h1>
-        <input class="filter__input u-full-width" type="text" placeholder="Search..." v-model="query" />
-        <div v-for="county in counties" class="filter__container">
-            <h3 class="filter__heading text-center">{{ county.title }}</h3>
-            {{ county.content }}
+        <input class="counties__input u-full-width" type="text" placeholder="Search..." v-model="query" />
+        <div v-for="county in allCounties" class="counties__container">
+            <h3 class="counties__heading text-center">{{ county.title }}</h3>
+            <p>{{ county.content }}</p>
         </div>
     </div>
 </body>

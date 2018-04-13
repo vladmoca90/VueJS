@@ -24,9 +24,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../content/utilities/utilities.css" />
+    <link rel="stylesheet" href="../..//content/utilities/utilities.css" />
 
-    <link rel="stylesheet" href="../content/messages-panel.css" />
+    <link rel="stylesheet" href="../../content/messages/messages-panel.css" />
 
 </head>
 
@@ -35,7 +35,7 @@
         <div class="panel users-panel u-full-height u-full-width u-border u-bg--white">
             <div class="users-panel__top u-relative">
                 <i class="fa fa-search users-panel__search-icon u--absolute"></i>
-                <input class="users-panel__search-bar u-full-width u-no-border" type="text" role="textbox" placeholder="Search..." v-model="query" />
+                <input class="users-panel__search-bar u-full-width" type="text" role="textbox" placeholder="Search..." v-model="query" />
             </div>
             <div class="users-panel__content u-relative">
                 <div class="users-panel__person u-full-height u-full-width u-relative" :class="{stayActive : active}">
@@ -64,7 +64,7 @@
             <textarea class="comments-panel__textarea u-full-height u-full-width" v-model="writeComment"></textarea>
             <div class="comments-panel__bottom u-full-height u-flex">
                 <button type="button" class="comments-panel__button-clip u-no-border" @click="chooseDocument">
-                    <i class="fa fa-paperclip"></i>
+                    <span class="fa fa-paperclip"></span>
                 </button>
                 <i class="far fa-smile comments-panel__stickers" @click="chooseSticker"></i>
                 <button type="button" class="btn btn-primary comments-panel__button-send" @click.enter="sendComment">SEND</button>
@@ -72,23 +72,5 @@
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    new Vue({
-        el: '.messages-panel',
-        data: {
-            query: '',
-            stayActive: false,
-            writeComment: '',
-            profile: [{
-                img: '',
-                name: '',
-                status: '',
-            }],
-            conversations: [],
-        },
-        computed: {},
-        methods: {},
-    });
-</script>
-
+<script type="text/javascript" src="../../scripts/messages/messages-panel.js"></script>
 </html>

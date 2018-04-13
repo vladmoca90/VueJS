@@ -1,6 +1,8 @@
 @import '../mixins/mixins.scss';
 
-.filter {
+@import '../variables/variables.scss';
+
+.counties {
     margin: 0 auto;
     max-width: 600px;
     &__input {
