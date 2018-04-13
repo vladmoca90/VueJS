@@ -1,16 +1,16 @@
-.filter {
+.counties {
   margin: 0 auto;
   max-width: 600px; }
-  .filter__input {
+  .counties__input {
     display: inline-block;
     margin: 25px auto;
     padding-left: 5px; }
-  .filter__container {
+  .counties__container {
     background-color: #eee;
     border-radius: 8px;
     font-size: 14px;
     margin-bottom: 20px;
     padding: 20px; }
-  .filter__heading {
+  .counties__heading {
     margin: 0;
     padding-bottom: 15px; }

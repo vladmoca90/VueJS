@@ -46,12 +46,6 @@ body {
         margin-bottom: 7px; }
       .main .cards .card__text {
         font-size: 15px; }
-        .main .cards .card__text:last-child {
-          bottom: 20px;
-          left: 0;
-          margin-bottom: 0;
-          right: 0;
-          text-align: center; }
       .main .cards .card__link-container {
         bottom: 20px;
         left: 0;

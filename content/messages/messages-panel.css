@@ -32,6 +32,7 @@ body {
       font-size: 19px;
       top: 5px; }
     .messages-panel .users-panel__search-bar {
+      border: 0;
       padding: 4px 4px 4px 25px; }
     .messages-panel .users-panel__content {
       overflow-x: hidden;
