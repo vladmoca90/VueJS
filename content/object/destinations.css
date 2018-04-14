@@ -30,15 +30,20 @@ body {
         transition: filter 0.5s; }
         .main .cards .card__img:hover {
           cursor: pointer;
-          filter: brightness(50%); }
+          filter: brightness(35%); }
       .main .cards .card__overlay {
-        opacity: 0;
+        opacity: 1;
         position: absolute;
-        top: 0; }
+        text-align: center;
+        top: 40%; }
         .main .cards .card__overlay-text {
-          font-size: 18px;
+          display: inline;
+          font-weight: bold;
+          font-size: 36px;
           font-family: Arial, Helvetica, sans-serif;
           color: #fff;
+          letter-spacing: 1px;
+          margin: 0;
           text-transform: uppercase; }
       .main .cards .card__content {
         border-top: 1px solid #ccc;

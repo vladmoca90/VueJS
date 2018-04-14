@@ -31,12 +31,14 @@
 
 <body>
     <section role="main" class="main u-full-width">
-        <input id="search-bar" class="u-full-width" type="text" placeholder="Search..."  v-model="query" />
+        <input id="search-bar" class="u-full-width" type="text" placeholder="Search..." v-model="query" />
         <div class="cards u-full-width u-flex u-space-evenly">
             <div class="card u-bg--white u-border" v-for="destination in allDestinations">
-                <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
-                <div class="card__overlay u-full-width">
-                    <p class="card__overlay-text">{{ destination.overlayText }}</p>
+                <div class="u-relative">
+                    <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
+                    <div class="card__overlay u-full-width">
+                        <p class="card__overlay-text">{{ destination.overlayText }}</p>
+                    </div>
                 </div>
                 <div class="card__content u-full-height u-relative">
                     <p role="heading" class="card__heading">{{ destination.title }}</p>
@@ -51,4 +53,5 @@
     </section>
 </body>
 <script type="text/javascript" src="../../scripts/object/destinations.js"></script>
+
 </html>
