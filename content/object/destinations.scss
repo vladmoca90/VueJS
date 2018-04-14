@@ -34,7 +34,16 @@ body {
                 transition: filter 0.5s;
                 &:hover {
                     cursor: pointer;
-                    filter: brightness(75%);
+                    filter: brightness(50%);
+                }
+            }
+            &__overlay {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                &-text {
+                    @include font-prop(18px, #fff, $arial);
+                    text-transform: uppercase;
                 }
             }
             &__content {
