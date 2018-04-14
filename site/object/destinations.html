@@ -36,7 +36,7 @@
             <div class="card u-bg--white u-border" v-for="destination in allDestinations">
                 <div class="u-relative">
                     <img v-bind:src="destination.image" v-bind:title="destination.imgInformation" class="card__img u-full-width" />
-                    <div class="card__overlay u-full-width">
+                    <div class="card__overlay">
                         <p class="card__overlay-text">{{ destination.overlayText }}</p>
                     </div>
                 </div>
