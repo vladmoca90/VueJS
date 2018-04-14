@@ -27,6 +27,20 @@ body {
             font-family: $gill-sans;
             margin-bottom: 50px;
             max-width: 350px;
+            &__overlay {
+                display: none;
+                margin: 0 auto;
+                position: absolute;
+                text-align: center;
+                top: 40%;
+                &-text {
+                    display: inline-block;
+                    font-weight: bold;
+                    @include font-prop(36px,#fff, $arial);
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+            }
             &__img {
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
@@ -34,21 +48,10 @@ body {
                 transition: filter 0.5s;
                 &:hover {
                     cursor: pointer;
-                    filter: brightness(35%);
-                }
-            }
-            &__overlay {
-                opacity: 1;
-                position: absolute;
-                text-align: center;
-                top: 40%;
-                &-text {
-                    display: inline;
-                    font-weight: bold;
-                    @include font-prop(36px, #fff, $arial);
-                    letter-spacing: 1px;
-                    margin: 0;
-                    text-transform: uppercase;
+                    filter: brightness(40%);
+                     + .card__overlay {
+                         display: block;
+                    }
                 }
             }
             &__content {
