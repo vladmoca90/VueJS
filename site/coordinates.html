@@ -26,71 +26,37 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="coordinates">
 
-        <button @click="increase(-3, 5)">Increase</button>
+        <div :style="{ margin: '30px auto', width: '300px' }">
 
-        <button @click="counter++">+</button>
+            <button class="btn btn-success" @click="increase(-3, 5)">Increase</button>
 
-        <p>{{ counter }}</p>
+            <button class="btn btn-primary" @click="counter++">+</button>
 
-        <div :style="coordinatesStyle">
+            <p></p>
 
-            <p @mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
+            <p>{{ counter }}</p>
+
+            <div :style="coordinatesColors">
+
+                <p @mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
+
+            </div>
+
+            <p></p>
+
+            <input type="text" @keyup.exact.a="anAlert" @keydown="value = $event.target.value" />
+
+            <p :style="textValueColor">
+                <span>{{ value }}</span>
+            </p>
+
+            <button @click="showPrompt">Your details</button>
 
         </div>
-
-        <p></p>
-
-        <input type="text" @keyup.exact.a="anAlert" @keydown="value = $event.target.value" />
-
-        <p :style="textValueColor">
-            <span>{{ value }}</span>
-        </p>
-
-        <button @click="showPrompt">Your details</button>
-
     </div>
 </body>
-<script type="text/javascript">
-    new Vue({
-        el: '#app',
-        data: {
-            counter: 0,
-            x: 0,
-            y: 0,
-            coordinatesStyle: {
-                backgroundColor: '#00f',
-                padding: '5px',
-                width: '280px',
-                color: '#fff',
-            },
-            inputIdentity: {
-                placeholder: 'Write here whatever you want'
-            },
-            textValueColor: {
-                color: '#f00',
-                fontWeight: 'bold',
-            },
-            value: '',
-        },
-        methods: {
-            increase: function (step1, step2) {
-                this.counter += (step1 + step2);
-            },
-            updateCoordinates: function (event) {
-                this.x = event.clientX;
-                this.y = (2 * event.clientX).toString(8);
-            },
-            anAlert: function () {
-                this.event = alert("You just deleted the last character");
-            },
-            showPrompt: function () {
-                this.event = prompt("Please type your name here");
-            },
-
-        }
-    });
-</script>
+<script type="text/javascript" src="../scripts/coordinates/coordinates.js"></script>
 
 </html>
