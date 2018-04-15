@@ -26,21 +26,20 @@
 </head>
 
 <body>
-    <div id="app">
-        <button role="button" class="btn btn-primary" @click="reverseArray">Reverse</button>
-        <div>{{ totalArray}}</div>
-        <p>{{ myArray }}</p>
+    <div id="app" :style="{ margin: '30px auto', width: '300px' }">
+        <button role="button" class="btn btn-primary" @click="reverseArray">Click to reverse</button>
+        <div :style="{ marginTop: '15px' }">{{ names }}</div>
     </div>
 </body>
 <script type="text/javascript">
     new Vue({
         el: "#app",
         data: {
-            totalArray: ["Alex", "Vlad", "Andreea", "Horia"],
+            names: ["Alex", "Vlad", "Andreea", "Horia"],
         },
         methods: {
-            reverseArray: function () {
-                myArray = this.totalArray.reverse();
+            reverseArray: function (names) {
+                return this.names.reverse();
             },
         }
     });
