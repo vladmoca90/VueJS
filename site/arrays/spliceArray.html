@@ -26,20 +26,24 @@
 </head>
 
 <body>
-    <div id="app">
-        <span>{{ myArray }}</span>
-        <span>{{ spliceArray }}</span>
+    <div id="app" :style="{ margin: '30px auto', width: '400px' }">
+        <button role="button" class="btn btn-warning" @click="spliceNames">Splice the names</button>
+        <p></p>
+        <p>{{ names }}</p>
     </div>
 </body>
 <script type="text/javascript">
     new Vue({
-        el: "#app",
+        el: '#app',
         data: {
-            myArray: ["Ana", "Vlad", 29, "Alex", 11, "Andreea", 0, true],
+            names: ['Ana', 'Vlad', 29, 'Ionel', 11, 'Andreea', 0, true],
         },
-        computed: {
-            spliceArray: function () {
-                this.myArray.splice(1, 7);
+        methods: {
+            spliceNames: function (names) {
+
+                var newNames = ['Nicoleta', 100, false];
+
+                this.names.splice(1, 7, newNames, newNames.length); //add another array
             },
         },
     });

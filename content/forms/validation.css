@@ -15,16 +15,12 @@
     .formular-content div input[type="radio"] {
       position: relative;
       top: 3px; }
-  .formular-content__personal {
-    flex-direction: row; }
   .formular-content__buttons {
     margin-bottom: 0; }
-  .formular-content__list {
-    flex-direction: row; }
-    .formular-content__list label {
-      font-weight: 400; }
-    .formular-content__list label[for="languages"],
-    .formular-content__list label[for="selectRegion"] {
-      font-weight: 700;
-      margin-bottom: 8px;
-      margin-right: auto; }
+  .formular-content__list label {
+    font-weight: 400; }
+  .formular-content__list label[for="languages"],
+  .formular-content__list label[for="selectRegion"] {
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-right: auto; }

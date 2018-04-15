@@ -26,7 +26,7 @@
     <style>
         #app {
             margin: 20px auto;
-            max-width: 350px;
+            max-width: 400px;
         }
 
         #app>p {
@@ -38,30 +38,30 @@
 
 <body>
     <div id="app" class="u-full-width">
-        <button role="button" class="btn btn-danger" @click.once="removeFromArray">Remove ( - )</button>
+        <button role="button" class="btn btn-danger" @click.once="removeFrom">Remove ( - )</button>
 
-        <p>{{ removeArray }}</p>
+        <p>{{ removedNames }}</p>
 
         <p></p>
 
-        <button role="button" class="btn btn-success" @click.once="addInArray">Add ( + )</button>
+        <button role="button" class="btn btn-success" @click.once="addIn">Add ( + )</button>
 
-        <p>{{ addArray }}</p>
+        <p>{{ addedNames }}</p>
     </div>
 </body>
 <script type="text/javascript">
     new Vue({
-        el: "#app",
+        el: '#app',
         data: {
-            removeArray: ["Alex", "Vlad", "Andreea", "Horia"],
-            addArray: ["Valentina", "Andrei", "Ioana", "Constantin"],
+            removedNames: ['Alex', 'Vlad', 'Andreea', 'Horia'],
+            addedNames: ['Valentina', 'Andrei', 'Ioana', 'Samuel'],
         },
         methods: {
-            removeFromArray: function () {
-                return this.removeArray.pop('Vlad');
+            removeFrom: function (removedNames) {
+                return this.removedNames.pop('Horia');
             },
-            addInArray: function () {
-                return this.addArray.unshift('Claudiu');
+            addIn: function (addedNames) {
+                return this.addedNames.unshift('Claudiu');
             },
         }
     });

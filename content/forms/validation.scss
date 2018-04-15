@@ -28,16 +28,11 @@
             }
         }
 
-        &__personal {
-            flex-direction: row;
-        }
-
         &__buttons {
             margin-bottom: 0;
         }
 
         &__list {
-            flex-direction: row;
 
             label {
                 font-weight: 400;
