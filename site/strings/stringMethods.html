@@ -28,30 +28,38 @@
 </head>
 
 <body>
-    <div class="app u-full-height u-full-width">
+    <div id="app">
         <div>
-            <span class="text-center">Ana are mere, portocale, pere si mure =></span>
-            <span class="text-center">{{ totalNumber() }}</span>
+            <span class="text-center">{{ numberOfWords }} =></span>
+            <span class="text-center">{{ totalNumber }}</span>
         </div>
         <div>
-            <span class="text-center">Toata viata am calatorit si m-am plimbat =></span>
-            <span class="text-center">{{ totalSubstr() }}</span>
+            <span class="text-center">{{ theSubstr }} =></span>
+            <span class="text-center">{{ totalSubstr }}</span>
+        </div>
+        <div>
+            <span class="text-center">{{ toArray }} =></span>
+            <span class="text-center">{{ anArray }}</span>
         </div>
     </div>
 </body>
 <script type="text/javascript">
     new Vue({
-        el: ".app",
+        el: "#app",
         data: {
-            numberOfWords: "Ana are mere, portocale, pere si mure",
-            theSubstr: "Toata viata am calatorit si m-am plimbat",
+            numberOfWords: 'Ana are mere, portocale, pere si mure',
+            theSubstr: 'Toata viata am calatorit si m-am plimbat',
+            toArray: 'Maine o sa imi vizitez bunica din Ploiesti',
         },
-        methods: {
-            totalNumber: function () {
+        computed: {
+            totalNumber: function (numberOfWords) {
                 return this.numberOfWords.length + " " + "words";
             },
-            totalSubstr: function () {
-                return this.theSubstr.substr(4, 13);
+            totalSubstr: function (theSubstr) {
+                return this.theSubstr.substr(4, 12);
+            },
+            anArray: function(toArray) {
+                return this.toArray.trim().split(' ');
             },
         },
     });
