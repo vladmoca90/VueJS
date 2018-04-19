@@ -1,11 +1,11 @@
 new Vue({
     el: '.table-box',
     data: {
-        numbers: [1.7932044, 4.4586777, 10.5556534, 7.00256324, 3.3365, 4.563546, 7.765000],
+        numbers: [1.79320, 4.45867, 10.55563, 7.00256, 3.3365, 4.56354, 7.76500],
     },
     methods: {
         toFixedValue: function (number) {
-            return number.toFixed(3);
+            return number.toFixed(2);
         },
         toPrecisionValue: function (number) {
             return number.toPrecision(5);
