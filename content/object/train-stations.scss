@@ -8,23 +8,45 @@ body {
     .banner {
         background-color: $green-dark;
         &__heading {
-            border-bottom: 13px solid $green-light;
+            border-bottom: 15px solid $green-light;
             @include font-prop(20px, #fff, $gill-sans);
-            padding: 10px;
+            padding: 13px;
             p {
                 margin: 0;
                 text-align: left;
             }
         }
         &__cover {
-            background-image: url('../../images/train-stations/GWR-cover.jpg');
-            background-size: cover;
-            min-height: 400px;
+            background-position-y: -30px;
+            @include background(local, url('../../images/train-stations/GWR-cover.jpg'), no-repeat, cover);
+            min-height: 375px;
+        }
+        &__logo {
+            filter: brightness(100);
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+            top: 25px;
         }
     }
     .stations {
         margin: 25px auto;
         max-width: 1050px;
+        &__information {
+            background-color: $green-dark;
+            margin: 40px auto;
+            padding: 10px 15px;
+            &-text {
+                @include font-prop(18px,#fff, $gill-sans);
+                margin: 0;
+                width: 40%;
+            }
+            &-logo {
+                filter: brightness(100);
+                margin-top: -10px;
+                max-width: 140px;
+            }
+        }
         &__list {
             flex-flow: row wrap;
             @include font-prop(16px,#fff, $arial);
