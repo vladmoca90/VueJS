@@ -40,15 +40,20 @@
             </div>
         </header>
         <section class="stations u-full-width">
-            <div class="stations__information">
-                <span class="stations__information-text">{{ stationInformation }}</p>
-                <img role="img" src="../../images/train-stations/logo.png" class="stations__information-logo u-full-width" />
+            <div class="stations__information u-flex">
+                <div>
+                    <p class="stations__information-text">{{ stationInformation }}</p>
+                </div>
+                <div>
+                    <img role="img" src="../../images/train-stations/logo.png" class="stations__information-logo u-full-width" />
+                </div>
             </div>
             <div class="stations__list u-full-width u-flex u-space-between">
-               <div class="stations__list-block u-full-width" v-for="station in stations">{{ station.name }}</div>
+                <div class="stations__list-block u-full-width" v-for="station in stations">{{ station.name }}</div>
             </div>
         </section>
     </main>
 </body>
 <script type="text/javascript" src="../../scripts/object/train-stations.js"></script>
+
 </html>

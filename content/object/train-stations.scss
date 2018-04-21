@@ -17,16 +17,16 @@ body {
             }
         }
         &__cover {
-            background-image: url('../../images/train-stations/GWR-cover.jpg');
-            background-size: cover;
-            min-height: 400px;
+            background-position-y: -30px;
+            @include background(fixed, url('../../images/train-stations/GWR-cover.jpg'), no-repeat, cover);
+            min-height: 375px;
         }
         &__logo {
             filter: brightness(100);
             left: 0;
             margin: 0 auto;
             right: 0;
-            top: 20px;
+            top: 25px;
         }
     }
     .stations {
@@ -34,11 +34,17 @@ body {
         max-width: 1050px;
         &__information {
             background-color: $green-dark;
-            @include font-prop(16px,#fff, $gill-sans);
-            margin: 30px auto;
+            margin: 20px auto 40px;
+            padding: 10px 15px;
+            &-text {
+                @include font-prop(18px,#fff, $gill-sans);
+                margin: 0;
+                width: 40%;
+            }
             &-logo {
                 filter: brightness(100);
-                max-width: 120px;
+                margin-top: -10px;
+                max-width: 140px;
             }
         }
         &__list {

@@ -2,7 +2,7 @@ new Vue({
     el: '.main',
     data: {
         bannerHeading: 'Welcome to Reading',
-        stationInformation: 'Welcome to FastTicket - Popular destinations. Select your destination from the list or click Station Finder A-Z for more options',
+        stationInformation: 'Welcome to FastTicket - Popular destinations. Select your destination from the list or click Station Finder A - Z for more options',
         stations: [
             {
                 code: 'APF',
