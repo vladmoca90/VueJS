@@ -1,6 +1,7 @@
 new Vue({
-    el: '',
+    el: '.main',
     data: {
+        bannerHeading: 'Welcome to Reading',
         stations: [
             {
                 code: 'BSK',

@@ -5,8 +5,42 @@
 body {
     margin: 0;
     padding: 0;
-}
-
-.main {
-    margin: 25px auto;
+    .banner {
+        background-color: $green-dark;
+        &__heading {
+            border-bottom: 13px solid $green-light;
+            @include font-prop(20px, #fff, $gill-sans);
+            padding: 10px;
+            p {
+                margin: 0;
+                text-align: left;
+            }
+        }
+        &__cover {
+            background-image: url('../../images/train-stations/GWR-cover.jpg');
+            background-size: cover;
+            min-height: 400px;
+        }
+    }
+    .stations {
+        margin: 25px auto;
+        max-width: 1050px;
+        &__list {
+            flex-flow: row wrap;
+            @include font-prop(16px,#fff, $arial);
+            &-block {
+                background-color: $green-dark;
+                cursor: pointer;
+                margin-bottom: 15px;
+                max-width: 325px;
+                padding: 15px 0;
+                text-align: center;
+                text-transform: uppercase;
+                transition: background 0.5s;
+                &:hover {
+                    background-color: $green-light;
+                }
+            }
+        }
+    }
 }
