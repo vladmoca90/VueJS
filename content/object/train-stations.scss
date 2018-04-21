@@ -10,7 +10,7 @@ body {
         &__heading {
             border-bottom: 13px solid $green-light;
             @include font-prop(20px, #fff, $gill-sans);
-            padding: 10px;
+            padding: 13px;
             p {
                 margin: 0;
                 text-align: left;
@@ -21,10 +21,26 @@ body {
             background-size: cover;
             min-height: 400px;
         }
+        &__logo {
+            filter: brightness(100);
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+            top: 20px;
+        }
     }
     .stations {
         margin: 25px auto;
         max-width: 1050px;
+        &__information {
+            background-color: $green-dark;
+            @include font-prop(16px,#fff, $gill-sans);
+            margin: 30px auto;
+            &-logo {
+                filter: brightness(100);
+                max-width: 120px;
+            }
+        }
         &__list {
             flex-flow: row wrap;
             @include font-prop(16px,#fff, $arial);

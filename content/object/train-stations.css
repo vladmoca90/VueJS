@@ -8,7 +8,7 @@ body {
       font-size: 20px;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
       color: #fff;
-      padding: 10px; }
+      padding: 13px; }
       body .banner__heading p {
         margin: 0;
         text-align: left; }
@@ -16,9 +16,24 @@ body {
       background-image: url("../../images/train-stations/GWR-cover.jpg");
       background-size: cover;
       min-height: 400px; }
+    body .banner__logo {
+      filter: brightness(100);
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+      top: 20px; }
   body .stations {
     margin: 25px auto;
     max-width: 1050px; }
+    body .stations__information {
+      background-color: #0a493e;
+      font-size: 16px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      color: #fff;
+      margin: 30px auto; }
+      body .stations__information-logo {
+        filter: brightness(100);
+        max-width: 120px; }
     body .stations__list {
       flex-flow: row wrap;
       font-size: 16px;
