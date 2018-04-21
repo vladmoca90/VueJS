@@ -31,19 +31,17 @@
 
 <body>
     <main role="main" class="main u-full-width">
-    <header role="banner" class="banner u-full-width">
-        <div class="banner__heading">
-            <p> {{ bannerHeading }}</p>
-        </div>
-        <div class="banner__cover u-full-height"></div>
-    </header>
-    <section class="stations u-full-width">
-        <table role="presentation" class="stations__table">
-            <tr>
-                <td></td>
-            </tr>
-        </table>
-    </section>
+        <header role="banner" class="banner u-full-width">
+            <div class="banner__heading">
+                <p>{{ bannerHeading }}</p>
+            </div>
+            <div class="banner__cover u-full-height"></div>
+        </header>
+        <section class="stations u-full-width">
+            <div class="stations__list u-full-width u-flex u-space-between">
+               <div class="stations__list-block u-full-width" v-for="station in stations">{{ station.name }}</div>
+            </div>
+        </section>
     </main>
 </body>
 <script type="text/javascript" src="../../scripts/object/train-stations.js"></script>

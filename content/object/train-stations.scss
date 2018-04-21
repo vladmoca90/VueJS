@@ -8,9 +8,9 @@ body {
     .banner {
         background-color: $green-dark;
         &__heading {
-            border-bottom: 12px solid $green-light;
-            @include font-prop(18px, #fff, $gill-sans);
-            padding: 12px;
+            border-bottom: 13px solid $green-light;
+            @include font-prop(20px, #fff, $gill-sans);
+            padding: 10px;
             p {
                 margin: 0;
                 text-align: left;
@@ -22,12 +22,25 @@ body {
             min-height: 400px;
         }
     }
-}
-
-.stations {
-    margin: 20px auto;
-    max-width: 600px;
-    &__table {
-        @include font-prop(16px, #fff, $arial);
+    .stations {
+        margin: 25px auto;
+        max-width: 1050px;
+        &__list {
+            flex-flow: row wrap;
+            @include font-prop(16px,#fff, $arial);
+            &-block {
+                background-color: $green-dark;
+                cursor: pointer;
+                margin-bottom: 15px;
+                max-width: 325px;
+                padding: 15px 0;
+                text-align: center;
+                text-transform: uppercase;
+                transition: background 0.5s;
+                &:hover {
+                    background-color: $green-light;
+                }
+            }
+        }
     }
 }
