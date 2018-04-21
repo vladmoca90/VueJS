@@ -8,7 +8,7 @@ body {
     .banner {
         background-color: $green-dark;
         &__heading {
-            border-bottom: 13px solid $green-light;
+            border-bottom: 15px solid $green-light;
             @include font-prop(20px, #fff, $gill-sans);
             padding: 13px;
             p {
@@ -18,7 +18,7 @@ body {
         }
         &__cover {
             background-position-y: -30px;
-            @include background(fixed, url('../../images/train-stations/GWR-cover.jpg'), no-repeat, cover);
+            @include background(local, url('../../images/train-stations/GWR-cover.jpg'), no-repeat, cover);
             min-height: 375px;
         }
         &__logo {
@@ -34,7 +34,7 @@ body {
         max-width: 1050px;
         &__information {
             background-color: $green-dark;
-            margin: 20px auto 40px;
+            margin: 40px auto;
             padding: 10px 15px;
             &-text {
                 @include font-prop(18px,#fff, $gill-sans);
