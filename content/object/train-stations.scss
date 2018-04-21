@@ -5,8 +5,29 @@
 body {
     margin: 0;
     padding: 0;
+    .banner {
+        background-color: $green-dark;
+        &__heading {
+            border-bottom: 12px solid $green-light;
+            @include font-prop(18px, #fff, $gill-sans);
+            padding: 12px;
+            p {
+                margin: 0;
+                text-align: left;
+            }
+        }
+        &__cover {
+            background-image: url('../../images/train-stations/GWR-cover.jpg');
+            background-size: cover;
+            min-height: 400px;
+        }
+    }
 }
 
-.main {
-    margin: 25px auto;
+.stations {
+    margin: 20px auto;
+    max-width: 600px;
+    &__table {
+        @include font-prop(16px, #fff, $arial);
+    }
 }
