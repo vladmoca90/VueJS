@@ -32,15 +32,15 @@
         <table class="table table-bordered">
             <thead>
                 <th>Numbers</th>
-                <th>To Fixed value</th>
-                <th>To Precision value</th>
-                <th>Power</th>
+                <th>Fixed value</th>
+                <th>Precision value</th>
+                <th>Power Value</th>
             </thead>
             <tbody>
                 <tr v-for="number in numbers">
                     <td>{{ number }}</td>
-                    <td>{{ toFixedValue(number) }}</td>
-                    <td>{{ toPrecisionValue(number) }}</td>
+                    <td>{{ fixedValue(number) }}</td>
+                    <td>{{ precisionValue(number) }}</td>
                     <td>{{ powerValue(number) }}</td>
                 </tr>
             </tbody>
