@@ -2,33 +2,34 @@ body {
   margin: 0;
   padding: 0; }
 
-.container {
+.box {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0 auto;
   max-width: 650px; }
-  .container__filter {
-    margin: 25px auto;
+  .box__filter {
+    margin: 25px 5px;
     padding: 5px; }
-  .container .article {
+  .box .article {
     border-radius: 12px;
     margin-bottom: 25px;
     padding: 40px 20px 20px; }
-    .container .article__content {
+    .box .article__content {
       padding-right: 20px; }
-    .container .article__close {
+    .box .article__close {
+      cursor: pointer;
       right: 20px;
       top: 8px; }
-    .container .article__heading {
+    .box .article__heading {
       margin: 0 auto 15px; }
-      .container .article__heading-sub {
+      .box .article__heading-sub {
         font-size: 16px;
         margin-bottom: 5px; }
-        .container .article__heading-sub:nth-of-type(1) {
+        .box .article__heading-sub:nth-of-type(1) {
           text-transform: uppercase; }
-        .container .article__heading-sub:nth-of-type(2) {
+        .box .article__heading-sub:nth-of-type(2) {
           font-style: italic; }
-    .container .article__text {
+    .box .article__text {
       font-size: 14px;
       margin-bottom: 0; }
-    .container .article__image img {
+    .box .article__image img {
       min-width: 215px; }

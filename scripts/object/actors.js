@@ -1,5 +1,5 @@
 new Vue({
-    el: '.container',
+    el: '.box',
     data: {
         searchHere: 'Search here...',
         query: '',

@@ -33,8 +33,8 @@
 
 <body>
 
-    <section class="container u-full-width">
-        <input type="text" role="textbox" v-bind:placeholder="searchHere" class="container__filter u-full-width" v-model="query" />
+    <section class="box u-full-width">
+        <input type="text" role="textbox" v-bind:placeholder="searchHere" class="box__filter u-full-width" v-model="query" />
         <article role="article" class="article u-border u-flex u-relative" v-for="actor in allActors">
             <span class="article__close u--absolute">X {{ closeText }}</span>
             <div class="article__content">
