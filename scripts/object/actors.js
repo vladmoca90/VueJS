@@ -4,6 +4,7 @@ new Vue({
         searchHere: 'Search here...',
         query: '',
         closeText: 'Close',
+        show: true,
         actors: [
             {
                 name: 'Russell Crowe',
