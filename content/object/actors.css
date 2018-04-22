@@ -1,9 +1,12 @@
 body {
+  background-attachment: fixed;
+  background-image: url("../../images/actors/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0; }
 
 .box {
-  color: #444;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0 auto;
   max-width: 650px; }
@@ -16,11 +19,11 @@ body {
     border-color: #ccc;
     margin: 25px 0;
     padding: 5px; }
-    .box__filter:before {
-      content: ''; }
     .box__filter:focus {
       outline: 0; }
   .box .article {
+    background-color: #fff;
+    color: #444;
     margin-bottom: 25px;
     padding: 40px 20px 20px; }
     .box .article__content {
@@ -38,6 +41,8 @@ body {
           text-transform: uppercase; }
         .box .article__heading-sub:nth-of-type(2) {
           font-style: italic; }
+    .box .article__separator {
+      background-color: #444; }
     .box .article__text {
       font-size: 14px;
       margin-bottom: 0; }
