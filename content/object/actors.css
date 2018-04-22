@@ -10,11 +10,14 @@ body {
     margin: 25px auto;
     padding: 5px; }
   .container .article {
-    border-radius: 10px;
-    margin-bottom: 15px;
-    padding: 20px; }
+    border-radius: 12px;
+    margin-bottom: 25px;
+    padding: 40px 20px 20px; }
     .container .article__content {
       padding-right: 20px; }
+    .container .article__close {
+      right: 20px;
+      top: 8px; }
     .container .article__heading {
       margin: 0 auto 15px; }
       .container .article__heading-sub {
