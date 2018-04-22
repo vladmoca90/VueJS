@@ -32,11 +32,11 @@
 <body>
 
     <div class="counties u-full-width">
-        <h1 class="text-center">UK Counties</h1>
-        <input class="counties__input u-full-width" type="text" placeholder="Search..." v-model="query" />
+        <p class="text-center counties__title">UK Counties</p>
+        <input class="counties__input u-full-width" type="text" v-bind:placeholder="searchHere" v-model="query" />
         <div v-for="county in allCounties" class="counties__container">
-            <h3 class="counties__heading text-center">{{ county.title }}</h3>
-            <p>{{ county.content }}</p>
+            <p class="counties__heading text-center">{{ county.title }}</p>
+            <p class="counties__text">{{ county.content }}</p>
         </div>
     </div>
 </body>

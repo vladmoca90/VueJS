@@ -1,8 +1,10 @@
 new Vue({
-    el: '.container',
+    el: '.box',
     data: {
         searchHere: 'Search here...',
         query: '',
+        closeText: 'Close',
+        showArticle: true,
         actors: [
             {
                 name: 'Russell Crowe',

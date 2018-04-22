@@ -5,7 +5,6 @@ new Vue({
         destinations: [
             {
                 image: '../../images/destinations/Malaysia.jpg',
-                overlayText: 'Malaysia',
                 imgInformation: 'Malaysia travel',
                 title: 'Malaysia',
                 subtitle: 'Asia',
@@ -14,7 +13,6 @@ new Vue({
             },
             {
                 image: '../../images/destinations/Thailand.jpg',
-                overlayText: 'Thailand',
                 imgInformation: 'Thailand travel',
                 title: 'Thailand',
                 subtitle: 'Asia',
@@ -23,7 +21,6 @@ new Vue({
             },
             {
                 image: '../../images/destinations/Japan.jpg',
-                overlayText: 'Japan',
                 imgInformation: 'Japan travel',
                 title: 'Japan',
                 subtitle: 'Asia',
@@ -32,7 +29,6 @@ new Vue({
             },
             {
                 image: '../../images/destinations/UK.jpg',
-                overlayText: 'United Kingdom',
                 imgInformation: 'United Kingdom travel',
                 title: 'United Kingdom',
                 subtitle: 'Europe',
@@ -41,7 +37,6 @@ new Vue({
             },
             {
                 image: '../../images/destinations/Italy.jpg',
-                overlayText: 'Italy',
                 imgInformation: 'Italy travel',
                 title: 'Italy',
                 subtitle: 'Europe',
@@ -50,7 +45,6 @@ new Vue({
             },
             {
                 image: '../../images/destinations/Spain.jpg',
-                overlayText: 'Spain',
                 imgInformation: 'Spain travel',
                 title: 'Spain',
                 subtitle: 'Europe',

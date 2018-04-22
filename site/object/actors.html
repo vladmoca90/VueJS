@@ -33,20 +33,23 @@
 
 <body>
 
-    <section class="container u-full-width">
-        <input type="text" role="textbox" v-bind:placeholder="searchHere" class="container__filter u-full-width" v-model="query" />
-        <article role="article" class="article u-border u-flex" v-for="actor in allActors">
-            <div class="article__content">
-                <h2 role="heading" class="article__heading">{{ actor.name }}</h2>
-                <p role="heading" class="article__heading-sub">{{ actor.dateOfBirth }}</p>
-                <p role="heading" class="article__heading-sub">{{ actor.placeOfBirth }}</p>
-                <hr role="separator">
-                <p role="text" class="article__text">{{ actor.biography }}</p>
-            </div>
-            <div class="article__image">
-                <img role="img" v-bind:src="actor.image" class="u-full-width" />
-            </div>
-        </article>
+    <section class="box u-full-width">
+        <input type="text" role="textbox" v-bind:placeholder="searchHere" class="box__filter u-full-width" v-model="query" />
+        <transition name="fade" v-for="actor in allActors">
+            <article role="article" class="article u-border u-flex u-relative" v-show="showArticle">
+                <span class="article__close u--absolute" @click.self="showArticle = !showArticle">X {{ closeText }}</span>
+                <div class="article__content">
+                    <h2 role="heading" class="article__heading">{{ actor.name }}</h2>
+                    <p role="heading" class="article__heading-sub">{{ actor.dateOfBirth }}</p>
+                    <p role="heading" class="article__heading-sub">{{ actor.placeOfBirth }}</p>
+                    <hr role="separator">
+                    <p role="text" class="article__text">{{ actor.biography }}</p>
+                </div>
+                <div class="article__image">
+                    <img role="img" v-bind:src="actor.image" class="u-full-width" />
+                </div>
+            </article>
+        </transition>
     </section>
 
 </body>
