@@ -33,14 +33,19 @@
 
 <body>
 
-    <section class="box u-full-width">
-        <input type="text" role="textbox" class="box__filter u-full-width" v-model="query" />
-        <article class="box-article u-border" v-for="actor in allActors">
-            <h2 role="heading" class="box-article__heading">{{ actor.name }}</h2>
-            <p role="heading" class="box-article__heading-sub">{{ actor.dateOfBirth }}</p>
-            <p role="heading" class="box-article__heading-sub">{{ actor.placeOfBirth }}</p>
-            <hr role="separator">
-            <p role="text" class="box-article__text">{{ actor.biography }}</p>
+    <section class="container u-full-width">
+        <input type="text" role="textbox" v-bind:placeholder="searchHere" class="container__filter u-full-width" v-model="query" />
+        <article role="article" class="article u-border u-flex" v-for="actor in allActors">
+            <div class="article__content">
+                <h2 role="heading" class="article__heading">{{ actor.name }}</h2>
+                <p role="heading" class="article__heading-sub">{{ actor.dateOfBirth }}</p>
+                <p role="heading" class="article__heading-sub">{{ actor.placeOfBirth }}</p>
+                <hr role="separator">
+                <p role="text" class="article__text">{{ actor.biography }}</p>
+            </div>
+            <div class="article__image">
+                <img role="img" v-bind:src="actor.image" class="u-full-width" />
+            </div>
         </article>
     </section>
 
