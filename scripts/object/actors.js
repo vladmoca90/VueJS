@@ -30,7 +30,7 @@ new Vue({
         ],
     },
     computed: {
-        allActors: function (actor) {
+        allActors: function () {
             return this.actors.filter((actor) => {
                 return actor.name.match(this.query) ||
                     actor.dateOfBirth.match(this.query) ||
