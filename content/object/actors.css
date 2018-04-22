@@ -3,14 +3,24 @@ body {
   padding: 0; }
 
 .box {
+  color: #444;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0 auto;
   max-width: 650px; }
   .box__filter {
-    margin: 25px 5px;
+    border-top: 1px;
+    border-right: 0px;
+    border-bottom: 1px;
+    border-left: 0;
+    border-style: solid;
+    border-color: #ccc;
+    margin: 25px 0;
     padding: 5px; }
+    .box__filter:before {
+      content: ''; }
+    .box__filter:focus {
+      outline: 0; }
   .box .article {
-    border-radius: 12px;
     margin-bottom: 25px;
     padding: 40px 20px 20px; }
     .box .article__content {
@@ -33,3 +43,15 @@ body {
       margin-bottom: 0; }
     .box .article__image img {
       min-width: 215px; }
+
+.fade-enter {
+  opacity: 0; }
+  .fade-enter-active {
+    transition: opacity 1.5s;
+    opacity: 1; }
+
+.fade-leave {
+  opacity: 1; }
+  .fade-leave-active {
+    transition: 1.5s;
+    opacity: 0; }

@@ -35,9 +35,9 @@
 
     <section class="box u-full-width">
         <input type="text" role="textbox" v-bind:placeholder="searchHere" class="box__filter u-full-width" v-model="query" />
-        <transition name="fade">
-            <article role="article" class="article u-border u-flex u-relative" v-show="show" v-for="actor in allActors">
-                <span class="article__close u--absolute" @click.native="show = !show">X {{ closeText }}</span>
+        <transition name="fade" v-for="actor in actors">
+            <article role="article" class="article u-border u-flex u-relative" v-show="showArticle">
+                <span class="article__close u--absolute" @click.self="showArticle = !showArticle">X {{ closeText }}</span>
                 <div class="article__content">
                     <h2 role="heading" class="article__heading">{{ actor.name }}</h2>
                     <p role="heading" class="article__heading-sub">{{ actor.dateOfBirth }}</p>

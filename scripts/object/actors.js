@@ -4,7 +4,7 @@ new Vue({
         searchHere: 'Search here...',
         query: '',
         closeText: 'Close',
-        show: true,
+        showArticle: true,
         actors: [
             {
                 name: 'Russell Crowe',
@@ -30,7 +30,7 @@ new Vue({
         ],
     },
     computed: {
-        allActors: function () {
+        allActors: function (actor) {
             return this.actors.filter((actor) => {
                 return actor.name.match(this.query) ||
                     actor.dateOfBirth.match(this.query) ||
