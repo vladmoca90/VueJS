@@ -3,12 +3,12 @@
 @import '../variables/variables.scss';
 
 body {
+    @include background(fixed, url('../../images/actors/background.jpg'), no-repeat, cover);
     margin: 0;
     padding: 0;
 }
 
 .box {
-    color: #444;
     font-family: $gill-sans;
     margin: 0 auto;
     max-width: 650px;
@@ -16,14 +16,13 @@ body {
         @include borders(1px, 0px, 1px, 0, solid, #ccc);
         margin: 25px 0;
         padding: 5px;
-        &:before {
-            content: '';
-        }
         &:focus {
             outline: 0;
         }
     }
     .article {
+        background-color: #fff;
+        color: #444;
         margin-bottom: 25px;
         padding: 40px 20px 20px;
         &__content {
@@ -46,6 +45,9 @@ body {
                     font-style: italic;
                 }
             }
+        }
+        &__separator {
+            background-color: #444;
         }
         &__text {
             font-size: 14px;
