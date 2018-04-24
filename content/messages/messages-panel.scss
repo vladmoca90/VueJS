@@ -24,7 +24,7 @@ body {
     }
     input,
     textarea {
-        color: #444;
+        color: $font-color;
     }
     input:focus,
     textarea:focus,
@@ -72,7 +72,7 @@ body {
                 margin-right: 5px;
             }
             span:hover {
-                color: #444;
+                color: $font-color;
             }
         }
     }
