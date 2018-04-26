@@ -18,7 +18,7 @@ body {
       background-image: url("../../images/train-stations/GWR-cover.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      min-height: 375px; }
+      min-height: 350px; }
     body .banner__logo {
       filter: brightness(100);
       left: 0;
@@ -47,7 +47,7 @@ body {
       font-size: 16px;
       font-family: Arial, Helvetica, sans-serif;
       color: #fff; }
-      body .stations__list-block {
+      body .stations__list-button {
         background-color: #0a493e;
         cursor: pointer;
         margin-bottom: 15px;
@@ -55,6 +55,6 @@ body {
         padding: 15px 0;
         text-align: center;
         text-transform: uppercase;
-        transition: background 0.5s; }
-        body .stations__list-block:hover {
+        transition: background 0.5s all; }
+        body .stations__list-button:hover {
           background-color: #317c2e; }
