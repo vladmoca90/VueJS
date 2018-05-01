@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+
+    <title>Motors Test</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/vue@2.1.8/dist/vue.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="../../content//object/cars.scss" />
+
+    <script src="../scripts/object/cars.js"></script>
+
+</head>
+
+<body>
+
+    <div id="dropdown-container" class="d-flex">
+        <div class="dropdown-section">
+            <select id="selectMake">
+                <option selected="selected">Make (any)</option>
+            </select>
+        </div>
+        <div class="dropdown-section">
+            <select disabled>
+                <option selected="selected">Model (any)</option>
+            </select>
+        </div>
+        <div class="dropdown-stock">Stock: <span class="dropdown-stock__value"></span></div>
+    </div>
+
+</body>
+
+</html>
