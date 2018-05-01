@@ -1,7 +1,8 @@
 new Vue({
     el: '#dropdown-container',
     data: {
-        makes: [{
+        makes: [
+            {
                 name: 'Alfa Romeo',
                 models: [
                     {
@@ -131,10 +132,12 @@ new Vue({
                 return countries[0].population;
             }
 
-            var count = 0;
+            var total = 0;
 
             for (i = 0; i < makes.length; i++) {
-
+                for(i=0; i< make.models.length; i++) {
+                    total += models[i].stock;
+                }
             }
         }
     }
