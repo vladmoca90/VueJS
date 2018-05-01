@@ -7,7 +7,7 @@
     max-width: 500px;
 
     table {
-        @include font-prop(15px, #444, $arial);
+        @include font-prop(15px, $font-color, $arial);
 
         th, td {
             text-align: center;

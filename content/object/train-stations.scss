@@ -19,7 +19,7 @@ body {
         &__cover {
             background-position-y: -30px;
             @include background(local, url('../../images/train-stations/GWR-cover.jpg'), no-repeat, cover);
-            min-height: 375px;
+            min-height: 350px;
         }
         &__logo {
             filter: brightness(100);
@@ -50,7 +50,7 @@ body {
         &__list {
             flex-flow: row wrap;
             @include font-prop(16px,#fff, $arial);
-            &-block {
+            &-button {
                 background-color: $green-dark;
                 cursor: pointer;
                 margin-bottom: 15px;
@@ -58,7 +58,7 @@ body {
                 padding: 15px 0;
                 text-align: center;
                 text-transform: uppercase;
-                transition: background 0.5s;
+                transition: background 0.5s all;
                 &:hover {
                     background-color: $green-light;
                 }
