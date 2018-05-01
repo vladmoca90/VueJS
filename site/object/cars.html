@@ -27,16 +27,16 @@
     <div id="dropdown-container" class="d-flex">
         <div class="dropdown-section">
             <select id="selectMake">
-                <option selected="selected">Make (any)</option>
+                <option selected disabled>Make (any)</option>
                 <option v-for="make in makes">{{ make.name }}</option>
             </select>
         </div>
         <div class="dropdown-section">
-            <select v-model="disable">
-                <option selected="selected">Model (any)</option>
+            <select disabled>
+                <option selected>Model (any)</option>
             </select>
         </div>
-        <div class="dropdown-stock">Stock: <span class="dropdown-stock__value"></span></div>
+        <div class="dropdown-stock">Stock: <span class="dropdown-stock__value">{{ totalCars(stock) }}</span></div>
     </div>
 
 </body>
