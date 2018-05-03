@@ -1,0 +1,3 @@
+VUe.component('App', function() {
+    
+});
