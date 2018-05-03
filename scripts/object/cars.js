@@ -1,10 +1,11 @@
 new Vue({
     el: '#dropdown-container',
     data: {
-        disabled: true,
-        makes: [{
+        makes: [
+            {
                 name: 'Alfa Romeo',
-                models: [{
+                models: [
+                    {
                         name: '174',
                         stock: 1
                     },
@@ -16,7 +17,8 @@ new Vue({
             },
             {
                 name: 'Audi',
-                models: [{
+                models: [
+                    {
                         name: 'A1',
                         stock: 4
                     },
@@ -36,7 +38,8 @@ new Vue({
             },
             {
                 name: 'BMW',
-                models: [{
+                models: [
+                    {
                         name: '1 Series',
                         stock: 4
                     },
@@ -56,7 +59,8 @@ new Vue({
             },
             {
                 name: 'Citroen',
-                models: [{
+                models: [
+                    {
                         name: 'Berlingo',
                         stock: 4
                     },
@@ -68,7 +72,8 @@ new Vue({
             },
             {
                 name: 'Ford',
-                models: [{
+                models: [
+                    {
                         name: 'Escort',
                         stock: 4
                     },
@@ -104,7 +109,8 @@ new Vue({
             },
             {
                 name: 'Lambourghini',
-                models: [{
+                models: [
+                    {
                         name: 'Hurracan',
                         stock: 1
                     },
@@ -117,6 +123,22 @@ new Vue({
         ],
     },
     methods: {
+        totalCars: function (stock) {
+            if (makes.length == 0) {
+                throw new Error('The array is empty');
+            }
 
+            if (makes.length == 1) {
+                return countries[0].population;
+            }
+
+            var total = 0;
+
+            for (i = 0; i < makes.length; i++) {
+                for(i=0; i< make.models.length; i++) {
+                    total += models[i].stock;
+                }
+            }
+        }
     }
 });
