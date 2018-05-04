@@ -1,18 +1,16 @@
 <template>
-    <table class="table table-bordered">
-        <thead>
-            <th></th>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+    <div id="app">
+        <tableComp />
+    </div>
 </template>
-
 <script>
+    import tableComp from 'tableComp.vue'
+
     export default {
+        name: 'app',
+        components: {
+            tableComp,
+        },
         data() {
             {
                 "d": {
@@ -89,3 +87,14 @@
         }
     }
 </script>
+
+<style>
+    #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
+</style>
