@@ -1,0 +1,32 @@
+@import '../mixins/mixins.scss';
+
+@import '../variables/variables.scss';
+
+$crimson: 'Crimson Text', serif;
+
+body {
+    font-family: $crimson;
+    @include background(fixed, url('../../images/backgrounds/fifa-bg.png'), no-repeat, cover);
+    margin: 0;
+    padding: 0;
+
+    #header, #content, #footer {
+        max-width: 1200px;
+
+        @media all and (min-width: $break-big-desktop) {
+            max-width: 1200px;
+        }
+        @media all and (min-width: $break-desktop) and (max-width: $break-big-desktop - 1) {
+            max-width: 960px;
+        }
+        @media all and (min-width: $break-tablet) and (max-width: $break-desktop - 1) {
+            max-width: 720px;
+        }
+        @media all and (min-width: $break-phone) and (max-width: $break-tablet - 1) {
+            max-width: 480px;
+        }
+        @media all and (max-width: $break-phone - 1) {
+            max-width: 320px;
+        }
+    }
+}

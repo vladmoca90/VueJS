@@ -16,8 +16,20 @@ $times: 'Times New Roman', Times, serif;
 
 $font-color: #444;
 
-$red-medium: #c0002b;
+$red: #c0002b;
 
 $green-dark: #0a493e;
 
 $green-light: #317c2e;
+
+//device breakpoints
+
+$break-phone: 480px;
+
+$break-phone-landscape: 600px;
+
+$break-tablet: 720px;
+
+$break-desktop: 960px;
+
+$break-big-desktop: 1200px;
