@@ -4,6 +4,14 @@
 
 $crimson: 'Crimson Text', serif;
 
+$color_panel: #f1ebe3;
+$color_a: #da1a32;
+$color_b: #002c5f;
+$color_c: #c90006;
+$color_d: #e00013;
+$color_e: #005aa8;
+$color_f: #009fa0;
+
 body {
     font-family: $crimson;
     @include background(fixed, url('../../images/backgrounds/fifa-bg.png'), no-repeat, cover);
