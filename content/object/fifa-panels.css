@@ -14,10 +14,10 @@ body {
     @media all and (min-width: 960px) and (max-width: 1199px) {
       body #header, body #content, body #footer {
         max-width: 960px; } }
-    @media all and (min-width: 720px) and (max-width: 959px) {
+    @media all and (min-width: 768px) and (max-width: 959px) {
       body #header, body #content, body #footer {
         max-width: 720px; } }
-    @media all and (min-width: 480px) and (max-width: 719px) {
+    @media all and (min-width: 480px) and (max-width: 767px) {
       body #header, body #content, body #footer {
         max-width: 480px; } }
     @media all and (max-width: 479px) {
