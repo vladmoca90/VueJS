@@ -1,5 +1,5 @@
 new Vue({
-    el: '#dropdown-container',
+    el: '#makes',
     data: {
         makes: [
             {
@@ -123,22 +123,8 @@ new Vue({
         ],
     },
     methods: {
-        totalCars: function (stock) {
-            if (makes.length == 0) {
-                throw new Error('The array is empty');
-            }
-
-            if (makes.length == 1) {
-                return countries[0].population;
-            }
-
-            var total = 0;
-
-            for (i = 0; i < makes.length; i++) {
-                for(i=0; i< make.models.length; i++) {
-                    total += models[i].stock;
-                }
-            }
+        totalCars: function (makes) {
+           
         }
     }
 });

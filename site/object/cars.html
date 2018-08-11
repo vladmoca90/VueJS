@@ -24,19 +24,19 @@
 </head>
 <body>
 
-    <div id="dropdown-container" class="d-flex">
-        <div class="dropdown-section">
+    <div id="makes" class="d-flex">
+        <div class="make-section">
             <select id="selectMake">
-                <option selected disabled>Make (any)</option>
+                <option>Make (any)</option>
                 <option v-for="make in makes">{{ make.name }}</option>
             </select>
         </div>
         <div class="dropdown-section">
-            <select disabled>
-                <option selected>Model (any)</option>
+            <select>
+                <option>Model (any)</option>
             </select>
         </div>
-        <div class="dropdown-stock">Stock: <span class="dropdown-stock__value">{{ totalCars(stock) }}</span></div>
+        <div class="make-stock">Stock: <span class="make-stock__value">{{ totalCars(stock) }}</span></div>
     </div>
 
 </body>

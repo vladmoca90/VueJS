@@ -3,22 +3,22 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0; }
-  body #dropdown-container {
+  body #makes {
     background-color: #6c7574;
-    border-radius: 4px;
+    border-radius: 2px;
     margin: 20px auto;
     max-width: 500px;
     padding: 3px 10px;
     width: 100%; }
-    body #dropdown-container .dropdown-section {
+    body #makes .make-section {
       color: #444;
       font-size: 14px; }
-      body #dropdown-container .dropdown-section:nth-of-type(2) {
+      body #makes .make-section:nth-of-type(2) {
         margin-left: 13px; }
-      body #dropdown-container .dropdown-section select {
+      body #makes .make-section select {
         padding: 2px;
         width: 180px; }
-    body #dropdown-container .dropdown-stock {
+    body #makes .make-stock {
       color: #fff;
       font-size: 18px;
       margin-left: auto; }
