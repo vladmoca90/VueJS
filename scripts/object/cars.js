@@ -1,5 +1,5 @@
 new Vue({
-    el: '#makes',
+    el: '#cars',
     data: {
         makes: [
             {
@@ -122,9 +122,5 @@ new Vue({
             }
         ],
     },
-    methods: {
-        totalCars: function (makes) {
-           
-        }
-    }
+    methods: {}
 });

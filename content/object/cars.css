@@ -3,22 +3,17 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0; }
-  body #makes {
+  body #cars {
     background-color: #6c7574;
-    border-radius: 2px;
+    justify-content: space-between;
     margin: 20px auto;
-    max-width: 500px;
-    padding: 3px 10px;
-    width: 100%; }
-    body #makes .make-section {
+    max-width: 400px;
+    padding: 5px; }
+    body #cars .make-section {
       color: #444;
       font-size: 14px; }
-      body #makes .make-section:nth-of-type(2) {
+      body #cars .make-section:nth-of-type(2) {
         margin-left: 13px; }
-      body #makes .make-section select {
+      body #cars .make-section select {
         padding: 2px;
-        width: 180px; }
-    body #makes .make-stock {
-      color: #fff;
-      font-size: 18px;
-      margin-left: auto; }
+        width: 160px; }
