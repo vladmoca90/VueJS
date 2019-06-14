@@ -9,5 +9,5 @@ gulp.task('sass', function() {
 
 //Watch task
 gulp.task('default',function() {
-    return gulp.watch('content/**/*.scss',['sass']);
+    return gulp.watch('content/**/*.scss', gulp.series('sass')););
 });
