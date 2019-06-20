@@ -62,19 +62,3 @@ body {
         }
     }
 }
-
-.fade-enter {
-    opacity: 0;
-    &-active {
-        transition: opacity 1.5s;
-        opacity: 1;
-    }
-}
-
-.fade-leave {
-    opacity: 1;
-    &-active {
-        transition: 1.5s;
-        opacity: 0;
-    }
-}
